@@ -1,9 +1,18 @@
 class Dashing.Image extends Dashing.Widget
 
   ready: ->
-    # This is fired when the widget is done being rendered
+    @index = 0
+    @photoElem = $(@node).find('.photo-container')
+    @nextPhoto()
+    @startCarousel()
 
-  onData: (data) ->
-    # Handle incoming data
-    # You can access the html node of this widget with `@node`
-    # Example: $(@node).fadeOut().fadeIn() will make the node flash each time data comes in.
+  startCarousel: ->
+    setInterval(@nextPhoto, 10000)
+
+  nextPhoto: =>
+    photos = @get('photos')
+    if photos
+      @photoElem.fadeOut =>
+        @index = Math.floor(Math.random()*photos.length)
+        @set 'current_photo', "/assets/"+photos[@index]
+        @photoElem.fadeIn()

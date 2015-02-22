@@ -8,6 +8,7 @@ SCHEDULER.every "30s" do
   send_event('books', { current: 0 })
   #Tasks
   send_event('newsletter', { current: 1000 })
+  send_event('camille', photos: ["2015.jpg", "2013.png", "cookie.jpg", "2014.jpg"])
   #Tech
   send_event('pulls', { current: 0 })
   send_event('forks', { items: [{"label" => "TODO", "value" => "TODO"}] })
