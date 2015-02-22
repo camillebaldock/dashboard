@@ -1,6 +1,6 @@
 require 'rest_client'
 
-SCHEDULER.every "30s" do
+SCHEDULER.every "30m" do
   response = RestClient.get "https://X:#{ENV["GEMNASIUM_TOKEN"]}@api.gemnasium.com/v1/projects"
   results = JSON.parse(response.to_str)
   colours = results["owned"].select do |result|

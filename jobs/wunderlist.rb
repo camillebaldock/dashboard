@@ -1,7 +1,7 @@
 require 'rest_client'
 require 'date'
 
-SCHEDULER.every "30s" do
+SCHEDULER.every "30m" do
   headers = {
     "X-Access-Token" => ENV["WUNDERLIST_CLIENT_TOKEN"],
     "X-Client-ID" => ENV["WUNDERLIST_CLIENT_ID"]
