@@ -104,4 +104,5 @@ DEPENDENCIES
   dashing
   octokit
   pry
+  rest-client
   ruby-trello
