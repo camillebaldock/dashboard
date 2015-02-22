@@ -1,9 +1,11 @@
 require 'octokit'
 
-SCHEDULER.every "1h" do
+SCHEDULER.every "1m" do
   Octokit.auto_paginate = true
   client = Octokit::Client.new(:access_token => ENV["GITHUB_TOKEN"])
-  parser = PuppetfileLockParser.new(File.join(File.dirname(__FILE__), '..', 'data', 'Puppetfile.lock'))
+  file = client.contents(ENV["BOXEN_REPO"], :path => 'Puppetfile.lock')
+  content = Base64.decode64(file['content'])
+  parser = PuppetfileLockParser.new(content)
   releases = parser.releases
   formatted_releases = { "items" => [] }
   releases.each do |release_key, release_value|

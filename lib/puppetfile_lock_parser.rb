@@ -1,8 +1,6 @@
 class PuppetfileLockParser
-  def initialize(file_path)
-    file = File.open(file_path, 'r')
-    @releases = parse_file(file)
-    file.close
+  def initialize(file_content)
+    @releases = parse_file(file_content)
   end
 
   def releases
@@ -11,14 +9,13 @@ class PuppetfileLockParser
 
 private
 
-  def parse_file(file)
+  def parse_file(content)
+    lines = content.split("\n")
     results = {}
-    loop do
-      break if not line = file.gets
+    lines.each_with_index do |line, line_index|
       if line.include?("GITHUBTARBALL")
-        remote = file.gets
-        file.gets
-        release = file.gets
+        remote = lines[line_index+1]
+        release = lines[line_index+3]
         opening_index = release.index('(')+1
         closing_index = release.index(')')-1
         version_number = release[opening_index..closing_index]
