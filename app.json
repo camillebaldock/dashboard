@@ -10,5 +10,6 @@
     "TRELLO_LIST_NAMES": "name,othername",
     "GITHUB_TOKEN": "github_oauth_token",
     "AUTH_TOKEN": "auth_token",
+    "GEMNASIUM_TOKEN": "gemnasium_token",
   },
 }
