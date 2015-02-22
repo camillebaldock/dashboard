@@ -1,6 +1,6 @@
 require 'octokit'
 
-SCHEDULER.every '10m' do
+SCHEDULER.every "#{ENV["UPDATE_FREQUENCY"]}" do
   Octokit.auto_paginate = true
   client = Octokit::Client.new(:access_token => ENV["GITHUB_TOKEN"])
   assigned = client.user_issues(:state => "open", :filter => "assigned").length

@@ -1,0 +1,13 @@
+GITHUBTARBALL
+  remote: LudereSolutions/puppet-reflector
+  specs:
+    reflector (1.0.0)
+
+GITHUBTARBALL
+  remote: Spantree/puppet-switchresx
+  specs:
+    switchresx (0.9.1)
+
+DEPENDENCIES
+  reflector (= 1.0.0)
+  switchresx (= 0.9.1)

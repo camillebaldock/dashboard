@@ -11,5 +11,7 @@
     "GITHUB_TOKEN": "github_oauth_token",
     "AUTH_TOKEN": "auth_token",
     "GEMNASIUM_TOKEN": "gemnasium_token",
+    "UPDATE_FREQUENCY": "10m",
+    "BOXEN_REPO": "camilleldn/boxen"
   },
 }
