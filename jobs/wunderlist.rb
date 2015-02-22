@@ -16,7 +16,7 @@ SCHEDULER.every "30s" do
     tasks_response = RestClient.get "https://a.wunderlist.com/api/v1/tasks?list_id=#{list_id}", headers
     tasks = JSON.parse(tasks_response.to_str)
     due_tasks = tasks.select do |task|
-      Date.parse(task["due_date"]) <= Date.today
+      task["due_date"] && Date.parse(task["due_date"]) <= Date.today
     end
     total += due_tasks.count
   end
