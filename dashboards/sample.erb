@@ -1,9 +1,6 @@
 <script type='text/javascript'>
 $(function() {
-  // These settings override the defaults set in application.coffee. You can do this on a per dashboard basis.
-  Dashing.gridsterLayout('[{"col":2,"row":1},{"col":1,"row":1},{"col":3,"row":1},{"col":2,"row":2},{"col":3,"row":2},{"col":1,"row":2},{"col":5,"row":1},{"col":4,"row":2},{"col":2,"row":3}]')
-  Dashing.widget_base_dimensions = [370, 340]
-  Dashing.numColumns = 5
+Dashing.gridsterLayout('[{"col":2,"row":1,"size_x":1,"size_y":1},{"col":1,"row":1,"size_x":1,"size_y":1},{"col":3,"row":1,"size_x":1,"size_y":1},{"col":2,"row":2,"size_x":1,"size_y":1},{"col":3,"row":2,"size_x":1,"size_y":1},{"col":1,"row":2,"size_x":1,"size_y":1},{"col":4,"row":1,"size_x":1,"size_y":2},{"col":1,"row":3,"size_x":1,"size_y":1}]')
 });
 </script>
 
@@ -31,6 +28,9 @@ $(function() {
     </li>
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="2">
       <div data-id="releases" data-view="List" data-unordered="true" data-title="Boxen releases"></div>
+    </li>
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="statuscake" data-view="Statuscake" data-title="Monitoring"></div>
     </li>
   </ul>
 </div>
