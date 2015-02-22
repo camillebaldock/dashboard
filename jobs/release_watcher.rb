@@ -1,6 +1,6 @@
 require 'octokit'
 
-SCHEDULER.every "1m" do
+SCHEDULER.every "1d" do
   Octokit.auto_paginate = true
   client = Octokit::Client.new(:access_token => ENV["GITHUB_TOKEN"])
   file = client.contents(ENV["BOXEN_REPO"], :path => 'Puppetfile.lock')

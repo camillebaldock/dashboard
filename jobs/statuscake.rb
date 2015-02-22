@@ -4,7 +4,7 @@ require 'pp'
 username = ENV["STATUSCAKE_USERNAME"]
 key = ENV["STATUSCAKE_KEY"]
 
-SCHEDULER.every "#{ENV["UPDATE_FREQUENCY"]}" do
+SCHEDULER.every "1h" do
   items=[]
   is_down=0
   overall_status='ok'
