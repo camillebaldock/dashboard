@@ -14,6 +14,8 @@
     "UPDATE_FREQUENCY": "10m",
     "BOXEN_REPO": "camilleldn/boxen",
     "STATUSCAKE_USERNAME":"statuscake_username",
-    "STATUSCAKE_KEY":"statuscake_key"
+    "STATUSCAKE_KEY":"statuscake_key",
+    "GMAIL_USER":"you@gmail.com",
+    "GMAIL_PASSWORD":"gmail-password"
   }
 }
