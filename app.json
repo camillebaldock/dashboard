@@ -2,5 +2,11 @@
   "name": "Camille Baldock Life Dashboard",
   "description": "A dashing app with various monitoring widgets",
   "repository": "https://github.com/camilleldn/life-dashboard",
-  "keywords": ["dashing", "ruby"]
+  "keywords": ["dashing", "ruby"],
+  "env": {
+    "TRELLO_DEVELOPER_KEY": "trello_developer_key",
+    "TRELLO_MEMBER_TOKEN": "trello_member_token",
+    "TRELLO_BOARD_NAME" : "trello_board_id",
+    "TRELLO_LIST_NAMES": "name,othername"
+  },
 }
