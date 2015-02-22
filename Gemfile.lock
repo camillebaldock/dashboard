@@ -104,6 +104,8 @@ GEM
       rack-test
       sinatra (~> 1.4.0)
       tilt (~> 1.3)
+    sinatra_cyclist (0.0.3)
+      sinatra
     slop (3.6.0)
     sprockets (2.10.2)
       hike (~> 1.2)
@@ -132,3 +134,4 @@ DEPENDENCIES
   rspec
   ruby-gmail
   ruby-trello
+  sinatra_cyclist
