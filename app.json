@@ -8,6 +8,7 @@
     "TRELLO_MEMBER_TOKEN": "trello_member_token",
     "TRELLO_BOARD_NAME" : "trello_board_id",
     "TRELLO_LIST_NAMES": "name,othername",
+    "GITHUB_TOKEN": "github_oauth_token",
     "AUTH_TOKEN": "auth_token",
   },
 }

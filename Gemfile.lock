@@ -32,6 +32,8 @@ GEM
       thor (~> 0.18.1)
     eventmachine (1.0.4)
     execjs (2.0.2)
+    faraday (0.9.1)
+      multipart-post (>= 1.2, < 3)
     hike (1.2.3)
     i18n (0.7.0)
     json (1.8.2)
@@ -39,8 +41,11 @@ GEM
     mime-types (2.4.3)
     minitest (5.5.1)
     multi_json (1.10.1)
+    multipart-post (2.0.0)
     netrc (0.10.2)
     oauth (0.4.7)
+    octokit (3.8.0)
+      sawyer (~> 0.6.0, >= 0.5.3)
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -62,6 +67,9 @@ GEM
     rufus-scheduler (2.0.24)
       tzinfo (>= 0.3.22)
     sass (3.2.19)
+    sawyer (0.6.0)
+      addressable (~> 2.3.5)
+      faraday (~> 0.8, < 0.10)
     sinatra (1.4.5)
       rack (~> 1.4)
       rack-protection (~> 1.4)
@@ -94,5 +102,6 @@ PLATFORMS
 
 DEPENDENCIES
   dashing
+  octokit
   pry
   ruby-trello
