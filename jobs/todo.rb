@@ -1,4 +1,4 @@
-SCHEDULER.every "1d" do
+SCHEDULER.every "1h" do
   #Entertainment
   send_event('films', { current: 0 })
   send_event('tv', { current: 0 })
