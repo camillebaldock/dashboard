@@ -1,5 +1,6 @@
 require "sinatra/cyclist"
 require 'dashing'
+require 'redis-objects'
 
 redis_uri = URI.parse(ENV["REDISTOGO_URL"])
 Redis.current = Redis.new(:host => redis_uri.host,

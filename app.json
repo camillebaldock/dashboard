@@ -17,5 +17,8 @@
     "STATUSCAKE_KEY":"statuscake_key",
     "GMAIL_USER":"you@gmail.com",
     "GMAIL_PASSWORD":"gmail-password"
-  }
+  },
+  "addons": [
+    "redistogo:nano",
+  ]
 }
