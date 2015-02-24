@@ -65,6 +65,9 @@ GEM
     rack-test (0.6.3)
       rack (>= 1.0)
     rake (10.4.2)
+    redis (3.2.1)
+    redis-objects (1.1.0)
+      redis (>= 3.0.2)
     rest-client (1.7.3)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
@@ -136,6 +139,7 @@ DEPENDENCIES
   passenger
   pry
   rake
+  redis-objects
   rest-client
   rspec
   ruby-gmail
