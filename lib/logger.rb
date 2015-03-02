@@ -9,7 +9,7 @@ class Logger
   end
 
   def info(message)
-    p "**JOB INFO** #{@name}: message"
+    p "**JOB INFO** #{@name}: #{message}"
   end
 
   def exception(exception)
