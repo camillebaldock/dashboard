@@ -9,6 +9,7 @@
     "TRELLO_BOARD_NAME" : "trello_board_id",
     "TRELLO_LIST_NAMES": "name,othername",
     "GITHUB_TOKEN": "github_oauth_token",
+    "GITHUB_USER": "camilleldn",
     "AUTH_TOKEN": "auth_token",
     "GEMNASIUM_TOKEN": "gemnasium_token",
     "UPDATE_FREQUENCY": "10m",
