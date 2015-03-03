@@ -9,6 +9,4 @@ SCHEDULER.every "1h" do
   send_event('newsletter', { current: 42 })
   send_event('blog', { current: 42 })
   send_event('kindle', { current: 42 })
-  send_event('pulls', { current: 42 })
-  send_event('forks', { items: [{"label" => "TODO", "value" => "TODO"}] })
 end
