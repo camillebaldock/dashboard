@@ -1,6 +1,4 @@
 SCHEDULER.every "1h" do
-  send_event('films', { current: 42 })
-  send_event('tv', { current: 42 })
   send_event('podcasts', { current: 42 })
   send_event('videos', { current: 42 })
   send_event('pocket', { current: 42 })
