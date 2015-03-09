@@ -20,7 +20,8 @@
     "GMAIL_PASSWORD":"gmail-password",
     "RESCUETIME_KEY": "rescuetime_key",
     "GOODREADS_LIST_ID": "goodreads_list_id",
-    "GOODREADS_KEY": "goodreads_key"
+    "GOODREADS_KEY": "goodreads_key",
+    "FEEDLY_TOKEN": "feedly_token"
   },
   "addons": [
     "redistogo:nano",
