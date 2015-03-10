@@ -23,7 +23,9 @@
     "GOODREADS_KEY": "goodreads_key",
     "FEEDLY_TOKEN": "feedly_token",
     "AMAZON_EMAIL": "amazon_email",
-    "AMAZON_PASSWORD": "amazon_password"
+    "AMAZON_PASSWORD": "amazon_password",
+    "WUNDERLIST_CLIENT_TOKEN": "wunderlist_token",
+    "WUNDERLIST_CLIENT_ID": "wunderlist_id"
   },
   "addons": [
     "redistogo:nano",
