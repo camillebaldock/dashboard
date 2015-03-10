@@ -1,6 +1,6 @@
 require 'octokit'
 
-SCHEDULER.every "10h" do
+SCHEDULER.every "1h" do
   logger = Logger.new("releases")
   logger.start
   begin
