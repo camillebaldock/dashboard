@@ -13,18 +13,19 @@ SCHEDULER.every "30m" do
     end
     out_of_date_forks = []
     forks.each do |fork|
-      logger.info(fork)
-      parent = client.repository("#{ENV["GITHUB_USER"]}/#{fork.name}").parent
-      parent_commits = parent.rels[:commits].get.data
-      latest_parent_commit_date = parent_commits.first.commit.committer.date
-      latest_parent_commit_sha = parent_commits.first.sha
-      repo_commits = fork.rels[:commits].get.data
-      while repo_commits.last.commit.committer.date > latest_parent_commit_date do
-        repo_commits = client.last_response.rels[:next].get.data
-      end
-      repo_shas = repo_commits.map(&:sha)
-      unless repo_shas.index(latest_parent_commit_sha)
-        out_of_date_forks << fork.name
+      if fork.full_name.include?(ENV["GITHUB_USER"])
+        parent = client.repository("#{ENV["GITHUB_USER"]}/#{fork.name}").parent
+        parent_commits = parent.rels[:commits].get.data
+        latest_parent_commit_date = parent_commits.first.commit.committer.date
+        latest_parent_commit_sha = parent_commits.first.sha
+        repo_commits = fork.rels[:commits].get.data
+        while repo_commits.last.commit.committer.date > latest_parent_commit_date do
+          repo_commits = client.last_response.rels[:next].get.data
+        end
+        repo_shas = repo_commits.map(&:sha)
+        unless repo_shas.index(latest_parent_commit_sha)
+          out_of_date_forks << fork.name
+        end
       end
     end
     formatted_forks = {"items" => []}
