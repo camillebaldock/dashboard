@@ -38,6 +38,9 @@ GEM
     execjs (2.0.2)
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
+    faraday_middleware (0.9.1)
+      faraday (>= 0.7.4, < 0.10)
+    hashie (3.4.0)
     hike (1.2.3)
     http-cookie (1.0.2)
       domain_name (~> 0.5)
@@ -76,6 +79,11 @@ GEM
       rake (>= 0.8.1)
     plex-ruby (1.5.2)
       nokogiri
+    pocket-ruby (0.0.6)
+      faraday (>= 0.7)
+      faraday_middleware (~> 0.9)
+      hashie (>= 0.4.0)
+      multi_json (~> 1.0, >= 1.0.3)
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -163,6 +171,7 @@ DEPENDENCIES
   octokit
   passenger
   plex-ruby
+  pocket-ruby
   pry
   rake
   redis-objects
