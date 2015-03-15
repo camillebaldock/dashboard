@@ -16,6 +16,7 @@ SCHEDULER.every "1h" do
       unless package
         package = release_key.match(/.*\/(.*)/)
       end
+      logger.info(release_key)
       new_release = client.releases(release_key)
       unless new_release.empty?
         new_release_value = new_release.first.tag_name
