@@ -25,7 +25,9 @@
     "AMAZON_EMAIL": "amazon_email",
     "AMAZON_PASSWORD": "amazon_password",
     "WUNDERLIST_CLIENT_TOKEN": "wunderlist_token",
-    "WUNDERLIST_CLIENT_ID": "wunderlist_id"
+    "WUNDERLIST_CLIENT_ID": "wunderlist_id",
+    "POCKET_CONSUMER_KEY": "consumer_key",
+    "POCKET_ACCESS_TOKEN": "access_token"
   },
   "addons": [
     "redistogo:nano",
