@@ -4,7 +4,6 @@ require 'json'
 ######################### CONFIGURATION START #########################
 # RescueTime API Key from https://www.rescuetime.com/anapi/setup_submit
 rescuetime_api_key = ENV["RESCUETIME_KEY"]
-p rescuetime_api_key
 goals = {
   total_productive: 7*60, #minutes, equal or greater to
   total_unproductive: 3*60, #minutes, less than
