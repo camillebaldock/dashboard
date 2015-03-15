@@ -13,6 +13,7 @@ SCHEDULER.every "30m" do
     end
     out_of_date_forks = []
     forks.each do |fork|
+      logger.info(fork)
       parent = client.repository("#{ENV["GITHUB_USER"]}/#{fork.name}").parent
       parent_commits = parent.rels[:commits].get.data
       latest_parent_commit_date = parent_commits.first.commit.committer.date
