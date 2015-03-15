@@ -80,6 +80,7 @@ SCHEDULER.every "30m" do
     client = KindleClient.new(ENV["AMAZON_EMAIL"], ENV["AMAZON_PASSWORD"])
     send_event("kindle", { current: client.to_read })
     highlight = client.highlights.sample
+    logger.info(highlight)
     send_event("quotes", { quote: highlight[:text], more_info: highlight[:title] })
   rescue Exception => e
     logger.exception(e)
