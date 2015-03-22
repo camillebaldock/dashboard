@@ -35,7 +35,6 @@
             <outline type="rss" text="JazzWax" title="JazzWax" xmlUrl="http://www.JazzWax.com/rss.xml" htmlUrl="http://www.JazzWax.com/"/>
             <outline type="rss" text="Paul Krugman" title="Paul Krugman" xmlUrl="http://krugman.blogs.nytimes.com/feed/" htmlUrl="http://krugman.blogs.nytimes.com"/>
             <outline type="rss" text="xkcd.com" title="xkcd.com" xmlUrl="http://xkcd.com/rss.xml" htmlUrl="http://xkcd.com/"/>
-            <outline type="rss" text="Paul Graham: Essays" title="Paul Graham: Essays" xmlUrl="http://www.aaronsw.com/2002/feeds/pgessays.rss" htmlUrl="http://www.paulgraham.com/"/>
             <outline type="rss" text="Jon Udell" title="Jon Udell" xmlUrl="http://blog.jonudell.net/feed/" htmlUrl="http://blog.jonudell.net"/>
             <outline type="rss" text="Martin Fowler" title="Martin Fowler" xmlUrl="http://www.martinfowler.com/feed.atom" htmlUrl="http://martinfowler.com"/>
             <outline type="rss" text="You've Been Haacked" title="You've Been Haacked" xmlUrl="http://feeds.haacked.com/haacked" htmlUrl="http://haacked.com/"/>
