@@ -1,5 +1,4 @@
 require 'json'
-require 'pp'
 
 username = ENV["STATUSCAKE_USERNAME"]
 key = ENV["STATUSCAKE_KEY"]
