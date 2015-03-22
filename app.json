@@ -30,6 +30,6 @@
     "POCKET_ACCESS_TOKEN": "access_token"
   },
   "addons": [
-    "redistogo:nano",
+    "redistogo:nano"
   ]
 }
