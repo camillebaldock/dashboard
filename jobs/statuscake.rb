@@ -23,7 +23,11 @@ SCHEDULER.every "1h" do
         status='warning'
       end
     end
-    send_event('statuscake', { current: items.count, status: 'danger' })
+    if items.count > 0
+      send_event('statuscake', { current: items.count, status: 'danger' })
+    else
+      send_event('statuscake', { status: 'ok' })
+    end
   rescue Exception => e
     logger.exception(e)
   end
