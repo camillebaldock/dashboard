@@ -20,7 +20,7 @@ SCHEDULER.every "1h" do
         new_release = client.releases(release_key)
         unless new_release.empty?
           new_release_value = new_release.first.tag_name
-          if new_release_value != release_value
+          if new_release_value.gsub(".","").to_i > release_value.gsub(".","").to_i
             hash = {"label" => package[1], "value" => "#{release_value} > #{new_release_value}"}
           end
         end
