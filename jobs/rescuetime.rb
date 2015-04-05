@@ -5,10 +5,9 @@ require 'json'
 # RescueTime API Key from https://www.rescuetime.com/anapi/setup_submit
 rescuetime_api_key = ENV["RESCUETIME_KEY"]
 goals = {
-  total_productive: 7*60, #minutes, equal or greater to
-  total_unproductive: 3*60, #minutes, less than
+  total_productive: 6*60*7, #minutes, equal or greater to
+  total_unproductive: 2*60*7, #minutes, less than
 }
-hours_to_analyze = nil #set to nil if you don't want hour based filtering
 ######################### CONFIGURATION END ###########################
 
 
@@ -26,10 +25,11 @@ SCHEDULER.every '1m', :first_in => 0 do |job|
     http = Net::HTTP.new("www.rescuetime.com", 443)
     http.use_ssl = true
     http.verify_mode = OpenSSL::SSL::VERIFY_PEER
-
+    today = Date.today.to_s
+    seven_days_ago = Date.today - 7*24
     #gets the data for today broken by productivity (very distracting, distracting, neutral, etc)
     #see https://www.rescuetime.com/anapi/setup/documentation for other options
-    response = http.request(Net::HTTP::Get.new("/anapi/data?key=#{rescuetime_api_key}&format=json&perspective=interval&restrict_kind=productivity"))
+    response = http.request(Net::HTTP::Get.new("/anapi/data?key=#{rescuetime_api_key}&format=json&restrict_begin=#{seven_days_ago.to_s}&restrict_end=#{today}&perspective=interval&restrict_kind=productivity"))
     usage = JSON.parse(response.body)
 
     data = {
@@ -40,10 +40,8 @@ SCHEDULER.every '1m', :first_in => 0 do |job|
       very_unproductive: 0
     }
     usage["rows"].each do |row|
-      if hours_to_analyze
-        date = DateTime.parse row[0]
-        next unless hours_to_analyze.include? date.hour
-      end
+      date = DateTime.parse row[0]
+      next if date < seven_days_ago
 
       data[:very_productive] += row[1] if row[3]==2
       data[:productive] += row[1] if row[3]==1

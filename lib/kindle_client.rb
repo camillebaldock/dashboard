@@ -32,7 +32,7 @@ class KindleClient
         quotes << {:text => highlight["highlight"], :title => title}
       end
     end
-    quotes.sample
+    quotes
   end
 
   private
