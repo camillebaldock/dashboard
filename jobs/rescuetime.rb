@@ -31,11 +31,10 @@ SCHEDULER.every '1h', :first_in => 0 do |job|
       data[:unproductive] += row[1] if row[5]==-1
       data[:very_unproductive] += row[1] if row[5]==-2
     end
-    productive = data[:very_productive]+data[:productive]
-    unproductive = data[:neutral] + data[:unproductive] + data[:very_unproductive]
+    productive = (data[:very_productive]+data[:productive]).to_f
+    unproductive = (data[:neutral] + data[:unproductive] + data[:very_unproductive]).to_f
     percentage_prod = productive/(productive+unproductive) * 100
-
-    send_event("rescuetime", { current: "#{percentage_prod}%"})
+    send_event("rescuetime", { current: "#{percentage_prod.round}%"})
 
   rescue Exception => e
     logger.exception(e)
