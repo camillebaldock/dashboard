@@ -1,7 +1,7 @@
 require 'mechanize'
 require 'json'
 
-SCHEDULER.every "5m" do
+SCHEDULER.every "1h", :first_in => 0 do
   logger = Logger.new("kindle")
   logger.start
   begin
@@ -9,7 +9,7 @@ SCHEDULER.every "5m" do
     send_event("kindle", { current: client.to_read })
     highlights = client.highlight
     highlight = highlights.sample
-    send_event("quotes", { quote: highlight[:text], more_info: highlight[:title] })
+    send_event("quotes", { text: highlight[:text] } )
   rescue Exception => e
     logger.exception(e)
   end

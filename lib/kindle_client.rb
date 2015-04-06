@@ -72,8 +72,12 @@ class KindleClient
   end
 
   def highlights_for(asin)
-    highlights = @mechanize_agent.get("https://kindle.amazon.com/kcw/highlights?asin=#{asin}&cursor=0&count=1000")
-    json = JSON.parse(highlights.body)
-    json["items"]
+    begin
+      highlights = @mechanize_agent.get("https://kindle.amazon.com/kcw/highlights?asin=#{asin}&cursor=0&count=1000")
+      json = JSON.parse(highlights.body)
+      json["items"]
+    rescue Exception => e
+      []
+    end
   end
 end
