@@ -9,7 +9,7 @@ SCHEDULER.every "1h", :first_in => 0 do
     send_event("kindle", { current: client.to_read })
     highlights = client.highlight
     highlight = highlights.sample
-    send_event("quotes", { text: highlight[:text] } )
+    send_event("quotes", { text: highlight[:text], source: highlight[:title] } )
   rescue Exception => e
     logger.exception(e)
   end
