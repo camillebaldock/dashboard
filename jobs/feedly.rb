@@ -19,10 +19,6 @@ SCHEDULER.every "30m" do
       unread_count["id"].include?("category/Reading")
     end
     send_event('rss', { current: reading_count["count"] })
-    podcast_count = unread_counts.find do |unread_count|
-      unread_count["id"].include?("category/Podcasts")
-    end
-    send_event('podcasts', { current: podcast_count["count"] })
   rescue Exception => e
     logger.exception(e)
   end

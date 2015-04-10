@@ -13,6 +13,8 @@ GEM
     addressable (2.3.8)
     backports (3.6.4)
     builder (3.2.2)
+    childprocess (0.5.6)
+      ffi (~> 1.0, >= 1.0.11)
     coderay (1.1.0)
     coffee-script (2.2.0)
       coffee-script-source
@@ -39,6 +41,7 @@ GEM
       multipart-post (>= 1.2, < 3)
     faraday_middleware (0.9.1)
       faraday (>= 0.7.4, < 0.10)
+    ffi (1.9.8)
     hashie (3.4.1)
     hike (1.2.3)
     http-cookie (1.0.2)
@@ -121,12 +124,18 @@ GEM
       json
       oauth (~> 0.4.5)
       rest-client (~> 1.7.2)
+    rubyzip (1.1.7)
     rufus-scheduler (2.0.24)
       tzinfo (>= 0.3.22)
     sass (3.2.19)
     sawyer (0.6.0)
       addressable (~> 2.3.5)
       faraday (~> 0.8, < 0.10)
+    selenium-webdriver (2.45.0)
+      childprocess (~> 0.5)
+      multi_json (~> 1.0)
+      rubyzip (~> 1.0)
+      websocket (~> 1.0)
     shared-mime-info (0.2.5)
     sinatra (1.4.6)
       rack (~> 1.4)
@@ -157,7 +166,10 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.6)
+    watir-webdriver (0.7.0)
+      selenium-webdriver (>= 2.45)
     webrobots (0.1.1)
+    websocket (1.2.1)
 
 PLATFORMS
   ruby
@@ -177,3 +189,4 @@ DEPENDENCIES
   rspec
   ruby-gmail
   ruby-trello
+  watir-webdriver

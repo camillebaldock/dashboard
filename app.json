@@ -27,7 +27,9 @@
     "WUNDERLIST_CLIENT_TOKEN": "wunderlist_token",
     "WUNDERLIST_CLIENT_ID": "wunderlist_id",
     "POCKET_CONSUMER_KEY": "consumer_key",
-    "POCKET_ACCESS_TOKEN": "access_token"
+    "POCKET_ACCESS_TOKEN": "access_token",
+    "POCKET_CASTS_EMAIL": "pocketcasts_email",
+    "POCKET_CASTS_PASSWORD": "pocketcasts_password"
   },
   "addons": [
     "redistogo:nano"
