@@ -5,15 +5,6 @@
         <title>Camille subscriptions in feedly Cloud</title>
     </head>
     <body>
-        <outline text="Podcasts" title="Podcasts">
-            <outline type="rss" text="Freakonomics Radio" title="Freakonomics Radio" xmlUrl="http://feeds.feedburner.com/freakonomicsradio" htmlUrl="http://www.wnyc.org/articles/freakonomics-podcast/"/>
-            <outline type="rss" text="Serial" title="Serial" xmlUrl="http://feeds.serialpodcast.org/serialpodcast" htmlUrl="http://serialpodcast.org"/>
-            <outline type="rss" text="Developer Tea" title="Developer Tea" xmlUrl="http://podcast.developertea.com/37244.rss" htmlUrl="http://www.developertea.com"/>
-            <outline type="rss" text="This American Life" title="This American Life" xmlUrl="http://feeds.thisamericanlife.org/talpodcast" htmlUrl="http://www.thisamericanlife.org"/>
-            <outline type="rss" text="BBFC" title="BBFC" xmlUrl="http://feeds.feedburner.com/bbfc_podcast" htmlUrl="http://www.bbfc.co.uk"/>
-            <outline type="rss" text="Shift Run Stop" title="Shift Run Stop" xmlUrl="http://feeds.feedburner.com/shiftrunstop/" htmlUrl="http://shiftrunstop.co.uk"/>
-            <outline type="rss" text="Invisibilia" title="Invisibilia" xmlUrl="http://www.npr.org/rss/rss.php?id=64" htmlUrl="http://www.npr.org/templates/story/story.php?storyId=64"/>
-        </outline>
         <outline text="Reading" title="Reading">
             <outline type="rss" text="zen habits" title="zen habits" xmlUrl="http://zenhabits.net/feed/" htmlUrl="http://zenhabits.net"/>
             <outline type="rss" text="Simon Willison’s Weblog" title="Simon Willison’s Weblog" xmlUrl="http://blog.simonwillison.net/rss" htmlUrl="http://blog.simonwillison.net/"/>
@@ -27,6 +18,7 @@
             <outline type="rss" text="Digital Inspiration Technology Blog" title="Digital Inspiration Technology Blog" xmlUrl="http://feeds.labnol.org/labnol" htmlUrl="http://www.labnol.org"/>
             <outline type="rss" text="Anna Shipman" title="Anna Shipman" xmlUrl="http://www.annashipman.co.uk/atom.xml" htmlUrl="http://www.annashipman.co.uk/"/>
             <outline type="rss" text="John Battelle's Search Blog" title="John Battelle's Search Blog" xmlUrl="http://feeds.feedburner.com/JohnBattellesSearchblog" htmlUrl="http://battellemedia.com"/>
+            <outline type="rss" text="Paul Phalt" title="Paul Phalt" xmlUrl="http://phalt.co/rss/" htmlUrl="http://phalt.co/"/>
             <outline type="rss" text="Signal vs. Noise" title="Signal vs. Noise" xmlUrl="https://signalvnoise.com/posts.rss" htmlUrl="https://signalvnoise.com/posts"/>
             <outline type="rss" text="Joel on Software" title="Joel on Software" xmlUrl="http://www.joelonsoftware.com/rss.xml" htmlUrl="http://www.joelonsoftware.com"/>
             <outline type="rss" text="The Hacker Chick Blog" title="The Hacker Chick Blog" xmlUrl="http://www.hackerchick.com/feed" htmlUrl="http://www.hackerchick.com"/>
