@@ -29,7 +29,8 @@
     "POCKET_CONSUMER_KEY": "consumer_key",
     "POCKET_ACCESS_TOKEN": "access_token",
     "POCKET_CASTS_EMAIL": "pocketcasts_email",
-    "POCKET_CASTS_PASSWORD": "pocketcasts_password"
+    "POCKET_CASTS_PASSWORD": "pocketcasts_password",
+    "TRAVIS_REPOS": "comma,separated,list,of,your,repo,names"
   },
   "addons": [
     "redistogo:nano"
