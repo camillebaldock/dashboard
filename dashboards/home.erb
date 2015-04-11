@@ -1,302 +1,414 @@
 <% content_for :title do %>Camille's dashboard<% end %>
 
-<div id="header">
-  <div class="header-left">
-    <h1 style="font-size:40px;text-align:left;">Camille's dashboards</h1>
-    <p>I'm a software engineer based in London, UK.</p>
-    <p>I use <a href="http://dashing.io">Dashing</a> dashboards to monitor various aspects of my life and work.
-    </p>
-    <p>You can follow me on <a href="https://twitter.com/camille_">Twitter</a>, <a href="https://github.com/camilleldn">GitHub</a> or <a href="http://camillebaldock.com">check out my website</a>.
-    </p>
-    <p>Want your own dashboard? Check out of the code and deploy your own from <a href="https://github.com/camilleldn/dashboard">here</a>.</p>
-    <br/>
-    <h3>Links to the dashboards:</h3>
-    <a href="/1" class="myButton">Tasks</a>
-    <a href="/2" class="myButton">Entertainment</a>
-    <a href="/3" class="myButton">Tech stuff</a>
-    <a href="/4" class="myButton">Productivity, quotes and cuteness</a>
+<div class="row">
+  <div class="col-sm-8 clearfix">
+    <div class="intro">
+      <h1>Camille's dashboards</h1>
+      <p>I'm Camille Baldock, a software engineer based in London, UK.</p>
+      <p>I use <a href="http://dashing.io">Dashing</a> dashboards to monitor various aspects of my life and work.</p>
+      <p>You can follow me on <a href="https://twitter.com/camille_">Twitter</a>, <a href="https://github.com/camilleldn">GitHub</a> or <a href="http://camillebaldock.com">check out my website</a>.</p>
+      <p>Want your own dashboard? Fork the repository or deploy your own from <a href="https://github.com/camilleldn/dashboard">here</a>.</p>
+    </div>
   </div>
-  <div class="header-right">
-    <img src="/assets/allthethings.jpg"></img>
+  <div class="col-sm-4 clearfix">
+    <figure class="intro-img">
+      <img src="/assets/allthethings.jpg"></img>
+    </figure>
   </div>
 </div>
-<div style="background:#4c4c4c; height: 5px;"></div>
-<div class="accordion accordion-left">
-    <h1>❤ Tasks and productivity</h1>
-    <div class="accordion-section">
-        <a class="accordion-section-title" href="#accordion-1">Email</a>
-        <div id="accordion-1" class="accordion-section-content">
-            <b>What?</b>
-            <p>The 'email' widget monitors how many emails are currently in my inbox.</p>
+
+<div class="row">
+  <div class="col-sm-3">
+    <div class="dashboard">
+      <a class="dashboard-link" href="/tasks">
+        <div class="dashboard-button">
+          <h3 class="dashboard-title" style="font-size:20px">Tasks</h3>
+          <h3 class="dashboard-subtitle">dashboard</h3>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="dashboard">
+      <a class="dashboard-link" href="/entertainment">
+        <div class="dashboard-button">
+          <h3 class="dashboard-title" style="font-size:20px">Entertainment</h3>
+          <h3 class="dashboard-subtitle">dashboard</h3>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="dashboard">
+      <a class="dashboard-link" href="/tech">
+        <div class="dashboard-button">
+          <h3 class="dashboard-title" style="font-size:20px">Tech</h3>
+          <h3 class="dashboard-subtitle">dashboard</h3>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="dashboard">
+      <a class="dashboard-link" href="/other">
+        <div class="dashboard-button">
+          <h3 class="dashboard-title" style="font-size:20px">Other</h3>
+          <h3 class="dashboard-subtitle">dashboard</h3>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+    <!--Email-->
+    <div class="col-sm-4">
+      <div class="measurement">
+        <div class="measurement-header">
+          <h3 class="measurement-title"><a href="/tasks">Email</a></h3>
+        </div>
+        <div class="description">
+            <p class="category">Tasks</a>
+            <p class="goal">Zero</p>
+            <p>The email widget monitors how many emails are currently in my inbox.</p>
             <p>I manage regular subscriptions with <a href="http://unroll.me">Unroll.me</a> so I only get one email per day for subscription emails.</p>
-            <br/>
-            <b>Goal</b>
-            <p>I strive to get to zero-inbox every day.</p>
-            <br/>
-            <a class="github-button" href="https://gist.github.com/camilleldn/10709a0ec6b25323f1cb" data-style="mega">Code for widget</a>
-            <a class="github-button" href="/1" data-icon="octicon-eye" data-style="mega">See how I'm doing today</a>
-        </div><!--end .accordion-section-content-->
-
-        <a class="accordion-section-title" href="#accordion-2">Wunderlist</a>
-        <div id="accordion-2" class="accordion-section-content">
-          <b>What?</b>
-          <p>The 'Wunderlist' widget monitors how many tasks are due on that day.</p>
-          <p>I use Wunderlist to track small tasks only (eg 'going to the post office').</p>
-          <br/>
-          <b>Goal</b>
-          <p>I strive to get to zero-inbox for my tasklist every day.</p>
-          <br/>
-          <a class="github-button" href="https://gist.github.com/camilleldn/1092f66251ad1461b473" data-style="mega">Code for widget</a>
-          <a class="github-button" href="/1" data-icon="octicon-eye" data-style="mega">See how I'm doing today</a>
+            <p class="code"><a href="https://gist.github.com/camilleldn/10709a0ec6b25323f1cb">Code for widget</a></p>
         </div>
-
-        <a class="accordion-section-title" href="#accordion-3">Trello</a>
-        <div id="accordion-3" class="accordion-section-content">
-          <b>What?</b>
-          <p>I use a Trello board with four sections for longer term projects that I am working on. These dashboards used to be one of those entries!</p>
-          <p>I track ongoing projects in the "Ongoing" section.</p>
-          <p>I have three "Icebox" sections for projects I'd like to start in the future: drawing projects, writing projects and any others.</p>
-          <br/>
-          <b>Goal</b>
-          <p>I aim to keep the "Ongoing" section at a maximum of three. I definitely don't aim to ever have an empty icebox: this would mean I have literally run out of ideas of things I'd like to do...</p>
-          <br/>
-          <a class="github-button" href="https://gist.github.com/camilleldn/cda910d857f4c6225f75" data-style="mega">Code for widget</a>
-          <a class="github-button" href="/1" data-icon="octicon-eye" data-style="mega">See how I'm doing today</a>
-        </div>
-
-        <a class="accordion-section-title" href="#accordion-18">Rescuetime</a>
-        <div id="accordion-18" class="accordion-section-content">
-          <b>What?</b>
-          <p>I use <a href="http://rescuetime.com">Rescuetime</a> to track how I spend my time on my computer.</p>
-          <p>I class software development and design work as productive work, any time on social networks as very unproductive. </p>
-          <br/>
-          <b>Goal</b>
-          <p>I am attempting to have at least 42 hours of productive time per week and at most 14 hours of unproductive time per week. I use it mainly to have historical data on how I tend to spend my time and gain insight on when I am most productive. </p>
-          <br/>
-          <a class="github-button" href="https://gist.github.com/gregschwartz/25b9f0d5260498e0d69a" data-style="mega">Code for widget</a>
-          <a class="github-button" href="/4" data-icon="octicon-eye" data-style="mega">See how I'm doing today</a>
-        </div>
-
-        <a class="accordion-section-title" href="#accordion-4">Last newsletter and blog post</a>
-        <div id="accordion-4" class="accordion-section-content">
-          <b>What?</b>
-          <p>I write the occasional technical blog post on <a href="http://camillebaldock.com">my website</a>.</p>
-          <p>I keep in touch with a few of my close friends by writing a monthly-ish newsletter, featuring bad puns and terrible doodles.</p>
-          <br/>
-          <b>Goal</b>
-          <p>If I haven't written a blog post in a couple of months, I'm probably too embarassed to publish anything I've written.</p>
-          <p>If haven't sent a newsletter in more than a month I'm being a pretty terrible friend.</p>
-          <p>I aim to not be a completely terrible friend and am working on managing my levels of writing-related shame.</p>
-          <br/>
-          <a class="github-button" href="https://gist.github.com/hannesfostie/5420959" data-style="mega">Code for widget</a>
-          <a class="github-button" href="/1" data-icon="octicon-eye" data-style="mega">See how I'm doing today</a>
-        </div>
-    </div>
-
-    <h1>❤ Reading and entertainment</h1>
-    <div class="accordion-section">
-        <a class="accordion-section-title" href="#accordion-5">RSS</a>
-        <div id="accordion-5" class="accordion-section-content">
-          <b>What?</b>
-          <p>I use <a href="http://feedly.com">Feedly</a> to collect posts from a number of blogs posts, mostly technical ones that I find interesting.</p>
-          <p>If you would like to see more details about what I read, you can <a href="feedly.opml">view the OPML file for my Feedly content</a>.</p>
-          <br/>
-          <b>Goal</b>
-          <p>Inbox zero!</p>
-          <br/>
-          <a class="github-button" href="https://gist.github.com/camilleldn/e7756c5067bc11323aee" data-style="mega">Code for widget</a>
-          <a class="github-button" href="/2" data-icon="octicon-eye" data-style="mega">See how I'm doing today</a>
-        </div>
-
-        <a class="accordion-section-title" href="#accordion-6">Pocket</a>
-        <div id="accordion-6" class="accordion-section-content">
-          <b>What?</b>
-          <p>I use <a href="http://getpocket.com">Pocket</a> to save links that are sent to me or I see on social media, so I can save them to read later. </p>
-          <br/>
-          <b>Goal</b>
-          <p>Inbox zero!</p>
-          <br/>
-          <a class="github-button" href="https://gist.github.com/camilleldn/faff5cd21dee6a64867a" data-style="mega">Code for widget</a>
-          <a class="github-button" href="/2" data-icon="octicon-eye" data-style="mega">See how I'm doing today</a>
-        </div>
-
-        <a class="accordion-section-title" href="#accordion-7">Books</a>
-        <div id="accordion-7" class="accordion-section-content">
-          <b>What?</b>
-          <p>I occasionally still buy or get given books in "dead-tree" format. I track those through
-          <a href="https://www.goodreads.com/">GoodReads</a> on a "to-read" list.</p>
-          <br/>
-          <b>Goal</b>
-          <p>Should never increase.<p>
-          <p>I treat my books like a queue: first-in, last out.</p>
-          <br/>
-          <a class="github-button" href="https://gist.github.com/camilleldn/4f873e77cc625ba3632b" data-style="mega">Code for widget</a>
-          <a class="github-button" href="/2" data-icon="octicon-eye" data-style="mega">See how I'm doing today</a>
-        </div>
-
-        <a class="accordion-section-title" href="#accordion-8">Kindle books</a>
-        <div id="accordion-8" class="accordion-section-content">
-          <b>What?</b>
-          <p>I use Kindle to read e-books on my phone and tablet.</p>
-          <br/>
-          <b>Goal</b>
-          <p>Should never increase.<p>
-          <p>I treat my books like a queue: first-in, last out.</p>
-          <br/>
-          <a class="github-button" href="https://gist.github.com/camilleldn/3eb233168e62fab96de2" data-style="mega">Code for widget</a>
-          <a class="github-button" href="/2" data-icon="octicon-eye" data-style="mega">See how I'm doing today</a>
-        </div>
-
-        <a class="accordion-section-title" href="#accordion-9">Films, TV shows and videos</a>
-        <div id="accordion-9" class="accordion-section-content">
-          <b>What?</b>
-          <p>I have a home-brewed Plex-like media server setup at home that can talk to my Amazon Prime, Netflix accounts and personal files.</p>
-          <p>It notifies me of new releases on TV shows that I follow and gives me the ability to mark TV shows and films as things I'd like to watch.</p>
-          <p>My home videos are mostly technical training videos like the excellent <a href="http://www.rubytapas.com">Ruby Tapas</a>.</p>
-          <br/>
-          <b>Goal</b>
-          <p>Inbox zero for home videos.</p>
-          <p>Inbox zero for all the TV shows that Twitter spoilers are going to ruin if I don't watch them quickly enough.</p>
-          <br/>
-          <a class="github-button" href="https://gist.github.com/camilleldn/b3df4f58efe938d05912" data-style="mega">Code for widget</a>
-          <a class="github-button" href="/2" data-icon="octicon-eye" data-style="mega">See how I'm doing today</a>
-        </div>
-
-        <a class="accordion-section-title" href="#accordion-10">Podcasts</a>
-        <div id="accordion-10" class="accordion-section-content">
-          <b>What?</b>
-          <p>I spend my commute-time and some of my evening time listening to podcasts.</p>
-          <p>If you would like to see more details about what I listen to, you can <a href="feedly.opml">view the OPML file for my Feedly content</a>.</p>
-          <br/>
-          <b>Goal</b>
-          <p>Inbox zero!</p>
-          <br/>
-          <a class="github-button" href="https://gist.github.com/camilleldn/e7756c5067bc11323aee" data-style="mega">Code for widget</a>
-          <a class="github-button" href="/2" data-icon="octicon-eye" data-style="mega">See how I'm doing today</a>
-        </div>
-    </div>
-</div><!--end .accordion-->
-
-<div class="accordion accordion-right">
-    <h1>❤ Tech stuff</h1>
-    <div class="accordion-section">
-      <a class="accordion-section-title" href="#accordion-20">Last laptop rebuild</a>
-      <div id="accordion-20" class="accordion-section-content">
-        <b>What?</b>
-        <p>I rebuild my laptop from scratch regularly. I find it useful to have a way of quickly resetting my machine between clients, in a fully automated way. This setup also serves security and disaster recovery purposes.</p>
-        <br/>
-        <b>Goal</b>
-        <p>Every month.</p>
-        <br/>
-        <a class="github-button" href="https://gist.github.com/hannesfostie/5420959" data-style="mega">Code for widget</a>
-        <a class="github-button" href="/3" data-icon="octicon-eye" data-style="mega">See how I'm doing today</a>
-      </div>
-
-      <a class="accordion-section-title" href="#accordion-11">Boxen releases</a>
-      <div id="accordion-11" class="accordion-section-content">
-        <b>What?</b>
-        <p>I use <a href="https://boxen.camillebaldock.com/">Boxen</a> to automate my development environment. This widget lists every Puppet module
-        that I use in my Boxen that has a new released version.</p>
-        <p></p>
-        <br/>
-        <b>Goal</b>
-        <p>I rebuild my laptop from scratch every month. I aim to have this list completely empty at least every time I rebuild my laptop.</p>
-        <p>If there are any security issues with any of my current Boxen versions, I will be upgrade as soon as the new version is available.</p>
-        <br/>
-        <a class="github-button" href="https://gist.github.com/camilleldn/03e617de7bde53f179a2" data-style="mega">Code for widget</a>
-        <a class="github-button" href="/3" data-icon="octicon-eye" data-style="mega">See how I'm doing today</a>
-      </div>
-
-      <a class="accordion-section-title" href="#accordion-12">Forks to update</a>
-      <div id="accordion-12" class="accordion-section-content">
-        <b>What?</b>
-        <p>I have a few forks of GitHub repos under my personal username. I use this widget to know if any of my forks' parents have been updated
-        so I can get those changes in my fork. </p>
-        <br/>
-        <b>Goal</b>
-        <p>I aim to have this list completely empty.</p>
-        <br/>
-        <a class="github-button" href="https://gist.github.com/camilleldn/1d4eedb3d6564b423bdd" data-style="mega">Code for widget</a>
-        <a class="github-button" href="/3" data-icon="octicon-eye" data-style="mega">See how I'm doing today</a>
-      </div>
-
-      <a class="accordion-section-title" href="#accordion-13">GitHub issues</a>
-      <div id="accordion-13" class="accordion-section-content">
-        <b>What?</b>
-        <p>If you're a GitHub user, you might compulsively check your <a href="https://github.com/issues">issues dashboard</a> like me.
-           This widget tracks all issues that I have created or been assigned to. </p>
-        <br/>
-        <b>Goal</b>
-        <p>Should never increase.</p>
-        <br/>
-        <a class="github-button" href="https://gist.github.com/camilleldn/2aacd5153a15c7def1a3" data-style="mega">Code for widget</a>
-        <a class="github-button" href="/3" data-icon="octicon-eye" data-style="mega">See how I'm doing today</a>
-      </div>
-
-      <a class="accordion-section-title" href="#accordion-14">GitHub pull requests</a>
-      <div id="accordion-14" class="accordion-section-content">
-        <b>What?</b>
-        <p>If you're a GitHub user, you might compulsively check your <a href="https://github.com/pulls">pull request dashboard</a> like me.
-           This widget tracks all pull requests currently open on my personal repositories.</p>
-        <br/>
-        <b>Goal</b>
-        <p>I aim to have inbox-zero on my pull requests in the middle and at the end of each working day.</p>
-        <br/>
-        <a class="github-button" href="https://gist.github.com/camilleldn/b73b963bf51956b459d5" data-style="mega">Code for widget</a>
-        <a class="github-button" href="/3" data-icon="octicon-eye" data-style="mega">See how I'm doing today</a>
-      </div>
-
-      <a class="accordion-section-title" href="#accordion-15">Monitoring</a>
-      <div id="accordion-15" class="accordion-section-content">
-        <b>What?</b>
-        <p>I use <a href="https://www.statuscake.com/">StatusCake</a> to monitor uptime on several of my personal and work applications.</p>
-        <br/>
-        <b>Goal</b>
-        <p>This should be green <b>all the time</b>!</p>
-        <br/>
-        <a class="github-button" href="https://gist.github.com/camilleldn/ba2e46052dc8da7b9624" data-style="mega">Code for widget</a>
-        <a class="github-button" href="/3" data-icon="octicon-eye" data-style="mega">See how I'm doing today</a>
-      </div>
-
-      <a class="accordion-section-title" href="#accordion-16">Gemnasium</a>
-      <div id="accordion-16" class="accordion-section-content">
-        <b>What?</b>
-        <p>A large number of personal projects and applications I work on are Ruby projects. This widget uses the <a href="http://gemnasium.com">Gemnasium</a> service to track Ruby gem updates.</p>
-        <p>If any gems have an update available, this widget will turn orange. If any of those updates are urgent, this widget will turn red.</p>
-        <br/>
-        <b>Goal</b>
-        <p>I aim to have this widget red for as short a time as possible. I will run through updates to make this widget green on a monthly basis. </p>
-        <br/>
-        <a class="github-button" href="https://gist.github.com/camilleldn/f8a5d9487a6ecb019b88" data-style="mega">Code for widget</a>
-        <a class="github-button" href="/3" data-icon="octicon-eye" data-style="mega">See how I'm doing today</a>
       </div>
     </div>
 
-    <h1>❤ Other</h1>
-    <div class="accordion-section">
-        <a class="accordion-section-title" href="#accordion-17">Quotes</a>
-        <div id="accordion-17" class="accordion-section-content">
-          <b>What?</b>
-          <p></p>
-          <br/>
-          <b>Goal</b>
-          <p></p>
-          <br/>
-          <a class="github-button" href="https://gist.github.com/camilleldn/d174530a7cf7cc50ed03" data-style="mega">Code for widget</a>
-          <a class="github-button" href="/4" data-icon="octicon-eye" data-style="mega">See how I'm doing today</a>
+    <!--TODOs-->
+    <div class="col-sm-4">
+      <div class="measurement">
+        <div class="measurement-header">
+          <h3 class="measurement-title"><a href="/tasks">TODOs</a></h3>
         </div>
-
-        <a class="accordion-section-title" href="#accordion-19">Randomawww</a>
-        <div id="accordion-19" class="accordion-section-content">
-          <b>What?</b>
-          <p>Random picture from Reddit's "aww" feed.</p>
-          <br/>
-          <b>Goal</b>
-          <p>Make me say "AAAAAWWWW" every time I see one of the pictures.</p>
-          <br/>
-          <a class="github-button" href="https://gist.github.com/chelsea/5641535" data-style="mega">Code for widget</a>
-          <a class="github-button" href="/4" data-icon="octicon-eye" data-style="mega">See how I'm doing today</a>
+        <div class="description">
+            <p class="category">Tasks</a>
+            <p class="goal">Zero</p>
+            <p>The TODOs widget monitors how many tasks are due on that day.</p>
+            <p>I use <a href="https://wunderlist.com">Wunderlist</a> to track small tasks only (eg 'going to the post office').</p>
+            <p class="code"><a href="https://gist.github.com/camilleldn/1092f66251ad1461b473">Code for widget</a></p>
         </div>
+      </div>
+    </div>
 
-    </div><!--end .accordion-section-->
-</div><!--end .accordion-->
+    <!--Trello-->
+    <div class="col-sm-4">
+      <div class="measurement">
+        <div class="measurement-header">
+          <h3 class="measurement-title"><a href="/tasks">Trello</a></h3>
+        </div>
+        <div class="description">
+            <p class="category">Tasks</a>
+            <p class="goal">Maximum three "Ongoing" tasks</p>
+            <p>I use a Trello board with four sections for longer term projects that I am working on. </p>
+            <p>I track ongoing projects in the "Ongoing" section.</p>
+            <p>I have three "Icebox" sections for projects I'd like to start in the future: drawing projects, writing projects and any others.</p>
+            <p class="code"><a href="https://gist.github.com/camilleldn/cda910d857f4c6225f75">Code for widget</a></p>
+        </div>
+      </div>
+    </div>
+
+</div>
+<div class="row">
+    <!--Newsletter and blog-->
+    <div class="col-sm-4">
+      <div class="measurement">
+        <div class="measurement-header">
+          <h3 class="measurement-title"><a href="/tasks">Newsletter and blog</a></h3>
+        </div>
+        <div class="description">
+            <p class="category">Tasks</a>
+            <p class="goal">Every month</p>
+            <p>I write the occasional technical blog post on <a href="http://camillebaldock.com">my website</a>.</p>
+            <p>I keep in touch with a few of my close friends by writing a monthly-ish newsletter, featuring bad puns and terrible doodles.</p>
+            <p class="code"><a href="https://gist.github.com/hannesfostie/5420959">Code for widget</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!--RSS-->
+    <div class="col-sm-4">
+      <div class="measurement">
+        <div class="measurement-header">
+          <h3 class="measurement-title"><a href="/entertainment">RSS</a></h3>
+        </div>
+        <div class="description">
+            <p class="category">Entertainment</p>
+            <p class="goal">Zero</p>
+            <p>I use <a href="http://feedly.com">Feedly</a> to collect posts from a number of blogs posts, mostly technical ones that I find interesting.</p>
+            <p>If you would like to see more details about what I read, you can <a href="feedly.opml">view the OPML file for my Feedly content</a>.</p>
+            <p class="code"><a href="https://gist.github.com/camilleldn/e7756c5067bc11323aee">Code for widget</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!--Pocket-->
+    <div class="col-sm-4">
+      <div class="measurement">
+        <div class="measurement-header">
+          <h3 class="measurement-title"><a href="/entertainment">Pocket</a></h3>
+        </div>
+        <div class="description">
+            <p class="category">Entertainment</p>
+            <p class="goal">Zero</p>
+            <p>I use <a href="http://getpocket.com">Pocket</a> to save links that are sent to me or I see on social media, so I can save them to read later. </p>
+            <p class="code"><a href="https://gist.github.com/camilleldn/faff5cd21dee6a64867a">Code for widget</a></p>
+        </div>
+      </div>
+    </div>
+
+</div>
+<div class="row">
+    <!--Books-->
+    <div class="col-sm-4">
+      <div class="measurement">
+        <div class="measurement-header">
+          <h3 class="measurement-title"><a href="/entertainment">Books</a></h3>
+        </div>
+        <div class="description">
+            <p class="category">Entertainment</p>
+            <p class="info">I treat my reading list like a queue: first in, last out.</p>
+            <p class="goal">Should ever increase</p>
+            <p>I occasionally still buy or get given books in "dead-tree" format. I track those through
+            <a href="https://www.goodreads.com/">GoodReads</a> on a "to-read" list.</p>
+            <p class="code"><a href="https://gist.github.com/camilleldn/4f873e77cc625ba3632b">Code for widget</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!--Kindle-->
+    <div class="col-sm-4">
+      <div class="measurement">
+        <div class="measurement-header">
+          <h3 class="measurement-title"><a href="/entertainment">Kindle books</a></h3>
+        </div>
+        <div class="description">
+            <p class="category">Entertainment</p>
+            <p class="info">I treat my reading list like a queue: first in, last out.</p>
+            <p class="goal">Should never increase</p>
+            <p>I use Kindle to read e-books on my phone and tablet.</p>
+            <p class="code"><a href="https://gist.github.com/camilleldn/3eb233168e62fab96de2">Code for widget</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!--Podcasts-->
+    <div class="col-sm-4">
+      <div class="measurement">
+        <div class="measurement-header">
+          <h3 class="measurement-title"><a href="/entertainment">Podcasts</a></h3>
+        </div>
+        <div class="description">
+            <p class="category">Entertainment</p>
+            <p class="goal">Zero</p>
+            <p>I use <a href="https://play.pocketcasts.com/web">PocketCasts</a> to manage my podcasts.</p>
+            <p>I listen to: <a href="http://99percentinvisible.org/">99% Invisible</a>, <a href="http://www.bbfc.co.uk/case-studies/podcasts">BBFC</a>,
+              <a href="https://developertea.com/">Developer Tea</a>, <a href="http://freakonomics.com/">Freakonomics</a>,
+              <a href="http://www.bbc.co.uk/podcasts/series/fricomedy">Friday Night Comedy (BBC4)</a>, <a href="http://www.npr.org/programs/invisibilia/">Invisibilia</a>,
+              <a href="http://shiftrunstop.co.uk/">Shift Run Stop</a>, <a href="http://songexploder.net/">Song Exploder</a>,
+              <a href="http://www.stuffyoushouldknow.com/podcasts/">Stuff You Should Know</a>,
+              <a href="http://www.thisamericanlife.org/">This American Life</a> and <a href="http://www.onthemedia.org/tags/tldr_podcast/">TLDR</a>.
+            </p>
+            <p class="code"><a href="https://gist.github.com/camilleldn/40db50ad9bef72c7c304">Code for widget</a></p>
+        </div>
+      </div>
+    </div><!--end .accordion-->
+  </div>
+  <div class="row">
+    <!--Films-->
+    <div class="col-sm-4">
+      <div class="measurement">
+        <div class="measurement-header">
+          <h3 class="measurement-title"><a href="/entertainment">Films, TV, videos</a></h3>
+        </div>
+        <div class="description">
+            <p class="category">Entertainment</p>
+            <p class="goal">Zero home videos</p>
+            <p>I have a home-brewed Plex-like media server setup at home that can talk to my Amazon Prime, Netflix accounts and personal files. I have the ability to add content to my list of things to watch.</p>
+            <p>My home videos are mostly technical training videos like the excellent <a href="http://www.rubytapas.com">Ruby Tapas</a>.</p>
+            <p class="code"><a href="https://gist.github.com/camilleldn/b3df4f58efe938d05912">Code for widget</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!--Gemnasium-->
+    <div class="col-sm-4">
+      <div class="measurement">
+        <div class="measurement-header">
+          <h3 class="measurement-title"><a href="/tech">Gemnasium</a></h3>
+        </div>
+        <div class="description">
+            <p class="category">Tech</a>
+            <p class="goal">Never red</p>
+            <p>A large number of personal projects and applications I work on are Ruby projects. This widget uses the <a href="http://gemnasium.com">Gemnasium</a> service to track Ruby gem updates.</p>
+            <p>If any gems have an update available, this widget will turn orange. If any of those updates are urgent, this widget will turn red.</p>
+            <p class="code"><a href="https://gist.github.com/camilleldn/f8a5d9487a6ecb019b88">Code for widget</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!--Boxen releases-->
+    <div class="col-sm-4">
+      <div class="measurement">
+        <div class="measurement-header">
+          <h3 class="measurement-title"><a href="/tech">Boxen releases</a></h3>
+        </div>
+        <div class="description">
+            <p class="category">Tech</p>
+            <p class="goal">Emptied monthly</p>
+            <p>I use <a href="https://boxen.camillebaldock.com/">Boxen</a> to
+               automate my development environment. This widget lists every Puppet
+               module that I use in my Boxen that has a new released version.</p>
+            <p class="code"><a href="https://gist.github.com/camilleldn/03e617de7bde53f179a2">Code for widget</a></p>
+        </div>
+      </div>
+    </div><!--end .accordion-->
+  </div>
+  <div class="row">
+    <!--Forks to update-->
+    <div class="col-sm-4">
+      <div class="measurement">
+        <div class="measurement-header">
+          <h3 class="measurement-title"><a href="/tech">Forks to update</a></h3>
+        </div>
+        <div class="description">
+            <p class="category">Tech</p>
+            <p class="goal">Zero</p>
+            <p>I have a few forks of GitHub repos under my personal username. I use this widget to know if any of my forks' parents have been updated
+            so I can get those changes in my fork. </p>
+            <p class="code"><a href="https://gist.github.com/camilleldn/1d4eedb3d6564b423bdd">Code for widget</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!--GitHub issues-->
+    <div class="col-sm-4">
+      <div class="measurement">
+        <div class="measurement-header">
+          <h3 class="measurement-title"><a href="/tech">GitHub issues</a></h3>
+        </div>
+        <div class="description">
+            <p class="category">Tech</p>
+            <p class="goal">Should never increase</p>
+            <p>If you're a GitHub user, you might compulsively check your
+              <a href="https://github.com/issues">issues dashboard</a> like me.
+               This widget tracks all issues that I have created or been assigned to. </p>
+            <p class="code"><a href="https://gist.github.com/camilleldn/2aacd5153a15c7def1a3">Code for widget</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!--GitHub pull requests-->
+    <div class="col-sm-4">
+      <div class="measurement">
+        <div class="measurement-header">
+          <h3 class="measurement-title"><a href="/tech">GitHub pull requests</a></h3>
+        </div>
+        <div class="description">
+            <p class="category">Tech</p>
+            <p class="goal">Zero</p>
+            <p>If you're a GitHub user, you might compulsively check your <a href="https://github.com/pulls">pull request dashboard</a> like me.
+              This widget tracks all pull requests currently open on my personal repositories.</p>
+            <p class="code"><a href="https://gist.github.com/camilleldn/b73b963bf51956b459d5">Code for widget</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <!--Travis-->
+    <div class="col-sm-4">
+      <div class="measurement">
+        <div class="measurement-header">
+          <h3 class="measurement-title"><a href="/tech">Travis</a></h3>
+        </div>
+        <div class="description">
+            <p class="category">Tech</a>
+            <p class="goal">Always green</p>
+            <p>I use Travis builds to monitor all my software builds, including the accessibility of my webpages.</p>
+            <p>The widget turns red if one of my builds has failed.</p>
+            <p class="code"><a href="https://gist.github.com/camilleldn/e83b1859d385b05f214e">Code for widget</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!--Monitoring-->
+    <div class="col-sm-4">
+      <div class="measurement">
+        <div class="measurement-header">
+          <h3 class="measurement-title"><a href="/tech">Monitoring</a></h3>
+        </div>
+        <div class="description">
+            <p class="category">Tech</p>
+            <p class="goal">Green at all times</p>
+            <p>I use <a href="https://www.statuscake.com/">StatusCake</a> to monitor uptime on several of my personal and work applications.</p>
+            <p class="code"><a href="https://gist.github.com/camilleldn/ba2e46052dc8da7b9624">Code for widget</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!--Rescuetime-->
+    <div class="col-sm-4">
+      <div class="measurement">
+        <div class="measurement-header">
+          <h3 class="measurement-title"><a href="/4">Rescuetime</a></h3>
+        </div>
+        <div class="description">
+            <p class="category">Other</a>
+            <p class="goal">60% or above</p>
+            <p>I use <a href="http://rescuetime.com">Rescuetime</a> to track how I spend my time on my computer.</p>
+            <p>I class software development and design work as productive work, any time on social networks as very unproductive. </p>
+            <p class="code"><a href="https://gist.github.com/camilleldn/97736ba8fd33c0aba69a">Code for widget</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <!--Laptop rebuild-->
+    <div class="col-sm-4">
+      <div class="measurement">
+        <div class="measurement-header">
+          <h3 class="measurement-title"><a href="/other">Laptop rebuild</a></h3>
+        </div>
+        <div class="description">
+            <p class="category">Other</p>
+            <p class="goal">Every month</p>
+            <p>I rebuild my laptop from scratch regularly. I find it useful to have a way of quickly resetting my machine between clients, in a fully automated way.</p>
+            <p>This setup also serves security and disaster recovery purposes.</p>
+            <p class="code"><a href="https://gist.github.com/hannesfostie/5420959">Code for widget</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!--Quotes-->
+    <div class="col-sm-4">
+      <div class="measurement">
+        <div class="measurement-header">
+          <h3 class="measurement-title"><a href="/other">Quotes</a></h3>
+        </div>
+        <div class="description">
+            <p class="category">Other</a>
+            <p class="goal">Just for fun</p>
+            <p>Random personal highlights from a selection of my Kindle ebooks.</p>
+            <p class="code"><a href="https://gist.github.com/camilleldn/d174530a7cf7cc50ed03">Code for widget</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!--Randomawww-->
+    <div class="col-sm-4">
+      <div class="measurement">
+        <div class="measurement-header">
+          <h3 class="measurement-title"><a href="/other">Randomawww</a></h3>
+        </div>
+        <div class="description">
+            <p class="category">Other</a>
+            <p class="goal">Just for fun</p>
+            <p>Random picture from Reddit's "aww" feed</p>
+            <p class="code"><a href="https://gist.github.com/chelsea/5641535">Code for widget</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
