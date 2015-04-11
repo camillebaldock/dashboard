@@ -1,3 +1,5 @@
+require 'redis'
+
 class Logger
 
   def initialize(name)
@@ -17,6 +19,7 @@ class Logger
   end
 
   def end
+    Redis.current.set("date_#{@name}", DateTime.now.strftime("%m/%d/%Y at %I:%M%p"))
     p "**JOB** #{@name}: finished"
   end
 end

@@ -1,0 +1,13 @@
+<%keys = Redis.current.keys
+dates = {}
+keys.each do |key|
+  if key.include?("date")
+    dates[key] = Redis.current.get(key)
+  end
+end
+sorted_keys = dates.keys.sort
+%>
+<% sorted_keys.each do |key| %>
+  <h3><%=key[5..]%></h3>
+  <p><%=dates[key]%></p>
+<% end %>
