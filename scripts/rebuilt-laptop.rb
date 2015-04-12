@@ -3,7 +3,7 @@ require 'net/http'
 require 'json'
 
 auth_token=ENV["AUTH_TOKEN"]
-last_rebuild='14 February 2015'
+last_rebuild='12 April 2015'
 
 json_headers = {"Content-Type" => "application/json",
                 "Accept" => "application/json"}
