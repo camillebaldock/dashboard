@@ -1,4 +1,5 @@
 require 'redis'
+require 'json'
 
 class Logger
 
@@ -19,7 +20,12 @@ class Logger
   end
 
   def end
-    Redis.current.set("date_#{@name}", DateTime.now.strftime("%m/%d/%Y at %I:%M%p"))
+    file = File.read('data/updates.json')
+    update_hash = JSON.parse(file)
+    update_hash[@name] = DateTime.now.strftime("%m/%d/%Y at %I:%M%p")
+    File.open("data/updates.json","w") do |f|
+      f.write(update_hash.to_json)
+    end
     p "**JOB** #{@name}: finished"
   end
 end
