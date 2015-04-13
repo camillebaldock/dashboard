@@ -36,3 +36,9 @@ params = {'auth_token' => auth_token, 'current' => unwatched_videos}
 uri = URI.parse('http://dashboard.camillebaldock.com/widgets/videos')
 http = Net::HTTP.new(uri.host, uri.port)
 response = http.post(uri.path, params.to_json, json_headers)
+
+url = URI.parse("http://dashboard.camillebaldock.com/last_updated/plex/#{auth_token}")
+req = Net::HTTP::Get.new(url.to_s)
+res = Net::HTTP.start(url.host, url.port) {|http|
+  http.request(req)
+}
