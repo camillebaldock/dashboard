@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rake'
 gem 'dashing'
-gem 'ruby-trello'
+gem 'ruby-trello', :git => 'git://github.com/camilleldn/ruby-trello.git'
 gem 'pry'
 gem 'octokit'
 gem 'rest-client'
