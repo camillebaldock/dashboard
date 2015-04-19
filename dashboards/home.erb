@@ -1,412 +1,413 @@
 <% content_for :title do %>Camille's dashboard<% end %>
-
-<div class="row">
-  <div class="col-sm-8 clearfix">
-    <div class="intro">
-      <h1>Camille's dashboards</h1>
-      <p>I'm Camille Baldock, a software engineer based in London, UK.</p>
-      <p>I use <a href="http://dashing.io">Dashing</a> dashboards to monitor various aspects of my life and work.</p>
-      <p>You can follow me on <a href="https://twitter.com/camille_">Twitter</a>, <a href="https://github.com/camilleldn">GitHub</a> or <a href="http://camillebaldock.com">check out my website</a>.</p>
-      <p>Want your own dashboard? Fork the repository or deploy your own from <a href="https://github.com/camilleldn/dashboard">here</a>.</p>
+<div id="container">
+  <div class="row">
+    <div class="col-sm-8 clearfix">
+      <div class="intro">
+        <h1>Camille's dashboards</h1>
+        <p>I'm Camille Baldock, a software engineer based in London, UK.</p>
+        <p>I use <a href="http://dashing.io">Dashing</a> dashboards to monitor various aspects of my life and work.</p>
+        <p>You can follow me on <a href="https://twitter.com/camille_">Twitter</a>, <a href="https://github.com/camilleldn">GitHub</a> or <a href="http://camillebaldock.com">check out my website</a>.</p>
+        <p>Want your own dashboard? Fork the repository or deploy your own from <a href="https://github.com/camilleldn/dashboard">here</a>.</p>
+      </div>
+    </div>
+    <div class="col-sm-4 clearfix">
+      <figure class="intro-img">
+        <img alt="Dashboards for all the things" src="/assets/allthethings.jpg">
+      </figure>
     </div>
   </div>
-  <div class="col-sm-4 clearfix">
-    <figure class="intro-img">
-      <img src="/assets/allthethings.jpg">
-    </figure>
-  </div>
-</div>
 
-<div class="row">
-  <div class="col-sm-3">
-    <div class="dashboard">
-      <a class="dashboard-link" href="/tasks">
-        <div class="dashboard-button">
-          <h3 class="dashboard-title">Tasks</h3>
-          <h3 class="dashboard-subtitle">dashboard</h3>
-        </div>
-      </a>
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="dashboard">
+        <a class="dashboard-link" href="/tasks">
+          <div class="dashboard-button">
+            <h3 class="dashboard-title">Tasks</h3>
+            <h3 class="dashboard-subtitle">dashboard</h3>
+          </div>
+        </a>
+      </div>
     </div>
-  </div>
-  <div class="col-sm-3">
-    <div class="dashboard">
-      <a class="dashboard-link" href="/entertainment">
-        <div class="dashboard-button">
-          <h3 class="dashboard-title">Entertainment</h3>
-          <h3 class="dashboard-subtitle">dashboard</h3>
-        </div>
-      </a>
+    <div class="col-sm-3">
+      <div class="dashboard">
+        <a class="dashboard-link" href="/entertainment">
+          <div class="dashboard-button">
+            <h3 class="dashboard-title">Entertainment</h3>
+            <h3 class="dashboard-subtitle">dashboard</h3>
+          </div>
+        </a>
+      </div>
     </div>
-  </div>
-  <div class="col-sm-3">
-    <div class="dashboard">
-      <a class="dashboard-link" href="/tech">
-        <div class="dashboard-button">
-          <h3 class="dashboard-title">Tech</h3>
-          <h3 class="dashboard-subtitle">dashboard</h3>
-        </div>
-      </a>
+    <div class="col-sm-3">
+      <div class="dashboard">
+        <a class="dashboard-link" href="/tech">
+          <div class="dashboard-button">
+            <h3 class="dashboard-title">Tech</h3>
+            <h3 class="dashboard-subtitle">dashboard</h3>
+          </div>
+        </a>
+      </div>
     </div>
-  </div>
-  <div class="col-sm-3">
-    <div class="dashboard">
-      <a class="dashboard-link" href="/other">
-        <div class="dashboard-button">
-          <h3 class="dashboard-title">Other</h3>
-          <h3 class="dashboard-subtitle">dashboard</h3>
-        </div>
-      </a>
+    <div class="col-sm-3">
+      <div class="dashboard">
+        <a class="dashboard-link" href="/other">
+          <div class="dashboard-button">
+            <h3 class="dashboard-title">Other</h3>
+            <h3 class="dashboard-subtitle">dashboard</h3>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
-</div>
 
-<div class="row">
-    <!--Email-->
-    <div class="col-sm-4">
-      <div class="measurement">
-        <div class="measurement-header">
-          <h3 class="measurement-title"><a href="/tasks">Email</a></h3>
-        </div>
-        <div class="description">
-            <p class="category">Tasks</a>
-            <p class="goal">Zero</p>
-            <p>The email widget monitors how many emails are currently in my inbox.</p>
-            <p>I manage regular subscriptions with <a href="http://unroll.me">Unroll.me</a> so I only get one email per day for subscription emails.</p>
-            <p class="code"><a href="https://gist.github.com/camilleldn/10709a0ec6b25323f1cb">Code for widget</a></p>
+  <div class="row">
+      <!--Email-->
+      <div class="col-sm-4">
+        <div class="measurement">
+          <div class="measurement-header">
+            <h3 class="measurement-title"><a href="/tasks">Email</a></h3>
+          </div>
+          <div class="description">
+              <p class="category">Tasks</a>
+              <p class="goal">Zero</p>
+              <p>The email widget monitors how many emails are currently in my inbox.</p>
+              <p>I manage regular subscriptions with <a href="http://unroll.me">Unroll.me</a> so I only get one email per day for subscription emails.</p>
+              <p class="code"><a href="https://gist.github.com/camilleldn/10709a0ec6b25323f1cb">Code for widget</a></p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!--TODOs-->
-    <div class="col-sm-4">
-      <div class="measurement">
-        <div class="measurement-header">
-          <h3 class="measurement-title"><a href="/tasks">TODOs</a></h3>
-        </div>
-        <div class="description">
-            <p class="category">Tasks</a>
-            <p class="goal">Zero</p>
-            <p>The TODOs widget monitors how many tasks are due on that day.</p>
-            <p>I use <a href="https://wunderlist.com">Wunderlist</a> to track small tasks only (eg 'going to the post office').</p>
-            <p class="code"><a href="https://gist.github.com/camilleldn/1092f66251ad1461b473">Code for widget</a></p>
+      <!--TODOs-->
+      <div class="col-sm-4">
+        <div class="measurement">
+          <div class="measurement-header">
+            <h3 class="measurement-title"><a href="/tasks">TODOs</a></h3>
+          </div>
+          <div class="description">
+              <p class="category">Tasks</a>
+              <p class="goal">Zero</p>
+              <p>The TODOs widget monitors how many tasks are due on that day.</p>
+              <p>I use <a href="https://wunderlist.com">Wunderlist</a> to track small tasks only (eg 'going to the post office').</p>
+              <p class="code"><a href="https://gist.github.com/camilleldn/1092f66251ad1461b473">Code for widget</a></p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!--Trello-->
-    <div class="col-sm-4">
-      <div class="measurement">
-        <div class="measurement-header">
-          <h3 class="measurement-title"><a href="/tasks">Trello</a></h3>
-        </div>
-        <div class="description">
-            <p class="category">Tasks</a>
-            <p class="goal">Maximum three "Ongoing" tasks</p>
-            <p>I use a Trello board with four sections for longer term projects that I am working on. </p>
-            <p>I track ongoing projects in the "Ongoing" section.</p>
-            <p>I have three "Icebox" sections for projects I'd like to start in the future: drawing projects, writing projects and any others.</p>
-            <p class="code"><a href="https://gist.github.com/camilleldn/cda910d857f4c6225f75">Code for widget</a></p>
+      <!--Trello-->
+      <div class="col-sm-4">
+        <div class="measurement">
+          <div class="measurement-header">
+            <h3 class="measurement-title"><a href="/tasks">Trello</a></h3>
+          </div>
+          <div class="description">
+              <p class="category">Tasks</a>
+              <p class="goal">Maximum three "Ongoing" tasks</p>
+              <p>I use a Trello board with four sections for longer term projects that I am working on. </p>
+              <p>I track ongoing projects in the "Ongoing" section.</p>
+              <p>I have three "Icebox" sections for projects I'd like to start in the future: drawing projects, writing projects and any others.</p>
+              <p class="code"><a href="https://gist.github.com/camilleldn/cda910d857f4c6225f75">Code for widget</a></p>
+          </div>
         </div>
       </div>
-    </div>
 
-</div>
-<div class="row">
-    <!--Newsletter and blog-->
-    <div class="col-sm-4">
-      <div class="measurement">
-        <div class="measurement-header">
-          <h3 class="measurement-title"><a href="/tasks">Newsletter and blog</a></h3>
-        </div>
-        <div class="description">
-            <p class="category">Tasks</a>
-            <p class="goal">Every month</p>
-            <p>I write the occasional technical blog post on <a href="http://camillebaldock.com">my website</a>.</p>
-            <p>I keep in touch with a few of my close friends by writing a monthly-ish newsletter, featuring bad puns and terrible doodles.</p>
-            <p class="code"><a href="https://gist.github.com/hannesfostie/5420959">Code for widget</a></p>
-        </div>
-      </div>
-    </div>
-
-    <!--RSS-->
-    <div class="col-sm-4">
-      <div class="measurement">
-        <div class="measurement-header">
-          <h3 class="measurement-title"><a href="/entertainment">RSS</a></h3>
-        </div>
-        <div class="description">
-            <p class="category">Entertainment</p>
-            <p class="goal">Zero</p>
-            <p>I use <a href="http://feedly.com">Feedly</a> to collect posts from a number of blogs posts, mostly technical ones that I find interesting.</p>
-            <p>If you would like to see more details about what I read, you can <a href="feedly.opml">view the OPML file for my Feedly content</a>.</p>
-            <p class="code"><a href="https://gist.github.com/camilleldn/e7756c5067bc11323aee">Code for widget</a></p>
-        </div>
-      </div>
-    </div>
-
-    <!--Pocket-->
-    <div class="col-sm-4">
-      <div class="measurement">
-        <div class="measurement-header">
-          <h3 class="measurement-title"><a href="/entertainment">Pocket</a></h3>
-        </div>
-        <div class="description">
-            <p class="category">Entertainment</p>
-            <p class="goal">Zero</p>
-            <p>I use <a href="http://getpocket.com">Pocket</a> to save links that are sent to me or I see on social media, so I can save them to read later. </p>
-            <p class="code"><a href="https://gist.github.com/camilleldn/faff5cd21dee6a64867a">Code for widget</a></p>
-        </div>
-      </div>
-    </div>
-
-</div>
-<div class="row">
-    <!--Books-->
-    <div class="col-sm-4">
-      <div class="measurement">
-        <div class="measurement-header">
-          <h3 class="measurement-title"><a href="/entertainment">Books</a></h3>
-        </div>
-        <div class="description">
-            <p class="category">Entertainment</p>
-            <p class="info">I treat my reading list like a queue: first in, last out.</p>
-            <p class="goal">Should ever increase</p>
-            <p>I occasionally still buy or get given books in "dead-tree" format. I track those through
-            <a href="https://www.goodreads.com/">GoodReads</a> on a "to-read" list.</p>
-            <p class="code"><a href="https://gist.github.com/camilleldn/4f873e77cc625ba3632b">Code for widget</a></p>
-        </div>
-      </div>
-    </div>
-
-    <!--Kindle-->
-    <div class="col-sm-4">
-      <div class="measurement">
-        <div class="measurement-header">
-          <h3 class="measurement-title"><a href="/entertainment">Kindle books</a></h3>
-        </div>
-        <div class="description">
-            <p class="category">Entertainment</p>
-            <p class="info">I treat my reading list like a queue: first in, last out.</p>
-            <p class="goal">Should never increase</p>
-            <p>I use Kindle to read e-books on my phone and tablet.</p>
-            <p class="code"><a href="https://gist.github.com/camilleldn/3eb233168e62fab96de2">Code for widget</a></p>
-        </div>
-      </div>
-    </div>
-
-    <!--Podcasts-->
-    <div class="col-sm-4">
-      <div class="measurement">
-        <div class="measurement-header">
-          <h3 class="measurement-title"><a href="/entertainment">Podcasts</a></h3>
-        </div>
-        <div class="description">
-            <p class="category">Entertainment</p>
-            <p class="goal">Zero</p>
-            <p>I use <a href="https://play.pocketcasts.com/web">PocketCasts</a> to manage my podcasts.</p>
-            <p>I listen to: <a href="http://99percentinvisible.org/">99% Invisible</a>, <a href="http://www.bbfc.co.uk/case-studies/podcasts">BBFC</a>,
-              <a href="https://developertea.com/">Developer Tea</a>, <a href="http://freakonomics.com/">Freakonomics</a>,
-              <a href="http://www.bbc.co.uk/podcasts/series/fricomedy">Friday Night Comedy (BBC4)</a>, <a href="http://www.npr.org/programs/invisibilia/">Invisibilia</a>,
-              <a href="http://shiftrunstop.co.uk/">Shift Run Stop</a>, <a href="http://songexploder.net/">Song Exploder</a>,
-              <a href="http://www.stuffyoushouldknow.com/podcasts/">Stuff You Should Know</a>,
-              <a href="http://www.thisamericanlife.org/">This American Life</a> and <a href="http://www.onthemedia.org/tags/tldr_podcast/">TLDR</a>.
-            </p>
-            <p class="code"><a href="https://gist.github.com/camilleldn/40db50ad9bef72c7c304">Code for widget</a></p>
-        </div>
-      </div>
-    </div><!--end .accordion-->
   </div>
   <div class="row">
-    <!--Films-->
-    <div class="col-sm-4">
-      <div class="measurement">
-        <div class="measurement-header">
-          <h3 class="measurement-title"><a href="/entertainment">Films, TV, videos</a></h3>
-        </div>
-        <div class="description">
-            <p class="category">Entertainment</p>
-            <p class="goal">Zero home videos</p>
-            <p>I have a home-brewed Plex-like media server setup at home that can talk to my Amazon Prime, Netflix accounts and personal files. I have the ability to add content to my list of things to watch.</p>
-            <p>My home videos are mostly technical training videos like the excellent <a href="http://www.rubytapas.com">Ruby Tapas</a>.</p>
-            <p class="code"><a href="https://gist.github.com/camilleldn/b3df4f58efe938d05912">Code for widget</a></p>
+      <!--Newsletter and blog-->
+      <div class="col-sm-4">
+        <div class="measurement">
+          <div class="measurement-header">
+            <h3 class="measurement-title"><a href="/tasks">Newsletter and blog</a></h3>
+          </div>
+          <div class="description">
+              <p class="category">Tasks</a>
+              <p class="goal">Every month</p>
+              <p>I write the occasional technical blog post on <a href="http://camillebaldock.com">my website</a>.</p>
+              <p>I keep in touch with a few of my close friends by writing a monthly-ish newsletter, featuring bad puns and terrible doodles.</p>
+              <p class="code"><a href="https://gist.github.com/hannesfostie/5420959">Code for widget</a></p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!--Gemnasium-->
-    <div class="col-sm-4">
-      <div class="measurement">
-        <div class="measurement-header">
-          <h3 class="measurement-title"><a href="/tech">Gemnasium</a></h3>
-        </div>
-        <div class="description">
-            <p class="category">Tech</a>
-            <p class="goal">Never red</p>
-            <p>A large number of personal projects and applications I work on are Ruby projects. This widget uses the <a href="http://gemnasium.com">Gemnasium</a> service to track Ruby gem updates.</p>
-            <p>If any gems have an update available, this widget will turn orange. If any of those updates are urgent, this widget will turn red.</p>
-            <p class="code"><a href="https://gist.github.com/camilleldn/f8a5d9487a6ecb019b88">Code for widget</a></p>
+      <!--RSS-->
+      <div class="col-sm-4">
+        <div class="measurement">
+          <div class="measurement-header">
+            <h3 class="measurement-title"><a href="/entertainment">RSS</a></h3>
+          </div>
+          <div class="description">
+              <p class="category">Entertainment</p>
+              <p class="goal">Zero</p>
+              <p>I use <a href="http://feedly.com">Feedly</a> to collect posts from a number of blogs posts, mostly technical ones that I find interesting.</p>
+              <p>If you would like to see more details about what I read, you can <a href="feedly.opml">view the OPML file for my Feedly content</a>.</p>
+              <p class="code"><a href="https://gist.github.com/camilleldn/e7756c5067bc11323aee">Code for widget</a></p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!--Boxen releases-->
-    <div class="col-sm-4">
-      <div class="measurement">
-        <div class="measurement-header">
-          <h3 class="measurement-title"><a href="/tech">Boxen releases</a></h3>
-        </div>
-        <div class="description">
-            <p class="category">Tech</p>
-            <p class="goal">Emptied monthly</p>
-            <p>I use <a href="https://boxen.camillebaldock.com/">Boxen</a> to
-               automate my development environment. This widget lists every Puppet
-               module that I use in my Boxen that has a new released version.</p>
-            <p class="code"><a href="https://gist.github.com/camilleldn/03e617de7bde53f179a2">Code for widget</a></p>
+      <!--Pocket-->
+      <div class="col-sm-4">
+        <div class="measurement">
+          <div class="measurement-header">
+            <h3 class="measurement-title"><a href="/entertainment">Pocket</a></h3>
+          </div>
+          <div class="description">
+              <p class="category">Entertainment</p>
+              <p class="goal">Zero</p>
+              <p>I use <a href="http://getpocket.com">Pocket</a> to save links that are sent to me or I see on social media, so I can save them to read later. </p>
+              <p class="code"><a href="https://gist.github.com/camilleldn/faff5cd21dee6a64867a">Code for widget</a></p>
+          </div>
         </div>
       </div>
-    </div><!--end .accordion-->
+
   </div>
   <div class="row">
-    <!--Forks to update-->
-    <div class="col-sm-4">
-      <div class="measurement">
-        <div class="measurement-header">
-          <h3 class="measurement-title"><a href="/tech">Forks to update</a></h3>
-        </div>
-        <div class="description">
-            <p class="category">Tech</p>
-            <p class="goal">Zero</p>
-            <p>I have a few forks of GitHub repos under my personal username. I use this widget to know if any of my forks' parents have been updated
-            so I can get those changes in my fork. </p>
-            <p class="code"><a href="https://gist.github.com/camilleldn/1d4eedb3d6564b423bdd">Code for widget</a></p>
+      <!--Books-->
+      <div class="col-sm-4">
+        <div class="measurement">
+          <div class="measurement-header">
+            <h3 class="measurement-title"><a href="/entertainment">Books</a></h3>
+          </div>
+          <div class="description">
+              <p class="category">Entertainment</p>
+              <p class="info">I treat my reading list like a queue: first in, last out.</p>
+              <p class="goal">Should ever increase</p>
+              <p>I occasionally still buy or get given books in "dead-tree" format. I track those through
+              <a href="https://www.goodreads.com/">GoodReads</a> on a "to-read" list.</p>
+              <p class="code"><a href="https://gist.github.com/camilleldn/4f873e77cc625ba3632b">Code for widget</a></p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!--GitHub issues-->
-    <div class="col-sm-4">
-      <div class="measurement">
-        <div class="measurement-header">
-          <h3 class="measurement-title"><a href="/tech">GitHub issues</a></h3>
-        </div>
-        <div class="description">
-            <p class="category">Tech</p>
-            <p class="goal">Should never increase</p>
-            <p>If you're a GitHub user, you might compulsively check your
-              <a href="https://github.com/issues">issues dashboard</a> like me.
-               This widget tracks all issues that I have created or been assigned to. </p>
-            <p class="code"><a href="https://gist.github.com/camilleldn/2aacd5153a15c7def1a3">Code for widget</a></p>
+      <!--Kindle-->
+      <div class="col-sm-4">
+        <div class="measurement">
+          <div class="measurement-header">
+            <h3 class="measurement-title"><a href="/entertainment">Kindle books</a></h3>
+          </div>
+          <div class="description">
+              <p class="category">Entertainment</p>
+              <p class="info">I treat my reading list like a queue: first in, last out.</p>
+              <p class="goal">Should never increase</p>
+              <p>I use Kindle to read e-books on my phone and tablet.</p>
+              <p class="code"><a href="https://gist.github.com/camilleldn/3eb233168e62fab96de2">Code for widget</a></p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!--GitHub pull requests-->
-    <div class="col-sm-4">
-      <div class="measurement">
-        <div class="measurement-header">
-          <h3 class="measurement-title"><a href="/tech">GitHub pull requests</a></h3>
+      <!--Podcasts-->
+      <div class="col-sm-4">
+        <div class="measurement">
+          <div class="measurement-header">
+            <h3 class="measurement-title"><a href="/entertainment">Podcasts</a></h3>
+          </div>
+          <div class="description">
+              <p class="category">Entertainment</p>
+              <p class="goal">Zero</p>
+              <p>I use <a href="https://play.pocketcasts.com/web">PocketCasts</a> to manage my podcasts.</p>
+              <p>I listen to: <a href="http://99percentinvisible.org/">99% Invisible</a>, <a href="http://www.bbfc.co.uk/case-studies/podcasts">BBFC</a>,
+                <a href="https://developertea.com/">Developer Tea</a>, <a href="http://freakonomics.com/">Freakonomics</a>,
+                <a href="http://www.bbc.co.uk/podcasts/series/fricomedy">Friday Night Comedy (BBC4)</a>, <a href="http://www.npr.org/programs/invisibilia/">Invisibilia</a>,
+                <a href="http://shiftrunstop.co.uk/">Shift Run Stop</a>, <a href="http://songexploder.net/">Song Exploder</a>,
+                <a href="http://www.stuffyoushouldknow.com/podcasts/">Stuff You Should Know</a>,
+                <a href="http://www.thisamericanlife.org/">This American Life</a> and <a href="http://www.onthemedia.org/tags/tldr_podcast/">TLDR</a>.
+              </p>
+              <p class="code"><a href="https://gist.github.com/camilleldn/40db50ad9bef72c7c304">Code for widget</a></p>
+          </div>
         </div>
-        <div class="description">
-            <p class="category">Tech</p>
-            <p class="goal">Zero</p>
-            <p>If you're a GitHub user, you might compulsively check your <a href="https://github.com/pulls">pull request dashboard</a> like me.
-              This widget tracks all pull requests currently open on my personal repositories.</p>
-            <p class="code"><a href="https://gist.github.com/camilleldn/b73b963bf51956b459d5">Code for widget</a></p>
+      </div><!--end .accordion-->
+    </div>
+    <div class="row">
+      <!--Films-->
+      <div class="col-sm-4">
+        <div class="measurement">
+          <div class="measurement-header">
+            <h3 class="measurement-title"><a href="/entertainment">Films, TV, videos</a></h3>
+          </div>
+          <div class="description">
+              <p class="category">Entertainment</p>
+              <p class="goal">Zero home videos</p>
+              <p>I have a home-brewed Plex-like media server setup at home that can talk to my Amazon Prime, Netflix accounts and personal files. I have the ability to add content to my list of things to watch.</p>
+              <p>My home videos are mostly technical training videos like the excellent <a href="http://www.rubytapas.com">Ruby Tapas</a>.</p>
+              <p class="code"><a href="https://gist.github.com/camilleldn/b3df4f58efe938d05912">Code for widget</a></p>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="row">
-    <!--Travis-->
-    <div class="col-sm-4">
-      <div class="measurement">
-        <div class="measurement-header">
-          <h3 class="measurement-title"><a href="/tech">Travis</a></h3>
-        </div>
-        <div class="description">
-            <p class="category">Tech</a>
-            <p class="goal">Always green</p>
-            <p>I use Travis builds to monitor all my software builds, including the accessibility of my webpages.</p>
-            <p>The widget turns red if one of my builds has failed.</p>
-            <p class="code"><a href="https://gist.github.com/camilleldn/e83b1859d385b05f214e">Code for widget</a></p>
-        </div>
-      </div>
-    </div>
 
-    <!--Monitoring-->
-    <div class="col-sm-4">
-      <div class="measurement">
-        <div class="measurement-header">
-          <h3 class="measurement-title"><a href="/tech">Monitoring</a></h3>
-        </div>
-        <div class="description">
-            <p class="category">Tech</p>
-            <p class="goal">Green at all times</p>
-            <p>I use <a href="https://www.statuscake.com/">StatusCake</a> to monitor uptime on several of my personal and work applications.</p>
-            <p class="code"><a href="https://gist.github.com/camilleldn/ba2e46052dc8da7b9624">Code for widget</a></p>
+      <!--Gemnasium-->
+      <div class="col-sm-4">
+        <div class="measurement">
+          <div class="measurement-header">
+            <h3 class="measurement-title"><a href="/tech">Gemnasium</a></h3>
+          </div>
+          <div class="description">
+              <p class="category">Tech</a>
+              <p class="goal">Never red</p>
+              <p>A large number of personal projects and applications I work on are Ruby projects. This widget uses the <a href="http://gemnasium.com">Gemnasium</a> service to track Ruby gem updates.</p>
+              <p>If any gems have an update available, this widget will turn orange. If any of those updates are urgent, this widget will turn red.</p>
+              <p class="code"><a href="https://gist.github.com/camilleldn/f8a5d9487a6ecb019b88">Code for widget</a></p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!--Rescuetime-->
-    <div class="col-sm-4">
-      <div class="measurement">
-        <div class="measurement-header">
-          <h3 class="measurement-title"><a href="/4">Rescuetime</a></h3>
+      <!--Boxen releases-->
+      <div class="col-sm-4">
+        <div class="measurement">
+          <div class="measurement-header">
+            <h3 class="measurement-title"><a href="/tech">Boxen releases</a></h3>
+          </div>
+          <div class="description">
+              <p class="category">Tech</p>
+              <p class="goal">Emptied monthly</p>
+              <p>I use <a href="https://boxen.camillebaldock.com/">Boxen</a> to
+                 automate my development environment. This widget lists every Puppet
+                 module that I use in my Boxen that has a new released version.</p>
+              <p class="code"><a href="https://gist.github.com/camilleldn/03e617de7bde53f179a2">Code for widget</a></p>
+          </div>
         </div>
-        <div class="description">
-            <p class="category">Other</a>
-            <p class="goal">60% or above</p>
-            <p>I use <a href="http://rescuetime.com">Rescuetime</a> to track how I spend my time on my computer.</p>
-            <p>I class software development and design work as productive work, any time on social networks as very unproductive. </p>
-            <p class="code"><a href="https://gist.github.com/camilleldn/97736ba8fd33c0aba69a">Code for widget</a></p>
+      </div><!--end .accordion-->
+    </div>
+    <div class="row">
+      <!--Forks to update-->
+      <div class="col-sm-4">
+        <div class="measurement">
+          <div class="measurement-header">
+            <h3 class="measurement-title"><a href="/tech">Forks to update</a></h3>
+          </div>
+          <div class="description">
+              <p class="category">Tech</p>
+              <p class="goal">Zero</p>
+              <p>I have a few forks of GitHub repos under my personal username. I use this widget to know if any of my forks' parents have been updated
+              so I can get those changes in my fork. </p>
+              <p class="code"><a href="https://gist.github.com/camilleldn/1d4eedb3d6564b423bdd">Code for widget</a></p>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="row">
-    <!--Laptop rebuild-->
-    <div class="col-sm-4">
-      <div class="measurement">
-        <div class="measurement-header">
-          <h3 class="measurement-title"><a href="/other">Laptop rebuild</a></h3>
-        </div>
-        <div class="description">
-            <p class="category">Other</p>
-            <p class="goal">Every month</p>
-            <p>I rebuild my laptop from scratch regularly. I find it useful to have a way of quickly resetting my machine between clients, in a fully automated way.</p>
-            <p>This setup also serves security and disaster recovery purposes.</p>
-            <p class="code"><a href="https://gist.github.com/hannesfostie/5420959">Code for widget</a></p>
-        </div>
-      </div>
-    </div>
 
-    <!--Quotes-->
-    <div class="col-sm-4">
-      <div class="measurement">
-        <div class="measurement-header">
-          <h3 class="measurement-title"><a href="/other">Quotes</a></h3>
+      <!--GitHub issues-->
+      <div class="col-sm-4">
+        <div class="measurement">
+          <div class="measurement-header">
+            <h3 class="measurement-title"><a href="/tech">GitHub issues</a></h3>
+          </div>
+          <div class="description">
+              <p class="category">Tech</p>
+              <p class="goal">Should never increase</p>
+              <p>If you're a GitHub user, you might compulsively check your
+                <a href="https://github.com/issues">issues dashboard</a> like me.
+                 This widget tracks all issues that I have created or been assigned to. </p>
+              <p class="code"><a href="https://gist.github.com/camilleldn/2aacd5153a15c7def1a3">Code for widget</a></p>
+          </div>
         </div>
-        <div class="description">
-            <p class="category">Other</a>
-            <p class="goal">Just for fun</p>
-            <p>Random personal highlights from a selection of my Kindle ebooks.</p>
-            <p class="code"><a href="https://gist.github.com/camilleldn/d174530a7cf7cc50ed03">Code for widget</a></p>
+      </div>
+
+      <!--GitHub pull requests-->
+      <div class="col-sm-4">
+        <div class="measurement">
+          <div class="measurement-header">
+            <h3 class="measurement-title"><a href="/tech">GitHub pull requests</a></h3>
+          </div>
+          <div class="description">
+              <p class="category">Tech</p>
+              <p class="goal">Zero</p>
+              <p>If you're a GitHub user, you might compulsively check your <a href="https://github.com/pulls">pull request dashboard</a> like me.
+                This widget tracks all pull requests currently open on my personal repositories.</p>
+              <p class="code"><a href="https://gist.github.com/camilleldn/b73b963bf51956b459d5">Code for widget</a></p>
+          </div>
         </div>
       </div>
     </div>
-
-    <!--Randomawww-->
-    <div class="col-sm-4">
-      <div class="measurement">
-        <div class="measurement-header">
-          <h3 class="measurement-title"><a href="/other">Randomawww</a></h3>
+    <div class="row">
+      <!--Travis-->
+      <div class="col-sm-4">
+        <div class="measurement">
+          <div class="measurement-header">
+            <h3 class="measurement-title"><a href="/tech">Travis</a></h3>
+          </div>
+          <div class="description">
+              <p class="category">Tech</a>
+              <p class="goal">Always green</p>
+              <p>I use Travis builds to monitor all my software builds, including the accessibility of my webpages.</p>
+              <p>The widget turns red if one of my builds has failed.</p>
+              <p class="code"><a href="https://gist.github.com/camilleldn/e83b1859d385b05f214e">Code for widget</a></p>
+          </div>
         </div>
-        <div class="description">
-            <p class="category">Other</a>
-            <p class="goal">Just for fun</p>
-            <p>Random picture from Reddit's "aww" feed</p>
-            <p class="code"><a href="https://gist.github.com/chelsea/5641535">Code for widget</a></p>
+      </div>
+
+      <!--Monitoring-->
+      <div class="col-sm-4">
+        <div class="measurement">
+          <div class="measurement-header">
+            <h3 class="measurement-title"><a href="/tech">Monitoring</a></h3>
+          </div>
+          <div class="description">
+              <p class="category">Tech</p>
+              <p class="goal">Green at all times</p>
+              <p>I use <a href="https://www.statuscake.com/">StatusCake</a> to monitor uptime on several of my personal and work applications.</p>
+              <p class="code"><a href="https://gist.github.com/camilleldn/ba2e46052dc8da7b9624">Code for widget</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!--Rescuetime-->
+      <div class="col-sm-4">
+        <div class="measurement">
+          <div class="measurement-header">
+            <h3 class="measurement-title"><a href="/4">Rescuetime</a></h3>
+          </div>
+          <div class="description">
+              <p class="category">Other</a>
+              <p class="goal">60% or above</p>
+              <p>I use <a href="http://rescuetime.com">Rescuetime</a> to track how I spend my time on my computer.</p>
+              <p>I class software development and design work as productive work, any time on social networks as very unproductive. </p>
+              <p class="code"><a href="https://gist.github.com/camilleldn/97736ba8fd33c0aba69a">Code for widget</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!--Laptop rebuild-->
+      <div class="col-sm-4">
+        <div class="measurement">
+          <div class="measurement-header">
+            <h3 class="measurement-title"><a href="/other">Laptop rebuild</a></h3>
+          </div>
+          <div class="description">
+              <p class="category">Other</p>
+              <p class="goal">Every month</p>
+              <p>I rebuild my laptop from scratch regularly. I find it useful to have a way of quickly resetting my machine between clients, in a fully automated way.</p>
+              <p>This setup also serves security and disaster recovery purposes.</p>
+              <p class="code"><a href="https://gist.github.com/hannesfostie/5420959">Code for widget</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!--Quotes-->
+      <div class="col-sm-4">
+        <div class="measurement">
+          <div class="measurement-header">
+            <h3 class="measurement-title"><a href="/other">Quotes</a></h3>
+          </div>
+          <div class="description">
+              <p class="category">Other</a>
+              <p class="goal">Just for fun</p>
+              <p>Random personal highlights from a selection of my Kindle ebooks.</p>
+              <p class="code"><a href="https://gist.github.com/camilleldn/d174530a7cf7cc50ed03">Code for widget</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!--Randomawww-->
+      <div class="col-sm-4">
+        <div class="measurement">
+          <div class="measurement-header">
+            <h3 class="measurement-title"><a href="/other">Randomawww</a></h3>
+          </div>
+          <div class="description">
+              <p class="category">Other</a>
+              <p class="goal">Just for fun</p>
+              <p>Random picture from Reddit's "aww" feed</p>
+              <p class="code"><a href="https://gist.github.com/chelsea/5641535">Code for widget</a></p>
+          </div>
         </div>
       </div>
     </div>
