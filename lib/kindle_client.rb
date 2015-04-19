@@ -48,7 +48,7 @@ class KindleClient
     highlights_page = @mechanize_agent.click(kindle_logged_in_page.link_with(text: /Your Books/))
 
     loop do
-      highlights_page.search(".//tr")[1..-1].each do |book|
+      (highlights_page.search(".//tr")[1..-1] || []).each do |book|
         title_and_author = book.search(".titleAndAuthor").first
         status = book.search(".statusText").first
         asin_and_title_element = title_and_author.search("a").first
@@ -75,7 +75,7 @@ class KindleClient
     begin
       highlights = @mechanize_agent.get("https://kindle.amazon.com/kcw/highlights?asin=#{asin}&cursor=0&count=1000")
       json = JSON.parse(highlights.body)
-      json["items"]
+      json["items"] || []
     rescue Exception => e
       []
     end
