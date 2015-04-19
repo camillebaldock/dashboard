@@ -3,7 +3,7 @@ require 'json'
 
 placeholder = '/assets/puppy.jpg'
 
-SCHEDULER.every '2m', first_in: 0 do |job|
+SCHEDULER.every '10m', first_in: 0 do |job|
   logger = Logger.new("randomaww")
   logger.start
   begin
