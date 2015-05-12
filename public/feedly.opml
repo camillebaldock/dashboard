@@ -7,6 +7,7 @@
     <body>
         <outline text="Reading" title="Reading">
             <outline type="rss" text="zen habits" title="zen habits" xmlUrl="http://zenhabits.net/feed/" htmlUrl="http://zenhabits.net"/>
+            <outline type="rss" text="JavaScript Weekly" title="JavaScript Weekly" xmlUrl="http://javascriptweekly.com/rss/2279360e" htmlUrl="http://javascriptweekly.com/"/>
             <outline type="rss" text="Simon Willison’s Weblog" title="Simon Willison’s Weblog" xmlUrl="http://blog.simonwillison.net/rss" htmlUrl="http://blog.simonwillison.net/"/>
             <outline type="rss" text="Andrew Langhorn" title="Andrew Langhorn" xmlUrl="http://ajlanghorn.com/feed/" htmlUrl="http://ajlanghorn.com"/>
             <outline type="rss" text="456 Berea Street" title="456 Berea Street" xmlUrl="http://www.456bereastreet.com/feed.xml" htmlUrl="http://www.456bereastreet.com/"/>
@@ -37,12 +38,15 @@
             <outline type="rss" text="Economix » Posts by Robert Rudinger Feed (http://economix-admin.em.nytimes.com/author/bruce-bartlett/feed/)" title="Economix » Posts by Robert Rudinger Feed (http://economix-admin.em.nytimes.com/author/bruce-bartlett/feed/)" xmlUrl="http://economix-admin.em.nytimes.com/author/bruce-bartlett/feed/"/>
             <outline type="rss" text="Daring Fireball" title="Daring Fireball" xmlUrl="http://daringfireball.net/feeds/main" htmlUrl="http://daringfireball.net/"/>
             <outline type="rss" text="Coding Horror" title="Coding Horror" xmlUrl="http://feeds.feedburner.com/codinghorror" htmlUrl="http://blog.codinghorror.com/"/>
+            <outline type="rss" text="Hacker News 200" title="Hacker News 200" xmlUrl="http://feeds.feedburner.com/hacker-news-feed-200?format=xml" htmlUrl="http://news.ycombinator.com"/>
             <outline type="rss" text="The Cooper Review" title="The Cooper Review" xmlUrl="http://thecooperreview.com/feed/" htmlUrl="http://thecooperreview.com"/>
             <outline type="rss" text="Dear Data Deliveries" title="Dear Data Deliveries" xmlUrl="http://feeds.feedburner.com/DearDataDeliveries-DearData" htmlUrl="http://www.dear-data.com/dear-data-deliveries/"/>
             <outline type="rss" text="A List Apart: The Full Feed" title="A List Apart: The Full Feed" xmlUrl="http://alistapart.com/site/rss" htmlUrl="http://alistapart.com"/>
             <outline type="rss" text="Rands in Repose" title="Rands in Repose" xmlUrl="http://randsinrepose.com/feed/" htmlUrl="http://randsinrepose.com"/>
+            <outline type="rss" text="Ruby Weekly" title="Ruby Weekly" xmlUrl="http://rubyweekly.com/rss/1m372len" htmlUrl="http://rubyweekly.com/"/>
             <outline type="rss" text="Geek Feminism Blog" title="Geek Feminism Blog" xmlUrl="http://geekfeminism.org/feed/" htmlUrl="http://geekfeminism.org"/>
             <outline type="rss" text="SimplyRecipes.com" title="SimplyRecipes.com" xmlUrl="http://feedproxy.google.com/elise/simplyrecipes" htmlUrl="http://www.simplyrecipes.com"/>
+            <outline type="rss" text="HTML5 Weekly" title="HTML5 Weekly" xmlUrl="http://html5weekly.com/rss/24p29a3i" htmlUrl="http://html5weekly.com/"/>
         </outline>
     </body>
 </opml>
