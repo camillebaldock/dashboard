@@ -1,9 +1,10 @@
 require 'uri'
 require 'net/http'
 require 'json'
+require 'date'
 
 auth_token=ENV["AUTH_TOKEN"]
-last_rebuild='12 April 2015'
+last_rebuild=Date.today
 
 json_headers = {"Content-Type" => "application/json",
                 "Accept" => "application/json"}
