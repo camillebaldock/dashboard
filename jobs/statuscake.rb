@@ -3,7 +3,7 @@ require 'json'
 username = ENV["STATUSCAKE_USERNAME"]
 key = ENV["STATUSCAKE_KEY"]
 
-SCHEDULER.every "1h" do
+SCHEDULER.every "1h", first_in: 0 do
   logger = Logger.new("statuscake")
   logger.start
   begin

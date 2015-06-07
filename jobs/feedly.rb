@@ -2,7 +2,7 @@ require "json"
 require "uri"
 require "net/http"
 
-SCHEDULER.every "30m" do
+SCHEDULER.every "30m", first_in: 0 do
   logger = Logger.new("feedly")
   logger.start
   begin
@@ -18,7 +18,17 @@ SCHEDULER.every "30m" do
     reading_count = unread_counts.find do |unread_count|
       unread_count["id"].include?("category/Reading")
     end
-    send_event('rss', { current: reading_count["count"] })
+    rss_count = reading_count["count"]
+    if rss_count == 0
+      status = 'ok'
+    elsif rss_count < 10
+      status = 'attention'
+    elsif rss_count < 20
+      status = 'warning'
+    else
+      status = 'danger'
+    end
+    send_event('rss', { current: rss_count, status: status })
   rescue Exception => e
     logger.exception(e)
   end

@@ -7,7 +7,7 @@ Trello.configure do |config|
   config.member_token = ENV["TRELLO_MEMBER_TOKEN"]
 end
 
-SCHEDULER.every "30m" do
+SCHEDULER.every "30m", first_in: 0 do
   logger = Logger.new("trello")
   logger.start
   begin

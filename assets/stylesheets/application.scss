@@ -68,6 +68,10 @@ mark, .mark { background-color: #fcf8e3; padding: .2em; }
 $background-color: #222;
 $text-color: #fff;
 
+$background-attention-color-1: #ffff00;
+$background-attention-color-2: #ffea00;
+$text-warning-color: #fff;
+
 $background-warning-color-1: #e82711;
 $background-warning-color-2: #9b2d23;
 $text-warning-color: #fff;
@@ -85,6 +89,11 @@ $text-danger-color: #fff;
   0%   { background-color: $background-danger-color-1; }
   50%  { background-color: $background-danger-color-2; }
   100% { background-color: $background-danger-color-1; }
+}
+@-webkit-keyframes status-attention-background {
+  0%   { background-color: $background-attention-color-1; }
+  50%  { background-color: $background-attention-color-2; }
+  100% { background-color: $background-attention-color-1; }
 }
 @mixin animation($animation-name, $duration, $function, $animation-iteration-count:""){
   -webkit-animation:  $animation-name $duration $function #{$animation-iteration-count};
@@ -209,9 +218,19 @@ h3 {
 }
 @media (max-width: 767px) { .double-height { height: 250px; } }
 
+.widget.status-attention {
+  background-color: $background-attention-color-1;
+  @include animation(status-attention-background, 5s, ease, infinite);
+
+  .icon-warning-sign {
+    display: inline-block;
+  }
+
+}
+
 .widget.status-warning {
   background-color: $background-warning-color-1;
-  @include animation(status-warning-background, 2s, ease, infinite);
+  @include animation(status-warning-background, 5s, ease, infinite);
 
   .icon-warning-sign {
     display: inline-block;
@@ -220,9 +239,8 @@ h3 {
 }
 
 .widget.status-danger {
-  color: $text-danger-color;
   background-color: $background-danger-color-1;
-  @include animation(status-danger-background, 2s, ease, infinite);
+  @include animation(status-danger-background, 5s, ease, infinite);
 
   .icon-warning-sign {
     display: inline-block;
@@ -239,12 +257,11 @@ h3 {
 }
 
 .updated-at {
-  font-size: 15px;
+  font-size: 12px;
   position: absolute;
   bottom: 12px;
   left: 0;
   right: 0;
-  display: none;
 }
 
 .time_past {
@@ -265,7 +282,7 @@ h3 {
 }
 
 //Column widths
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 { position: relative; min-height: 1px; padding-left: 10px; padding-right: 10px; }
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 { position: relative; min-height: 1px; padding-left: 10px; padding-right: 10px; margin-bottom: 10px; }
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 { float: left; }
 .col-xs-1 { width: 8.33333%; }
 .col-xs-2 { width: 16.66667%; }
@@ -505,7 +522,7 @@ a:hover { color: #DF15CB; }
 
 //Row
 .row { margin-left: -10px; margin-right: -10px; }
-.row:before, .row:after { content: " "; display: table; }
+.row:before, .row:after { display: table; }
 .row:after { clear: both; }
 
 //Introductory text and image

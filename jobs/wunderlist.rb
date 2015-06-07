@@ -1,7 +1,7 @@
 require 'rest_client'
 require 'date'
 
-SCHEDULER.every "30m" do
+SCHEDULER.every "30m", first_in: 0 do
   logger = Logger.new("wunderlist")
   logger.start
   begin

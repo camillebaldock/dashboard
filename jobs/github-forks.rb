@@ -1,6 +1,6 @@
 require 'octokit'
 
-SCHEDULER.every "30m" do
+SCHEDULER.every "30m", first_in: 0 do
   logger = Logger.new("github-forks")
   logger.start
   begin

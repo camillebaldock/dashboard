@@ -1,7 +1,7 @@
 require 'open-uri'
 require 'nokogiri'
 
-SCHEDULER.every "30m" do
+SCHEDULER.every "30m", first_in: 0 do
   logger = Logger.new("books")
   logger.start
   begin

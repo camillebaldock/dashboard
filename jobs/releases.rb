@@ -1,6 +1,6 @@
 require 'octokit'
 
-SCHEDULER.every "1h" do
+SCHEDULER.every "1h", first_in: 0 do
   logger = Logger.new("releases")
   logger.start
   begin
@@ -27,7 +27,11 @@ SCHEDULER.every "1h" do
         formatted_releases["items"] << hash
       end
     end
-    send_event("releases", formatted_releases)
+    status = "ok"
+    if formatted_releases["items"].count > 0
+      status = "danger"
+    end
+    send_event("releases", formatted_releases, status: status)
   rescue Exception => e
     logger.exception(e)
   end

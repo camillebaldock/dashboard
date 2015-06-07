@@ -1,6 +1,6 @@
 require 'octokit'
 
-SCHEDULER.every "30m" do
+SCHEDULER.every "30m", first_in: 0 do
   logger = Logger.new("github-issues")
   logger.start
   begin
