@@ -1,0 +1,2 @@
+class StatusCalculator
+end
