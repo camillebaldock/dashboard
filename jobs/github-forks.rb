@@ -33,7 +33,12 @@ SCHEDULER.every "30m", first_in: 0 do
       hash = {"label" => out_of_date_fork}
       formatted_forks["items"] << hash
     end
-    send_event("github-forks", formatted_forks)
+    if formatted_forms["items"].count > 0
+      status = "danger"
+    else
+      status = "ok"
+    end
+    send_event("github-forks", formatted_forks, status: status)
   rescue Exception => e
     logger.exception(e)
   end

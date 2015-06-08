@@ -24,9 +24,9 @@ SCHEDULER.every "30m", first_in: 0 do
     elsif rss_count < 10
       status = 'attention'
     elsif rss_count < 20
-      status = 'warning'
-    else
       status = 'danger'
+    else
+      status = 'warning'
     end
     send_event('rss', { current: rss_count, status: status })
   rescue Exception => e

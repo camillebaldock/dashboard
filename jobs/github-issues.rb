@@ -9,7 +9,17 @@ SCHEDULER.every "30m", first_in: 0 do
     assigned_ids = client.user_issues(:state => "open", :filter => "assigned").map(&:id)
     created_ids = client.user_issues(:state => "open", :filter => "created").map(&:id)
     all_issue_ids = (assigned_ids + created_ids).uniq
-    send_event("github-issues", { current: all_issue_ids.count })
+    issue_count = all_issue_ids.count
+    if issue_count == 0
+      status = 'ok'
+    elsif issue_count < 10
+      status = 'attention'
+    elsif issue_count < 50
+      status = 'danger'
+    else
+      status = 'warning'
+    end
+    send_event("github-issues", { current: issue_count, status: status })
   rescue Exception => e
     logger.exception(e)
   end

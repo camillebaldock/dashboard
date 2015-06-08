@@ -11,9 +11,9 @@ SCHEDULER.every "30m", first_in: 0 do
       elsif inbox_count < 5
         status = 'attention'
       elsif inbox_count < 10
-        status = 'warning'
-      else
         status = 'danger'
+      else
+        status = 'warning'
       end
       send_event("email", { current: inbox_count, status: status })
     end
