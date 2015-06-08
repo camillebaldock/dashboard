@@ -1,4 +1,4 @@
-# Camille's dashboard
+d# Camille's dashboard
 
 Dashing widgets that monitor various aspects of my life and work. For more details of each dashboard and widget, go the [dashboard home page](http://dashboard.camillebaldock.com).
 
