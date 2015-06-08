@@ -7,10 +7,6 @@ SCHEDULER.every "1h", :first_in => 0 do
   begin
     client = KindleClient.new(ENV["AMAZON_EMAIL"], ENV["AMAZON_PASSWORD"])
     send_event("kindle", { current: client.to_read })
-    #highlights = client.highlight
-    #highlight = highlights.sample
-    #send_event("quotes", { text: highlight[:text], source: highlight[:title] } )
-    send_event("quotes", { text: "todo text", source: "todo source" } )
   rescue Exception => e
     logger.exception(e)
   end

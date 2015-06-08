@@ -24,9 +24,9 @@ SCHEDULER.every "1h", first_in: 0 do
       end
     end
     if items.count > 0
-      send_event('statuscake', { current: items.count, status: 'danger' })
+      send_event('statuscake', { "current" => items.count, "background-color" => 'red' })
     else
-      send_event('statuscake', { status: 'ok' })
+      send_event('statuscake', { "background-color" => 'green' })
     end
   rescue Exception => e
     logger.exception(e)

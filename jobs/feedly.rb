@@ -25,8 +25,8 @@ SCHEDULER.every "30m", first_in: 0 do
       "warning" => 20
     }
     status_calculator = StatusCalculator.new(settings)
-    status = status_calculator.run(rss_count)
-    send_event('rss', { current: rss_count, status: status })
+    color = status_calculator.get_color(rss_count)
+    send_event('rss', { "current" => rss_count, "background-color" => color })
   rescue Exception => e
     logger.exception(e)
   end
