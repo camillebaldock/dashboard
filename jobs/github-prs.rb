@@ -18,7 +18,14 @@ SCHEDULER.every "30m", first_in: 0 do
       end
       number_prs += prs.count
     end
-    send_event("github-prs", { current: number_prs })
+    settings = {
+      "attention" => 1,
+      "danger" => 5,
+      "warning" => 10
+    }
+    status_calculator = StatusCalculator.new(settings)
+    status = status_calculator.run(number_prs)
+    send_event("github-prs", { current: number_prs, status: status })
   rescue Exception => e
     logger.exception(e)
   end

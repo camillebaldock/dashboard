@@ -27,10 +27,11 @@ SCHEDULER.every "1h", first_in: 0 do
         formatted_releases["items"] << hash
       end
     end
-    status = "ok"
-    if formatted_releases["items"].count > 0
-      status = "danger"
-    end
+    settings = {
+      "danger" => 1
+    }
+    status_calculator = StatusCalculator.new(settings)
+    status = status_calculator.run(formatted_releases["items"].count)
     send_event("releases", formatted_releases, status: status)
   rescue Exception => e
     logger.exception(e)

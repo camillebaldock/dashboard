@@ -23,7 +23,14 @@ SCHEDULER.every "30m", first_in: 0 do
       end
       total += due_tasks.count
     end
-    send_event('wunderlist', { current: total })
+    settings = {
+      "attention" => 1,
+      "danger" => 3,
+      "warning" => 6
+    }
+    status_calculator = StatusCalculator.new(settings)
+    status = status_calculator.run(total)
+    send_event('wunderlist', { current: total, status: status })
   rescue Exception => e
     logger.exception(e)
   end

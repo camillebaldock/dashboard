@@ -9,7 +9,14 @@ SCHEDULER.every "30m", first_in: 0 do
     end
     client = Pocket.client(:access_token => ENV["POCKET_ACCESS_TOKEN"])
     info = client.retrieve(:detailType => :simple, :state => :unread)
-    send_event("pocket", { current: info["list"].count })
+    settings = {
+      "attention" => 1,
+      "danger" => 10,
+      "warning" => 20
+    }
+    status_calculator = StatusCalculator.new(settings)
+    status = status_calculator.run(info["list"].count)
+    send_event("pocket", { current: info["list"].count, status: status })
   rescue Exception => e
     logger.exception(e)
   end

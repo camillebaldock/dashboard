@@ -19,15 +19,13 @@ SCHEDULER.every "30m", first_in: 0 do
       unread_count["id"].include?("category/Reading")
     end
     rss_count = reading_count["count"]
-    if rss_count == 0
-      status = 'ok'
-    elsif rss_count < 10
-      status = 'attention'
-    elsif rss_count < 20
-      status = 'danger'
-    else
-      status = 'warning'
-    end
+    settings = {
+      "attention" => 1,
+      "danger" => 10,
+      "warning" => 20
+    }
+    status_calculator = StatusCalculator.new(settings)
+    status = status_calculator.run(rss_count)
     send_event('rss', { current: rss_count, status: status })
   rescue Exception => e
     logger.exception(e)
