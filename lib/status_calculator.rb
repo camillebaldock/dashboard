@@ -15,4 +15,15 @@ class StatusCalculator
     end
   end
 
+  def get_color(number)
+    status = run(number)
+    colours = {
+      "ok" => "green",
+      "attention" => "yellow",
+      "danger" => "orange",
+      "warning" => "red"
+    }
+    colours[status]
+  end
+
 end

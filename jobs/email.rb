@@ -12,8 +12,8 @@ SCHEDULER.every "30m", first_in: 0 do
         "warning" => 10
       }
       status_calculator = StatusCalculator.new(settings)
-      status = status_calculator.run(inbox_count)
-      send_event("email", { current: inbox_count, status: status })
+      color = status_calculator.get_color(inbox_count)
+      send_event("email", { "current" => inbox_count, "background-color" => color })
     end
   rescue Exception => e
     logger.exception(e)

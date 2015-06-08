@@ -24,8 +24,8 @@ SCHEDULER.every "30m", first_in: 0 do
       "warning" => 10
     }
     status_calculator = StatusCalculator.new(settings)
-    status = status_calculator.run(number_prs)
-    send_event("github-prs", { current: number_prs, status: status })
+    color = status_calculator.get_color(number_prs)
+    send_event("github-prs", { current: number_prs, "background-color" => color })
   rescue Exception => e
     logger.exception(e)
   end

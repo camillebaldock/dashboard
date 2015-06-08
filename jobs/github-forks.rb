@@ -37,8 +37,8 @@ SCHEDULER.every "30m", first_in: 0 do
       "danger" => 1
     }
     status_calculator = StatusCalculator.new(settings)
-    status = status_calculator.run(formatted_forks["items"].count)
-    send_event("github-forks", formatted_forks, status: status)
+    color = status_calculator.get_color(formatted_forks["items"].count)
+    send_event("github-forks", formatted_forks, "background-color" => color)
   rescue Exception => e
     logger.exception(e)
   end
