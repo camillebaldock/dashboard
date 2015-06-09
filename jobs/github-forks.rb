@@ -34,7 +34,7 @@ SCHEDULER.every "30m", first_in: 0 do
       formatted_forks["items"] << hash
     end
     settings = {
-      "danger" => 1
+      "warning" => 1
     }
     status_calculator = StatusCalculator.new(settings)
     color = status_calculator.get_color(formatted_forks["items"].count)
