@@ -28,7 +28,7 @@ SCHEDULER.every "1h", first_in: 0 do
       end
     end
     settings = {
-      "danger" => 1
+      "warning" => 1
     }
     status_calculator = StatusCalculator.new(settings)
     color = status_calculator.get_color(formatted_releases["items"].count)
