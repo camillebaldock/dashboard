@@ -12,3 +12,7 @@ class Dashing.Text extends Dashing.Widget
         hours = timestamp.getHours()
         minutes = ("0" + timestamp.getMinutes()).slice(-2)
         "Last updated at #{hours}:#{minutes}"
+
+  onData: (data) ->
+    if data['background-color']
+      $(@get('node')).css 'background-color', data['background-color']

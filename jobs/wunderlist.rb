@@ -29,8 +29,8 @@ SCHEDULER.every "30m", first_in: 0 do
       "warning" => 6
     }
     status_calculator = StatusCalculator.new(settings)
-    status = status_calculator.run(total)
-    send_event('wunderlist', { current: total, status: status })
+    color = status_calculator.get_color(total)
+    send_event('wunderlist', { "current" => total, "background-color" => color })
   rescue Exception => e
     logger.exception(e)
   end
