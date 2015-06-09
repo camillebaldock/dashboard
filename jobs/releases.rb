@@ -31,8 +31,9 @@ SCHEDULER.every "1h", first_in: 0 do
       "danger" => 1
     }
     status_calculator = StatusCalculator.new(settings)
-    status = status_calculator.run(formatted_releases["items"].count)
-    send_event("releases", formatted_releases, status: status)
+    color = status_calculator.get_color(formatted_releases["items"].count)
+    formatted_releases["background-color"] = color
+    send_event("releases", formatted_releases)
   rescue Exception => e
     logger.exception(e)
   end

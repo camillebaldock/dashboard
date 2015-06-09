@@ -40,6 +40,6 @@ class Dashing.TimeSinceLast extends Dashing.Widget
 
     diff = moment().unix() - moment(@last_event).unix()
     if (diff > redAfter)
-      "#e84916"
+      "red"
     else
-      '#4d9e45'
+      "green"
