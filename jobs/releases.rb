@@ -27,6 +27,7 @@ SCHEDULER.every "1h", first_in: 0 do
         formatted_releases["items"] << hash
       end
     end
+    formatted_releases["items"].compact!
     settings = {
       "warning" => 1
     }
