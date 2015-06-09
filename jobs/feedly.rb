@@ -13,6 +13,7 @@ SCHEDULER.every "30m", first_in: 0 do
     uri = URI.parse("http://cloud.feedly.com/v3/markers/counts")
     http = Net::HTTP.new(uri.host, uri.port)
     response = http.get(uri.path, headers)
+    logger.info(response)
     response_hash = JSON.parse(response.body)
     unread_counts = response_hash["unreadcounts"]
     reading_count = unread_counts.find do |unread_count|

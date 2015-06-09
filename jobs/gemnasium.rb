@@ -13,13 +13,13 @@ SCHEDULER.every "30m", first_in: 0 do
     end
     reds = colours.select { |colour| colour == "red" }
     if reds.count > 0
-      send_event('gemnasium', { current: reds.count, status: 'warning' })
+      send_event('gemnasium', { current: reds.count, "background-color" => 'red' })
     else
       yellows = colours.select { |colour| colour == "yellow" }
       if yellows.count > 0
-        send_event('gemnasium', { current: yellows.count, status: 'danger' })
+        send_event('gemnasium', { current: yellows.count, "background-color" => 'yellow' })
       else
-        send_event('gemnasium', { status: 'ok' })
+        send_event('gemnasium', { "background-color" => 'green' })
       end
     end
   rescue Exception => e
