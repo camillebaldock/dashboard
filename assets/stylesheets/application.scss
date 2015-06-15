@@ -555,8 +555,8 @@ a:hover { color: #DF15CB; }
 .measurement { box-shadow: 0 2px 4px rgba(237, 153, 24, 1); }
 .measurement { margin-bottom: 21px; background-color: #fff; border: 1px solid transparent; border-radius: 4px; -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05); box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05); }
 
-.description { padding: 15px; position:relative; }
-.description { height: 280px; overflow: hidden; background-color: white; }
+.description { padding: 15px; position:relative; font-size: 12px; }
+.description { height: 210px; overflow: hidden; background-color: white; }
 .description:before, .description:after { content: " "; display: table; }
 .description:after { clear: both; }
 @media (max-width: 991px) and (min-width: 768px) { .description { height: 320px; } }
