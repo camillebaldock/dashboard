@@ -7,8 +7,15 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-3">
-          <div data-id="rescuetime" data-view="Number" data-title="Productivity" class="grey"></div>
+        <div class="col-sm-3 flip-container" ontouchstart="this.classList.toggle('hover');">
+          <div class="flipper">
+            <div class="front">
+              <div data-id="rescuetime" data-view="Number" data-title="Productivity" class="grey"></div>
+            </div>
+            <div class="back">
+              <div data-id="back" data-view="Number" data-title="Productivity" class="grey"></div>
+            </div>
+          </div>
         </div>
         <div class="col-sm-3">
           <div data-id="laptop" data-view="TimeSinceLast" data-title="Last laptop rebuild" class="dark-blue"></div>
