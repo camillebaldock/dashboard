@@ -2,38 +2,68 @@
 <body class="black">
   <div id="container" class="full-width">
     <div class="row">
-        <div class="col-sm-12">
-          <div data-id="quotes" data-view="Text" class="lilac"></div>
-        </div>
+      <div class="col-sm-12">
+        <div data-id="quotes" data-view="Text" class="lilac"></div>
+      </div>
     </div>
     <div class="row">
-        <div class="col-sm-3 flip-container" ontouchstart="this.classList.toggle('hover');">
-          <div class="flipper">
-            <div class="front">
-              <div data-id="rescuetime" data-view="Number" data-title="Productivity" class="grey"></div>
-            </div>
-            <div class="back">
-              <div class="measurement-header">
-                <h3 class="measurement-title"><a href="/4">Rescuetime</a></h3>
-              </div>
-              <div class="description">
-                <p class="goal">60% or above</p>
-                <p>I use <a href="http://rescuetime.com">Rescuetime</a> to track how I spend my time on my computer.</p>
-                <p>I class software development and design work as productive work, any time on social networks as very unproductive. </p>
-                <p class="code"><a href="https://gist.github.com/camilleldn/97736ba8fd33c0aba69a">Code for widget</a></p>
-              </div>
-            </div>
+      <div class="col-sm-3">
+        <div data-id="rescuetime" data-view="Number" data-title="Productivity" class="grey"></div>
+      </div>
+      <div class="col-sm-3">
+        <div data-id="laptop" data-view="TimeSinceLast" data-title="Last laptop rebuild" class="dark-blue"></div>
+      </div>
+      <div class="col-sm-3">
+        <div data-id="euler" data-view="Number" data-title="Unsolved Project Euler" class="cyan"></div>
+      </div>
+      <div class="col-sm-3">
+        <div data-id="aww" data-view="Image"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12"></div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3" id="rescuetime">
+          <div class="measurement-header">
+            <h3 class="measurement-title">Rescuetime</h3>
           </div>
+          <div class="description">
+            <p class="goal">60% or above</p>
+            <p>I use <a href="http://rescuetime.com">Rescuetime</a> to track how I spend my time on my computer.</p>
+            <p>I class software development and design work as productive work, any time on social networks as very unproductive. </p>
+            <p class="code"><a href="https://gist.github.com/camilleldn/97736ba8fd33c0aba69a">Code for widget</a></p>
+          </div>
+      </div>
+      <div class="col-sm-3" id="laptop">
+        <div class="measurement-header">
+          <h3 class="measurement-title">Laptop rebuild</h3>
         </div>
-        <div class="col-sm-3">
-          <div data-id="laptop" data-view="TimeSinceLast" data-title="Last laptop rebuild" class="dark-blue"></div>
+        <div class="description">
+          <p class="goal">Every month</p>
+          <p>I rebuild my laptop from scratch regularly. I find it useful to have a way of quickly resetting my machine between clients, in a fully automated way.</p>
+          <p>This setup also serves security and disaster recovery purposes.</p>
+          <p class="code"><a href="https://gist.github.com/hannesfostie/5420959">Code for widget</a></p>
         </div>
-        <div class="col-sm-3">
-          <div data-id="euler" data-view="Number" data-title="Unsolved Project Euler" class="cyan"></div>
+      </div>
+      <div class="col-sm-3" id="euler">
+        <div class="measurement-header">
+          <h3 class="measurement-title">Project Euler</h3>
         </div>
-        <div class="col-sm-3">
-          <div data-id="aww" data-view="Image"></div>
+        <div class="description">
+          <p class="goal">Zero</p>
         </div>
+      </div>
+      <div class="col-sm-3" id="aww">
+        <div class="measurement-header">
+          <h3 class="measurement-title">Randomawww</h3>
+        </div>
+        <div class="description">
+          <p class="goal">Just for fun</p>
+          <p>Random picture from Reddit's "aww" feed</p>
+          <p class="code"><a href="https://gist.github.com/chelsea/5641535">Code for widget</a></p>
+        </div>
+      </div>
     </div>
   </div>
 </body>

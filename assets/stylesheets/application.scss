@@ -521,9 +521,10 @@ a:hover { color: #DF15CB; }
 @media (min-width: 1200px) { #container { width: 970px; } }
 
 //Row
-.row { margin-left: -10px; margin-right: -10px; }
+.row { margin-left: -10px; margin-right: -10px; height: 260px; }
 .row:before, .row:after { display: table; }
 .row:after { clear: both; }
+@media (max-width: 767px) { .row { height: 1040px; } }
 
 //Introductory text and image
 .intro p { color: black; font-family: "Muli", sans-serif; font-size: 13px; }

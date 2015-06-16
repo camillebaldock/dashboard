@@ -2,28 +2,136 @@
 <body class="black">
   <div id="container" class="full-width">
     <div class="row">
-        <div class="col-sm-3">
-          <div class="double-height" data-id="releases" data-view="List" data-unordered="true" data-title="Boxen releases"></div>
+        <div class="col-sm-3 flip-container" ontouchstart="this.classList.toggle('hover');">
+          <div class="flipper">
+            <div class="front">
+              <div class="double-height" data-id="releases" data-view="List" data-unordered="true" data-title="Boxen releases"></div>
+            </div>
+            <div class="back double-height">
+              <div class="measurement-header">
+                <h3 class="measurement-title">Boxen releases</h3>
+              </div>
+              <div class="description">
+                <p class="goal">Emptied monthly</p>
+                <p>I use <a href="https://boxen.camillebaldock.com/">Boxen</a> to
+                   automate my development environment. This widget lists every Puppet
+                   module that I use in my Boxen that has a new released version.</p>
+                <p class="code"><a href="https://gist.github.com/camilleldn/03e617de7bde53f179a2">Code for widget</a></p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-sm-3">
-          <div data-id="github-forks" data-view="List" data-unordered="true" data-title="Forks to update"></div>
+        <div class="col-sm-3 flip-container" ontouchstart="this.classList.toggle('hover');">
+          <div class="flipper">
+            <div class="front">
+              <div data-id="github-forks" data-view="List" data-unordered="true" data-title="Forks to update"></div>
+            </div>
+            <div class="back">
+              <div class="measurement-header">
+                <h3 class="measurement-title">Forks to update</h3>
+              </div>
+              <div class="description">
+                  <p class="goal">Zero</p>
+                  <p>I have a few forks of GitHub repos under my personal username. I use this widget to know if any of my forks' parents have been updated
+                  so I can get those changes in my fork. </p>
+                  <p class="code"><a href="https://gist.github.com/camilleldn/1d4eedb3d6564b423bdd">Code for widget</a></p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-sm-3">
-          <div data-id="github-issues" data-view="Number" data-title="GitHub Issues"></div>
+        <div class="col-sm-3 flip-container" ontouchstart="this.classList.toggle('hover');">
+          <div class="flipper">
+            <div class="front">
+              <div data-id="github-issues" data-view="Number" data-title="GitHub Issues"></div>
+            </div>
+            <div class="back">
+              <div class="measurement-header">
+                <h3 class="measurement-title">GitHub issues</h3>
+              </div>
+              <div class="description">
+                <p class="goal">Should never increase</p>
+                <p>If you're a GitHub user, you might compulsively check your
+                  <a href="https://github.com/issues">issues dashboard</a> like me.
+                   This widget tracks all issues that I have created or been assigned to. </p>
+                <p class="code"><a href="https://gist.github.com/camilleldn/2aacd5153a15c7def1a3">Code for widget</a></p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-sm-3">
-          <div data-id="github-prs" data-view="Number" data-title="Pull requests"></div>
+        <div class="col-sm-3 flip-container" ontouchstart="this.classList.toggle('hover');">
+          <div class="flipper">
+            <div class="front">
+              <div data-id="github-prs" data-view="Number" data-title="Pull requests"></div>
+            </div>
+            <div class="back">
+              <div class="measurement-header">
+                <h3 class="measurement-title">GitHub pull requests</h3>
+              </div>
+              <div class="description">
+                  <p class="goal">Zero</p>
+                  <p>If you're a GitHub user, you might compulsively check your <a href="https://github.com/pulls">pull request dashboard</a> like me.
+                    This widget tracks all pull requests currently open on my personal repositories.</p>
+                  <p class="code"><a href="https://gist.github.com/camilleldn/b73b963bf51956b459d5">Code for widget</a></p>
+              </div>
+            </div>
+          </div>
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-3">
-          <div data-id="travis" data-view="Number" data-title="Website Builds"></div>
+        <div class="col-sm-3 flip-container">
         </div>
-        <div class="col-sm-3">
-          <div data-id="gemnasium" data-view="Number" data-title="Gemnasium"></div>
+        <div class="col-sm-3 flip-container" ontouchstart="this.classList.toggle('hover');">
+          <div class="flipper">
+            <div class="front">
+              <div data-id="travis" data-view="Number" data-title="Website Builds"></div>
+            </div>
+            <div class="back">
+              <div class="measurement-header">
+                <h3 class="measurement-title">Travis</h3>
+              </div>
+              <div class="description">
+                  <p class="goal">Always green</p>
+                  <p>I use Travis builds to monitor all my software builds, including the accessibility of my webpages.</p>
+                  <p>The widget turns red if one of my builds has failed.</p>
+                  <p class="code"><a href="https://gist.github.com/camilleldn/e83b1859d385b05f214e">Code for widget</a></p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-sm-3">
-          <div data-id="statuscake" data-view="Number" data-title="Monitoring"></div>
+        <div class="col-sm-3 flip-container" ontouchstart="this.classList.toggle('hover');">
+          <div class="flipper">
+            <div class="front">
+              <div data-id="gemnasium" data-view="Number" data-title="Gemnasium"></div>
+            </div>
+            <div class="back">
+              <div class="measurement-header">
+                <h3 class="measurement-title">Gemnasium</h3>
+              </div>
+              <div class="description">
+                <p class="goal">Never red</p>
+                <p>A large number of personal projects and applications I work on are Ruby projects. This widget uses the <a href="http://gemnasium.com">Gemnasium</a> service to track Ruby gem updates.</p>
+                <p>If any gems have an update available, this widget will turn orange. If any of those updates are urgent, this widget will turn red.</p>
+                <p class="code"><a href="https://gist.github.com/camilleldn/f8a5d9487a6ecb019b88">Code for widget</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 flip-container" ontouchstart="this.classList.toggle('hover');">
+          <div class="flipper">
+            <div class="front">
+              <div data-id="statuscake" data-view="Number" data-title="Monitoring"></div>
+            </div>
+            <div class="back">
+              <div class="measurement-header">
+                <h3 class="measurement-title">Monitoring</h3>
+              </div>
+              <div class="description">
+                <p class="goal">Green at all times</p>
+                <p>I use <a href="https://www.statuscake.com/">StatusCake</a> to monitor uptime on several of my personal and work applications.</p>
+                <p class="code"><a href="https://gist.github.com/camilleldn/ba2e46052dc8da7b9624">Code for widget</a></p>
+              </div>
+            </div>
+          </div>
         </div>
     </div>
   </div>
