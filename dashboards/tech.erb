@@ -42,15 +42,15 @@ file = File.read('data/tech.json')
     </div>
     <% @help.each do |index, info| %>
       <div class="help-row" id="<%=index%>">
-        <div class="col-sm-12" class="padding-top">
-          <div class="col-sm-3 help-title">
+        <div class="col-sm-12">
+          <div class="col-sm-3 help-title padding-top">
             <h3><%= info["title"] %></h3>
           </div>
-          <div class="col-sm-3 help">
+          <div class="col-sm-3 help padding-top">
             <p class="goal"><%= info["goal"] %></p>
             <p class="code"><a href="https://gist.github.com/<%= info["gist"] %>">Code for widget</a></p>
           </div>
-          <div class="col-sm-6 help">
+          <div class="col-sm-6 help padding-top">
             <%= info["description"] %>
           </div>
         </div>
