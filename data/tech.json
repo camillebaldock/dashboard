@@ -33,7 +33,7 @@
     "title": "Gemnasium",
     "goal": "Never red",
     "gist": "camilleldn/f8a5d9487a6ecb019b88",
-    "description": ""
+    "description": "A large number of personal projects and applications I work on are Ruby projects. This widget uses the <a href=\"http://gemnasium.com\">Gemnasium</a> service to track Ruby gem updates. If any gems have an update available, this widget will turn orange. If any of those updates are urgent, this widget will turn red."
   },
   "statuscake": {
     "title": "Monitoring",

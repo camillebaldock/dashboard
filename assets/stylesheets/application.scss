@@ -563,7 +563,20 @@ a:hover { color: #DF15CB; }
 	font-family: FontAwesome;
 }
 
+.home-icon:before {
+	content: "\f015  ";
+	font-family: FontAwesome;
+}
+
 .help-icon {
+  float: right;
+  color: black;
+  cursor: pointer;
+  margin-right: 5px;
+  margin-top: 2px;
+}
+
+.home-icon {
   float: right;
   color: black;
   cursor: pointer;
