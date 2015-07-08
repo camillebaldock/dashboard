@@ -41,7 +41,7 @@ file = File.read('data/tech.json')
       <div class="col-sm-12"></div>
     </div>
     <% @help.each do |index, info| %>
-      <div class="row" id="<%=index%>">
+      <div class="help-row" id="<%=index%>">
         <div class="col-sm-12">
           <div class="col-sm-3 help-title">
             <h3><%= info["title"] %></h3>

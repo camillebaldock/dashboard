@@ -522,6 +522,7 @@ a:hover { color: #DF15CB; }
 
 //Row
 .row { margin-left: -10px; margin-right: -10px; height: 260px; }
+.help-row { margin-left: -10px; margin-right: -10px; }
 .row:before, .row:after { display: table; }
 .row:after { clear: both; }
 @media (max-width: 767px) { .row { height: 1040px; } }
@@ -554,7 +555,6 @@ a:hover { color: #DF15CB; }
 
 .help { height: 100px; background-color: white; }
 .help-title { height: 100px; background-color: #B695C0; }
-
 .help-icon:before {
 	content: "\f059  ";
 	font-family: FontAwesome;
