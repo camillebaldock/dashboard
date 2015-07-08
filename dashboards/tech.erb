@@ -42,7 +42,7 @@ file = File.read('data/tech.json')
     </div>
     <% @help.each do |index, info| %>
       <div class="help-row" id="<%=index%>">
-        <div class="col-sm-12">
+        <div class="col-sm-12" class="padding-top">
           <div class="col-sm-3 help-title">
             <h3><%= info["title"] %></h3>
           </div>

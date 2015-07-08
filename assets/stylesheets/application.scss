@@ -522,7 +522,7 @@ a:hover { color: #DF15CB; }
 
 //Row
 .row { margin-left: -10px; margin-right: -10px; height: 260px; }
-.help-row { margin-left: -10px; margin-right: -10px; }
+.help-row { margin-left: -10px; margin-right: -10px;}
 .row:before, .row:after { display: table; }
 .row:after { clear: both; }
 @media (max-width: 767px) { .row { height: 1040px; } }
@@ -554,7 +554,10 @@ a:hover { color: #DF15CB; }
 .dashboard-link:hover { text-decoration: none; }
 
 .help { height: 100px; background-color: white; }
-.help-title { height: 100px; background-color: #B695C0; }
+.help-title h3 {
+  text-align: center;
+}
+.help-title { height: 100px; background-color: orange; }
 .help-icon:before {
 	content: "\f059  ";
 	font-family: FontAwesome;
@@ -661,4 +664,8 @@ a:hover { color: #DF15CB; }
 
 .black {
   background-color: black;
+}
+
+.padding-top {
+  padding-top: 10px;
 }
