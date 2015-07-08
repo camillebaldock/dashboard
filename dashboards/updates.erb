@@ -1,4 +1,5 @@
-<%file = File.read('data/updates.json')
+<%
+file = File.read('data/updates.json')
 dates = JSON.parse(file)
 sorted_keys = dates.keys.sort
 %>

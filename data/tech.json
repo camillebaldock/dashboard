@@ -1,0 +1,44 @@
+{
+  "releases": {
+    "title": "Boxen releases",
+    "goal": "Emptied monthly",
+    "gist": "camilleldn/03e617de7bde53f179a2",
+    "description": "I use <a href=\"https://boxen.camillebaldock.com/\">Boxen</a> to automate my development environment. This widget lists every Puppet module that I use in my Boxen that has a new released version."
+  },
+  "github-forks": {
+    "title": "Forks to update",
+    "goal": "Zero",
+    "gist": "camilleldn/1d4eedb3d6564b423bdd",
+    "description": "I use this widget to know if any of my GitHub forks' parents have been updated so I can get those changes in my fork."
+  },
+  "github-issues": {
+    "title": "GitHub issues",
+    "goal": "Should never increase",
+    "gist": "camilleldn/2aacd5153a15c7def1a3",
+    "description": "If you're a GitHub user, you might compulsively check your <a href=\"https://github.com/issues\">issues dashboard</a> like me. This widget tracks all issues that I have created or been assigned to."
+  },
+  "github-prs": {
+    "title": "GitHub pull requests",
+    "goal": "Zero",
+    "gist": "camilleldn/b73b963bf51956b459d5",
+    "description": "If you're a GitHub user, you might compulsively check your <a href=\"https://github.com/pulls\">pull request dashboard</a> like me. This widget tracks all pull requests currently open on my personal repositories."
+  },
+  "travis": {
+    "title": "Travis",
+    "goal": "Always green",
+    "gist": "camilleldn/e83b1859d385b05f214e",
+    "description": "I use Travis builds to monitor all my software builds, including the accessibility of my webpages. The widget turns red if one of my builds has failed."
+  },
+  "gemnasium": {
+    "title": "Gemnasium",
+    "goal": "Never red",
+    "gist": "camilleldn/f8a5d9487a6ecb019b88",
+    "description": ""
+  },
+  "statuscake": {
+    "title": "Monitoring",
+    "goal": "Green at all times",
+    "gist": "camilleldn/ba2e46052dc8da7b9624",
+    "description": "I use <a href=\"https://www.statuscake.com/\">StatusCake</a> to monitor uptime on several of my personal and work applications."
+  }
+}

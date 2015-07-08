@@ -196,3 +196,6 @@ DEPENDENCIES
   ruby-gmail
   ruby-trello!
   watir-webdriver
+
+BUNDLED WITH
+   1.10.4

@@ -1,4 +1,5 @@
 require 'dashing'
+
 require 'redis-objects'
 
 redis_uri = URI.parse(ENV["REDISTOGO_URL"])

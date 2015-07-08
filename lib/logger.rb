@@ -1,4 +1,3 @@
-require 'redis'
 require 'json'
 
 class Logger
