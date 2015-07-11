@@ -1,138 +1,66 @@
 <% content_for :title do %>Camille's dashboard - Tasks<% end %>
+<%
+file = File.read('data/tasks.json')
+@help = JSON.parse(file)
+%>
 <body class="black">
   <div id="container" class="full-width">
     <div class="row">
       <div class="col-sm-3">
-        <a class="help-icon"></a>
+        <a class="help-icon" href="#wunderlist"></a>
         <div data-id="wunderlist" data-view="Number" data-title="TODOs"></div>
       </div>
       <div class="col-sm-3">
-        <a class="help-icon"></a>
+        <a class="help-icon" href="#email"></a>
         <div data-id="email" data-view="Number" data-title="Email"></div>
       </div>
       <div class="col-sm-3">
-        <a class="help-icon"></a>
+        <a class="help-icon" href="#newsletter"></a>
         <div data-id="newsletter" data-view="TimeSinceLast" data-title="Newsletter"></div>
       </div>
       <div class="col-sm-3">
-        <a class="help-icon"></a>
+        <a class="help-icon" href="#blog"></a>
         <div data-id="blog" data-view="TimeSinceLast" data-title="Blog"></div>
       </div>
     </div>
     <div class="row">
       <div class="col-sm-3">
-        <a class="help-icon"></a>
+        <a class="help-icon" href="#trello"></a>
         <div data-id="trello-ongoing" data-view="Number" data-title="Ongoing" class="cream"></div>
       </div>
       <div class="col-sm-3">
-        <a class="help-icon"></a>
+        <a class="help-icon" href="#trello"></a>
         <div data-id="trello-writing" data-view="Number" data-title="Writing" class="lilac"></div>
       </div>
       <div class="col-sm-3">
-        <a class="help-icon"></a>
+        <a class="help-icon" href="#trello"></a>
         <div data-id="trello-drawing" data-view="Number" data-title="Drawing" class="cyan"></div>
       </div>
       <div class="col-sm-3">
-        <a class="help-icon"></a>
+        <a class="help-icon" href="#trello"></a>
         <div data-id="trello-icebox" data-view="Number" data-title="Icebox" class="purple"></div>
       </div>
     </div>
     <div class="row">
       <div class="col-sm-12"></div>
     </div>
-    <div class="row">
-      <div class="col-sm-3" id="wunderlist">
-        <div class="measurement-header">
-          <h3 class="measurement-title">TODOs</h3>
-        </div>
-        <div class="description">
-            <p class="goal">Zero</p>
-            <p>The TODOs widget monitors how many tasks are due on that day.</p>
-            <p>I use <a href="https://wunderlist.com">Wunderlist</a> to track small tasks only (eg 'going to the post office').</p>
-            <p class="code"><a href="https://gist.github.com/camilleldn/1092f66251ad1461b473">Code for widget</a></p>
-        </div>
-      </div>
-      <div class="col-sm-3" id="email">
-        <div class="measurement-header">
-          <h3 class="measurement-title">Email</h3>
-        </div>
-        <div class="description">
-          <p class="goal">Zero</p>
-          <p>The email widget monitors how many emails are currently in my inbox.</p>
-          <p>I manage regular subscriptions with <a href="http://unroll.me">Unroll.me</a> so I only get one email per day for subscription emails.</p>
-          <p class="code"><a href="https://gist.github.com/camilleldn/10709a0ec6b25323f1cb">Code for widget</a></p>
+    <% @help.each do |index, info| %>
+      <div class="help-row" id="<%=index%>">
+        <div class="col-sm-12">
+          <div class="col-sm-3 help-title padding-top">
+            <h3><%= info["title"] %></h3>
+          </div>
+          <div class="col-sm-3 help padding-top">
+            <p class="goal"><%= info["goal"] %></p>
+            <p class="info"><%= info["info"] %></p>
+            <p class="code"><a href="https://gist.github.com/<%= info["gist"] %>">Code for widget</a></p>
+          </div>
+          <div class="col-sm-6 help padding-top">
+            <a class="home-icon" href="#container" title="Back to dashboard"></a>
+            <%= info["description"] %>
+          </div>
         </div>
       </div>
-      <div class="col-sm-3" id="newsletter">
-        <div class="measurement-header">
-          <h3 class="measurement-title">Newsletter</h3>
-        </div>
-        <div class="description">
-          <p class="goal">Every month</p>
-          <p>I keep in touch with a few of my close friends by writing a monthly-ish newsletter, featuring bad puns and terrible doodles.</p>
-          <p class="code"><a href="https://gist.github.com/hannesfostie/5420959">Code for widget</a></p>
-        </div>
-      </div>
-      <div class="col-sm-3" id="blog">
-        <div class="measurement-header">
-          <h3 class="measurement-title">Blog</h3>
-        </div>
-        <div class="description">
-          <p class="goal">Every month</p>
-          <p>I write the occasional technical blog post on <a href="http://camillebaldock.com">my website</a>.</p>
-          <p class="code"><a href="https://gist.github.com/hannesfostie/5420959">Code for widget</a></p>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-3" id="trello-ongoing">
-        <div class="measurement-header">
-          <h3 class="measurement-title">Trello</h3>
-        </div>
-        <div class="description">
-            <p class="goal">Maximum three "Ongoing" tasks</p>
-            <p>I use a Trello board with four sections for longer term projects that I am working on. </p>
-            <p>I track ongoing projects in the "Ongoing" section.</p>
-            <p>I have three "Icebox" sections for projects I'd like to start in the future: drawing projects, writing projects and any others.</p>
-            <p class="code"><a href="https://gist.github.com/camilleldn/cda910d857f4c6225f75">Code for widget</a></p>
-        </div>
-      </div>
-      <div class="col-sm-3" id="trello-writing">
-        <div class="measurement-header">
-          <h3 class="measurement-title">Trello</h3>
-        </div>
-        <div class="description">
-            <p class="goal">Maximum three "Ongoing" tasks</p>
-            <p>I use a Trello board with four sections for longer term projects that I am working on. </p>
-            <p>I track ongoing projects in the "Ongoing" section.</p>
-            <p>I have three "Icebox" sections for projects I'd like to start in the future: drawing projects, writing projects and any others.</p>
-            <p class="code"><a href="https://gist.github.com/camilleldn/cda910d857f4c6225f75">Code for widget</a></p>
-        </div>
-      </div>
-      <div class="col-sm-3" id="trello-drawing">
-        <div class="measurement-header">
-          <h3 class="measurement-title">Trello</h3>
-        </div>
-        <div class="description">
-            <p class="goal">Maximum three "Ongoing" tasks</p>
-            <p>I use a Trello board with four sections for longer term projects that I am working on. </p>
-            <p>I track ongoing projects in the "Ongoing" section.</p>
-            <p>I have three "Icebox" sections for projects I'd like to start in the future: drawing projects, writing projects and any others.</p>
-            <p class="code"><a href="https://gist.github.com/camilleldn/cda910d857f4c6225f75">Code for widget</a></p>
-        </div>
-      </div>
-      <div class="col-sm-3" id="trello-icebox">
-        <div class="measurement-header">
-          <h3 class="measurement-title">Trello</h3>
-        </div>
-        <div class="description">
-            <p class="goal">Maximum three "Ongoing" tasks</p>
-            <p>I use a Trello board with four sections for longer term projects that I am working on. </p>
-            <p>I track ongoing projects in the "Ongoing" section.</p>
-            <p>I have three "Icebox" sections for projects I'd like to start in the future: drawing projects, writing projects and any others.</p>
-            <p class="code"><a href="https://gist.github.com/camilleldn/cda910d857f4c6225f75">Code for widget</a></p>
-        </div>
-      </div>
-    </div>
+    <% end %>
   </div>
 </body>

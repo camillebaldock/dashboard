@@ -1,0 +1,32 @@
+{
+  "wunderlist": {
+    "title": "TODOs",
+    "goal": "Zero",
+    "gist": "camilleldn/1092f66251ad1461b473",
+    "description": "The TODOs widget monitors how many tasks are due on that day. I use <a href=\"https://wunderlist.com\">Wunderlist</a> to track small tasks only (eg 'going to the post office')."
+  },
+  "email": {
+    "title": "Email",
+    "goal": "Zero",
+    "gist": "camilleldn/10709a0ec6b25323f1cb",
+    "description": "The email widget monitors how many emails are currently in my inbox. I manage regular subscriptions with <a href=\"http://unroll.me\">Unroll.me</a> so I only get one email per day for subscription emails."
+  },
+  "newsletter": {
+    "title": "Newsletter",
+    "goal": "Every month",
+    "gist": "hannesfostie/5420959",
+    "description": "I keep in touch with a few of my close friends by writing a monthly-ish newsletter, featuring bad puns and terrible doodles."
+  },
+  "blog": {
+    "title": "Blog",
+    "goal": "Every month",
+    "gist": "hannesfostie/5420959",
+    "description": "I write the occasional technical blog post on <a href=\"http://camillebaldock.com\">my website</a>."
+  },
+  "trello": {
+    "title": "Trello",
+    "goal": "Maximum three \"Ongoing\" tasks",
+    "gist": "camilleldn/cda910d857f4c6225f75",
+    "description": "I use a Trello board with four sections for longer term projects that I am working on. I track ongoing projects in the \"Ongoing\" section. I have three \"Icebox\" sections for projects I'd like to start in the future: drawing projects, writing projects and any others."
+  }
+}
