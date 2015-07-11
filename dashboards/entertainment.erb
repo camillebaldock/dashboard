@@ -41,26 +41,6 @@ file = File.read('data/entertainment.json')
         <div data-id="podcasts" data-view="Number" data-title="Podcasts" class="dark-blue"></div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-sm-12"></div>
-    </div>
-    <% @help.each do |index, info| %>
-      <div class="help-row" id="<%=index%>">
-        <div class="col-sm-12">
-          <div class="col-sm-3 help-title padding-top">
-            <h3><%= info["title"] %></h3>
-          </div>
-          <div class="col-sm-3 help padding-top">
-            <p class="goal"><%= info["goal"] %></p>
-            <p class="info"><%= info["info"] %></p>
-            <p class="code"><a href="https://gist.github.com/<%= info["gist"] %>">Code for widget</a></p>
-          </div>
-          <div class="col-sm-6 help padding-top">
-            <a class="home-icon" href="#container" title="Back to dashboard"></a>
-            <%= info["description"] %>
-          </div>
-        </div>
-      </div>
-    <% end %>
+    <%= erb(:help, :layout => false) %>
   </div>
 </body>
