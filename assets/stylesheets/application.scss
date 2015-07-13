@@ -610,6 +610,20 @@ a:hover { color: #7815DF; }
   text-decoration: none;
 }
 
+.category:before {
+	content: "\f02e  ";
+	font-family: FontAwesome;
+}
+
+.info {
+  color: #7815DF;
+}
+
+.info:before {
+	content: "\f129   ";
+	font-family: FontAwesome;
+}
+
 .goal:before {
 	content: "\f140  ";
 	font-family: FontAwesome;
@@ -619,26 +633,6 @@ a:hover { color: #7815DF; }
   color: #7815DF;
 }
 
-.category:before {
-	content: "\f02e  ";
-	font-family: FontAwesome;
-}
-
-.info {
-  color: #7815DF;
-  font-size: 12px;
-}
-
-.info:before {
-	content: "\f129   ";
-	font-family: FontAwesome;
-}
-
-.category {
-  color: #7815DF;
-  font-size: 12px;
-}
-
 .code > a:before {
 	content: "\f09b  ";
 	font-family: FontAwesome;
@@ -646,6 +640,15 @@ a:hover { color: #7815DF; }
 
 .code {
   padding-top: 10px;
+  a {
+    color: #7815DF;
+  }
+}
+
+
+.category {
+  color: #7815DF;
+  font-size: 12px;
 }
 
 .yellow {
