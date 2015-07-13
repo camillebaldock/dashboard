@@ -533,7 +533,16 @@ a:hover { color: #7815DF; }
 .row { margin-left: -10px; margin-right: -10px; height: 260px; }
 .separator { height: 260px; }
 .title-row { height: none; }
-.help-row { margin-left: -10px; margin-right: -10px;}
+.help-row {
+  margin-left: -10px;
+  margin-right: -10px;
+  p {
+    color: black;
+  }
+  h3 {
+    color: black;
+  }
+}
 .row:before, .row:after { display: table; }
 .row:after { clear: both; }
 @media (max-width: 767px) { .row { height: 1040px; } }
