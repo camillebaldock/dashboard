@@ -1,9 +1,0 @@
-<%
-file = File.read('data/updates.json')
-dates = JSON.parse(file)
-sorted_keys = dates.keys.sort
-%>
-<% sorted_keys.each do |key| %>
-  <h3><%=key%></h3>
-  <p><%=dates[key]%></p>
-<% end %>
