@@ -41,7 +41,7 @@ private
       if show_more.first.visible?
         show_more.first.click
       end
-      show_more = get_visible_show_more_elements
+      show_more = []
     end
     unplayed = @browser.elements(:class => 'played_status_0').size + @browser.elements(:class => 'played_status_1').size
     p "#{name}: #{unplayed} unplayed"
