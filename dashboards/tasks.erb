@@ -26,7 +26,11 @@ file = File.read('data/tasks.json')
     <div class="row">
       <div class="col-sm-3">
         <a class="help-icon" href="#trello"></a>
-        <div data-id="trello-ongoing" data-view="Number" data-title="Ongoing" class="cream"></div>
+        <div data-id="trello-current" data-view="Number" data-title="Current" class="cream"></div>
+      </div>
+      <div class="col-sm-3">
+        <a class="help-icon" href="#trello"></a>
+        <div data-id="trello-ready" data-view="Number" data-title="Ready" class="purple"></div>
       </div>
       <div class="col-sm-3">
         <a class="help-icon" href="#trello"></a>
@@ -35,10 +39,6 @@ file = File.read('data/tasks.json')
       <div class="col-sm-3">
         <a class="help-icon" href="#trello"></a>
         <div data-id="trello-drawing" data-view="Number" data-title="Drawing" class="cyan"></div>
-      </div>
-      <div class="col-sm-3">
-        <a class="help-icon" href="#trello"></a>
-        <div data-id="trello-icebox" data-view="Number" data-title="Icebox" class="purple"></div>
       </div>
     </div>
     <%= erb(:help, :layout => false) %>

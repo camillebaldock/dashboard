@@ -25,8 +25,8 @@
   },
   "trello": {
     "title": "Trello",
-    "goal": "Maximum three \"Ongoing\" tasks",
+    "goal": "Maximum two \"Current\" tasks",
     "gist": "camilleldn/cda910d857f4c6225f75",
-    "description": "I use a Trello board with four sections for longer term projects that I am working on. I track ongoing projects in the \"Ongoing\" section. I have three \"Icebox\" sections for projects I'd like to start in the future: drawing projects, writing projects and any others."
+    "description": "I use a Trello board with four sections for longer term projects that I am working on. I track my current projects in the \"Ongoing\" section. I have three \"Ready\" sections for projects I'd like to start in the future: drawing projects, writing projects and any others."
   }
 }
