@@ -20,7 +20,7 @@ SCHEDULER.every "10m", :first_in => 0 do
     if broken_builds > 0
       send_event('travis', { current: broken_builds, "background-color" => 'red' })
     else
-      send_event('travis', { "background-color" => 'green' })
+      send_event('travis', { current: nil, "background-color" => 'green' })
     end
   rescue Exception => e
     logger.exception(e)
