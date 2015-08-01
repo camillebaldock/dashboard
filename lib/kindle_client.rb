@@ -18,23 +18,6 @@ class KindleClient
     load_books_from_kindle_account
   end
 
-  def generate_book_keys_yml
-    File.open("books.yml", "w") do |file|
-      file.write @books.to_yaml
-    end
-  end
-
-  def highlight
-    quotes = []
-    quote_books = YAML.load(File.open("./books.yml"))
-    quote_books.each do |key, title|
-      highlights_for(key).each do |highlight|
-        quotes << {:text => highlight["highlight"], :title => title}
-      end
-    end
-    quotes
-  end
-
   private
 
   def load_books_from_kindle_account
@@ -69,15 +52,5 @@ class KindleClient
     @mechanize_agent = Mechanize.new
     @mechanize_agent.user_agent_alias = 'Windows Mozilla'
     @mechanize_agent.agent.http.verify_mode = OpenSSL::SSL::VERIFY_NONE
-  end
-
-  def highlights_for(asin)
-    begin
-      highlights = @mechanize_agent.get("https://kindle.amazon.com/kcw/highlights?asin=#{asin}&cursor=0&count=1000")
-      json = JSON.parse(highlights.body)
-      json["items"] || []
-    rescue Exception => e
-      []
-    end
   end
 end
