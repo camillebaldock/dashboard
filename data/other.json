@@ -1,10 +1,4 @@
 {
-    "rescuetime": {
-        "title": "Rescuetime",
-        "goal": "60% or above",
-        "gist": "camilleldn/97736ba8fd33c0aba69a",
-        "description": "I use <a href=\"http://rescuetime.com\">Rescuetime</a> to track how I spend my time on my computer. I class software development and design work as productive work, any time on social networks as very unproductive."
-    },
     "laptop": {
         "title": "Laptop rebuild",
         "goal": "Every month",
