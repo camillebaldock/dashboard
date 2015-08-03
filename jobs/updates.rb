@@ -1,6 +1,3 @@
-require 'mechanize'
-require 'json'
-
 SCHEDULER.every "1h", :first_in => 0 do
   logger = Logger.new("updates")
   logger.start
