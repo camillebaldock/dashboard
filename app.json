@@ -33,7 +33,8 @@
     "TRAVIS_REPOS": "comma,separated,list,of,your,repo,names",
     "PROJECT_EULER_USERNAME": "project_euler_username",
     "PROJECT_EULER_PASSWORD": "project_euler_password",
-    "MANUAL_FORKS":"user/parent,otheruser/fork;user2/parent,otheruser2/fork"
+    "MANUAL_FORKS":"user/parent,otheruser/fork;user2/parent,otheruser2/fork",
+    "MONITORED_GITHUB_ORGS":"names,of,github,orgs,to,monitor,for,pulls,and,issues"
   },
   "addons": [
     "redistogo:nano"
