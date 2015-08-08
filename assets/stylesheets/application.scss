@@ -211,6 +211,7 @@ h3 {
   vertical-align: middle;
   display: block;
   height: 250px;
+  display: table;
   h1 {
     color: black;
   }
@@ -219,6 +220,8 @@ h3 {
   }
   h3 {
     color: black;
+    display: table-cell;
+    vertical-align: middle;
   }
   p {
     color: black;
