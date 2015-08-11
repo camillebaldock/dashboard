@@ -20,6 +20,14 @@ file = File.read('data/other.json')
       </div>
     </div>
     <div class="row">
+      <div class="col-sm-3">
+        <a class="help-icon" href="#training"></a>
+        <div data-id="training" data-view="Number" data-title="Training courses" class="cream"></div>
+      </div>
+      <div class="col-sm-3">
+        <a class="help-icon" href="#challenges"></a>
+        <div data-id="challenges" data-view="Number" data-title="Coding challenges" class="purple"></div>
+      </div>
     </div>
     <%= erb(:help, :layout => false) %>
   </div>
