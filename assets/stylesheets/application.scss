@@ -727,3 +727,22 @@ a:hover { color: #7815DF; }
 .what {
   height:auto;
 }
+
+@media (min-width: 768px) {
+  .quote-container {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .metadata-container {
+    position: relative;
+    top: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .widget-quotes {
+    height: 100%;
+  }
+}
