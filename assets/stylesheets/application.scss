@@ -538,7 +538,7 @@ a:hover { color: #7815DF; }
 
 //Row
 .row { margin-left: -10px; margin-right: -10px; height: 100%; }
-.separator { height: 260px; }
+@media (max-width: 768px) { #container { width: 740px; } }
 .title-row { height: none; }
 .row:before, .row:after { display: table; }
 .row:after { clear: both; }
@@ -642,6 +642,10 @@ a:hover { color: #7815DF; }
   a:hover {
     color: #DF15CB;
   }
+}
+
+.first-help-row {
+  margin-top:1200px;
 }
 
 .help-row {

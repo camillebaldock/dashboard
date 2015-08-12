@@ -1,9 +1,7 @@
-<div class="separator">
-</div>
-<div class="separator">
-</div>
+<% @row = 0 %>
 <% @help.each do |index, info| %>
-  <div class="help-row" id="<%=index%>">
+  <% @row += 1 %>
+  <div class="help-row <%= "first-help-row" if @row == 1 %> id="<%=index%>">
     <div class="col-sm-12">
       <div class="col-sm-3 help-title padding-top">
         <h3><%= info["title"] %></h3>
