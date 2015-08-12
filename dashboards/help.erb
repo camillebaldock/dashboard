@@ -7,7 +7,9 @@
         <h3><%= info["title"] %></h3>
       </div>
       <div class="col-sm-3 help padding-top">
-        <p class="goal"><%= info["goal"] %></p>
+        <% if info["goal"] %>
+          <p class="goal"><%= info["goal"] %></p>
+        <% end %>
         <% if info["info"] %>
           <p class="info"><%= info["info"] %></p>
         <% end %>
