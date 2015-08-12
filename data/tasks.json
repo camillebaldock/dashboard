@@ -21,12 +21,12 @@
     "title": "Blog",
     "goal": "Every month",
     "gist": "hannesfostie/5420959",
-    "description": "I write the occasional technical blog post on <a href=\"http://camillebaldock.com\">my website</a>."
+    "description": "I write occasional technical blog posts on <a href=\"http://camillebaldock.com\">my website</a>."
   },
   "trello": {
     "title": "Trello",
     "goal": "Maximum two \"Current\" tasks",
     "gist": "camilleldn/cda910d857f4c6225f75",
-    "description": "I use a Trello board with four sections for longer term projects that I am working on. I track my current projects in the \"Ongoing\" section. I have three \"Ready\" sections for projects I'd like to start in the future: drawing projects, writing projects and any others."
+    "description": "I use a Trello board with four sections for longer term projects that I am working on. I track my current projects in the \"Current\" section. I have three \"Ready\" sections for projects I'd like to start in the future: drawing projects, writing projects and any others."
   }
 }

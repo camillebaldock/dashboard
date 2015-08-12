@@ -1,4 +1,7 @@
 {
+    "quotes": {
+        "title": "Quotes"
+    },
     "laptop": {
         "title": "Laptop rebuild",
         "goal": "Every month",
@@ -8,10 +11,10 @@
     "euler": {
         "title": "Project Euler"
     },
-    "aww": {
-        "title": "Randomawww",
-        "goal": "Just for fun",
-        "gist": "chelsea/5641535",
-        "description": "Random picture from Reddit's \"aww\" feed."
-    }
+    "training": {
+        "title": "Training"
+    },
+    "challenges": {
+        "title": "Challenges"
+    },
 }
