@@ -1,20 +1,24 @@
 {
     "quotes": {
-        "title": "Quotes"
+        "title": "Quotes",
+        "gist": "camilleldn/920042990c6f9c121f58"
     },
     "laptop": {
         "title": "Laptop rebuild",
-        "goal": "Every month",
+        "goal": "Every 2 months",
         "gist": "hannesfostie/5420959",
         "description": "I rebuild my laptop from scratch regularly. I find it useful to have a way of quickly resetting my machine between clients, in a fully automated way. This setup also serves security and disaster recovery purposes."
     },
     "euler": {
-        "title": "Project Euler"
+        "title": "Project Euler",
+        "gist": "camilleldn/a29450249721e1686cb8"
     },
     "training": {
-        "title": "Training"
+        "title": "Training",
+        "gist": "camilleldn/cda910d857f4c6225f75"
     },
     "challenges": {
-        "title": "Challenges"
-    },
+        "title": "Challenges",
+        "gist": "camilleldn/cda910d857f4c6225f75"
+    }
 }
