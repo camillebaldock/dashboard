@@ -537,8 +537,8 @@ a:hover { color: #7815DF; }
 @media (min-width: 1200px) { #container { width: 970px; } }
 
 //Row
-.row { margin-left: -10px; margin-right: -10px; height: 100%; }
-@media (max-width: 768px) { #container { width: 740px; } }
+.row { height: 100%; }
+@media (max-width: 768px) { #container { width: 100%; } }
 .title-row { height: none; }
 .row:before, .row:after { display: table; }
 .row:after { clear: both; }
