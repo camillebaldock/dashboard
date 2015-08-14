@@ -1,7 +1,8 @@
 {
     "quotes": {
         "title": "Quotes",
-        "gist": "camilleldn/920042990c6f9c121f58"
+        "gist": "camilleldn/920042990c6f9c121f58",
+        "description": "I keep track of Kindle highlights and quotes that I found interesting, entertaining or note-worthy. They are viewable in <a href=\"https://github.com/camilleldn/dashboard/blob/master/quotes.yml\">this YML file</a>."
     },
     "laptop": {
         "title": "Laptop rebuild",
@@ -11,14 +12,17 @@
     },
     "euler": {
         "title": "Project Euler",
-        "gist": "camilleldn/a29450249721e1686cb8"
+        "gist": "camilleldn/a29450249721e1686cb8",
+        "description": "I enjoy solving the maths problems on <a href=\"https://projecteuler.net\">Project Euler</a>. I have a script monitoring any new problems published there."
     },
     "training": {
         "title": "Training",
-        "gist": "camilleldn/cda910d857f4c6225f75"
+        "gist": "camilleldn/cda910d857f4c6225f75",
+        "description": "I store technical training courses, tutorials and articles I am currently working on or plan to be working on in the future in a Trello board."
     },
     "challenges": {
         "title": "Challenges",
-        "gist": "camilleldn/cda910d857f4c6225f75"
+        "gist": "camilleldn/cda910d857f4c6225f75",
+        "description": "I store coding challenges that I'd like to solve, eg from the Google Code Jam or Codility, in a Trello board."
     }
 }

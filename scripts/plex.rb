@@ -32,7 +32,12 @@ uri = URI.parse('http://dashboard.camillebaldock.com/widgets/films')
 http = Net::HTTP.new(uri.host, uri.port)
 response = http.post(uri.path, params.to_json, json_headers)
 
-params = {'auth_token' => auth_token, 'current' => unwatched_videos}
+settings = {
+  "danger" => 1
+}
+status_calculator = StatusCalculator.new(settings)
+color = status_calculator.get_color(unwatched_videos)
+params = {'auth_token' => auth_token, 'current' => unwatched_videos, "background-color" => color }
 uri = URI.parse('http://dashboard.camillebaldock.com/widgets/videos')
 http = Net::HTTP.new(uri.host, uri.port)
 response = http.post(uri.path, params.to_json, json_headers)

@@ -8,33 +8,33 @@ file = File.read('data/tech.json')
     <div class="row">
         <div class="col-sm-3">
           <a class="help-icon" href="#releases"></a>
-          <div class="double-height" data-id="releases" data-view="List" data-unordered="true" data-title="Boxen releases"></div>
+          <div class="double-height" data-id="releases" data-view="List" data-unordered="true" data-title="Boxen releases" class="grey"></div>
         </div>
         <div class="col-sm-3">
           <a class="help-icon" href="#github-forks"></a>
-          <div data-id="github-forks" data-view="List" data-unordered="true" data-title="Forks to update"></div>
+          <div data-id="github-forks" data-view="List" data-unordered="true" data-title="Forks to update" class="grey"></div>
         </div>
         <div class="col-sm-3">
           <a class="help-icon" href="#github-issues"></a>
-          <div data-id="github-issues" data-view="Number" data-title="GitHub Issues"></div>
+          <div data-id="github-issues" data-view="Number" data-title="Issues" class="grey"></div>
         </div>
         <div class="col-sm-3">
           <a class="help-icon" href="#github-prs"></a>
-          <div data-id="github-prs" data-view="Number" data-title="Pull requests"></div>
+          <div data-id="github-prs" data-view="Number" data-title="Pull requests" class="grey"></div>
         </div>
     </div>
     <div class="row">
         <div class="col-sm-3">
           <a class="help-icon" href="#travis"></a>
-          <div data-id="travis" data-view="Number" data-title="Website Builds"></div>
+          <div data-id="travis" data-view="Number" data-title="Website Builds" class="grey"></div>
         </div>
         <div class="col-sm-3">
           <a class="help-icon" href="#gemnasium"></a>
-          <div data-id="gemnasium" data-view="Number" data-title="Gemnasium"></div>
+          <div data-id="gemnasium" data-view="Number" data-title="Gemnasium" class="grey"></div>
         </div>
         <div class="col-sm-3">
           <a class="help-icon" href="#statuscake"></a>
-          <div data-id="statuscake" data-view="Number" data-title="Monitoring"></div>
+          <div data-id="statuscake" data-view="Number" data-title="Monitoring" class="grey"></div>
         </div>
     </div>
     <%= erb(:help, :layout => false) %>

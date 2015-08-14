@@ -1,39 +1,39 @@
 {
   "releases": {
     "title": "Boxen releases",
-    "goal": "Emptied monthly",
+    "goal": "Zero",
     "gist": "camilleldn/03e617de7bde53f179a2",
-    "description": "I use <a href=\"https://boxen.camillebaldock.com/\">Boxen</a> to automate my development environment. This widget lists every Puppet module that I use in my Boxen that has a new released version."
+    "description": "I use <a href=\"https://boxen.camillebaldock.com/\">Boxen</a> to automate setting up my computers. This widget lists every Puppet module that I use in my Boxen that has a new released version."
   },
   "github-forks": {
     "title": "Forks to update",
     "goal": "Zero",
     "gist": "camilleldn/1d4eedb3d6564b423bdd",
-    "description": "I use this widget to know if any of my GitHub forks' parents have been updated so I can get those changes in my fork."
+    "description": "Shows if any of my GitHub forks' parents have new commits that aren't in my forks."
   },
   "github-issues": {
     "title": "GitHub issues",
-    "goal": "Should never increase",
+    "goal": "Zero",
     "gist": "camilleldn/2aacd5153a15c7def1a3",
-    "description": "If you're a GitHub user, you might compulsively check your <a href=\"https://github.com/issues\">issues dashboard</a> like me. This widget tracks all issues that I have created or been assigned to."
+    "description": "I compulsively check my <a href=\"https://github.com/issues\">issues</a> on GitHub. This widget tracks all issues open on my personal repositories and some organisations for which I am responsible for responding to issues."
   },
   "github-prs": {
     "title": "GitHub pull requests",
     "goal": "Zero",
     "gist": "camilleldn/b73b963bf51956b459d5",
-    "description": "If you're a GitHub user, you might compulsively check your <a href=\"https://github.com/pulls\">pull request dashboard</a> like me. This widget tracks all pull requests currently open on my personal repositories."
+    "description": "I compulsively check my <a href=\"https://github.com/pulls\">pull requests</a> on GitHub. This widget tracks all pull requests open on my personal repositories and some organisations for which I am responsible for responding to pull requests."
   },
   "travis": {
     "title": "Travis",
-    "goal": "Always green",
+    "goal": "Zero",
     "gist": "camilleldn/e83b1859d385b05f214e",
-    "description": "I use Travis builds to monitor all my software builds, including the accessibility of my webpages. The widget turns red if one of my builds has failed."
+    "description": "Monitors the number of failed Travis builds. I use Travis builds to monitor all of my project builds."
   },
   "gemnasium": {
     "title": "Gemnasium",
-    "goal": "Never red",
+    "goal": "Zero",
     "gist": "camilleldn/f8a5d9487a6ecb019b88",
-    "description": "A large number of personal projects and applications I work on are Ruby projects. This widget uses the <a href=\"http://gemnasium.com\">Gemnasium</a> service to track Ruby gem updates. If any gems have an update available, this widget will turn orange. If any of those updates are urgent, this widget will turn red."
+    "description": "This widget uses the <a href=\"http://gemnasium.com\">Gemnasium</a> service to track Ruby gem updates on my projects. If any gems have an update available, this widget will turn orange. If any of those updates are urgent, this widget will turn red."
   },
   "statuscake": {
     "title": "Monitoring",

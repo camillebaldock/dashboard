@@ -17,10 +17,15 @@ SCHEDULER.every "10m", :first_in => 0 do
         broken_builds += 1
       end
     end
+    settings = {
+      "warning" => 1
+    }
+    status_calculator = StatusCalculator.new(settings)
+    color = status_calculator.get_color(broken_builds)
     if broken_builds > 0
-      send_event('travis', { current: broken_builds, "background-color" => 'red' })
+      send_event('travis', { current: broken_builds, "background-color" => color })
     else
-      send_event('travis', { current: nil, "background-color" => 'green' })
+      send_event('travis', { current: nil, "background-color" => color })
     end
   rescue Exception => e
     logger.exception(e)

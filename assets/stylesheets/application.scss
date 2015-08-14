@@ -525,8 +525,8 @@ h1 { margin-top: 0; }
 h2 { text-align: center; }
 h2 + * { margin-top: 30px; }
 h4 { margin: 0; }
-a { color: #DF15CB; }
-a:hover { color: #7815DF; }
+a { color: #E285DA; }
+a:hover { color: #B38CE1; }
 
 //Container settings
 #container { margin-right: auto; margin-left: auto; padding-left: 10px; padding-right: 10px; padding-top: 10px;}
@@ -543,16 +543,16 @@ a:hover { color: #7815DF; }
 .row:before, .row:after { display: table; }
 .row:after { clear: both; }
 
-//Introductory text and image
-.intro p { color: white; font-family: "Muli", sans-serif; }
+//Introductory text
+.intro p { color: white; font-family: "Muli", sans-serif; font-size: 16px; }
 .intro h1 { text-align: left; font-size: 40px; padding-top: 10px; }
-.intro-img { float: right; margin-bottom: 10px; width: 200px; }
-.intro-img + .intro { margin-left: 140px; }
 @media (max-width: 767px) { .description { height: auto; }
   .intro { padding-top: 20px; }
   .intro h1 { text-align: center;  }
-  .intro-img { float: none; margin-bottom: 10px; width: 100%;}
-  .intro-img + .intro  { margin-left: 0; } }
+}
+
+//Questions text
+.questions p { color: white; font-family: "Muli", sans-serif; text-align: right; }
 
 //Dashboard links
 .dashboard { box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
@@ -566,7 +566,7 @@ a:hover { color: #7815DF; }
 }
 .dashboard-title { margin-top: 0; margin-bottom: 0; font-size: 20px; color: black; }
 .dashboard-title { text-transform: uppercase; letter-spacing: 1px; text-align: center; }
-.dashboard-subtitle { margin-top: 0; margin-bottom: 0; font-size: 12px; color: black; }
+.dashboard-subtitle { margin-top: 0; margin-bottom: 0; font-size: 14px; color: black; }
 .dashboard-subtitle { text-transform: uppercase; letter-spacing: 1px; text-align: center; }
 .dashboard-link:hover { text-decoration: none; }
 
@@ -577,6 +577,21 @@ a:hover { color: #7815DF; }
 .help-title { height: 100px; background-color: orange; }
 .help-icon:before {
 	content: "\f059  ";
+	font-family: FontAwesome;
+}
+
+.github-issues h1:before {
+  content: "\f09b  ";
+	font-family: FontAwesome;
+}
+
+.github-prs h1:before {
+  content: "\f09b  ";
+	font-family: FontAwesome;
+}
+
+.github-forks h1:before {
+  content: "\f09b  ";
 	font-family: FontAwesome;
 }
 
@@ -612,7 +627,7 @@ a:hover { color: #7815DF; }
 }
 
 .info {
-  color: #7815DF;
+  color: #B38CE1;
 }
 
 .info:before {
@@ -626,7 +641,7 @@ a:hover { color: #7815DF; }
 }
 
 .goal {
-  color: #7815DF;
+  color: #B38CE1;
 }
 
 .code > a:before {
@@ -635,10 +650,10 @@ a:hover { color: #7815DF; }
 }
 
 .code {  a {
-    color: #7815DF;
+    color: #B38CE1;
   }
   a:hover {
-    color: #DF15CB;
+    color: #E285DA;
   }
 }
 
@@ -654,56 +669,16 @@ a:hover { color: #7815DF; }
     color: black;
   }
   a {
-    color: #7815DF;
+    color: #B38CE1;
   }
   a:hover {
-    color: #DF15CB;
+    color: #E285DA;
   }
 }
 
 .category {
-  color: #7815DF;
+  color: #B38CE1;
   font-size: 12px;
-}
-
-.yellow {
-  background-color: yellow;
-}
-
-.orange {
-  background-color:#FF8000;
-}
-
-.lilac {
-  background-color:#DA81F5;
-}
-
-.green {
-  background-color:#3ADF00;
-}
-
-.purple {
-  background-color:#8000FF;
-}
-
-.grey {
-  background-color:#6E6E6E;
-}
-
-.blue {
-  background-color:#0089DF;
-}
-
-.dark-blue {
-  background-color:#013ADF;
-}
-
-.cyan {
-  background-color: cyan;
-}
-
-.cream {
-  background-color: #EDE9E1;
 }
 
 .full-width{
@@ -755,4 +730,24 @@ a:hover { color: #7815DF; }
   .help-row {
     height: auto;
   }
+}
+
+.color-1 {
+  background-color: #B38CE1;
+}
+
+.color-2 {
+  background-color: #8AB7DF;
+}
+
+.color-3 {
+  background-color: #E285DA;
+}
+
+.color-4 {
+  background-color: #9693E3;
+}
+
+.grey {
+  background-color: #4C4C4C;
 }

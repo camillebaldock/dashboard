@@ -8,25 +8,25 @@ file = File.read('data/other.json')
     <div class="row">
       <div class="col-sm-6">
         <a class="help-icon" href="#quotes"></a>
-        <div data-id="quotes" data-view="Quotes" class="double-height lilac"></div>
-      </div>
-      <div class="col-sm-3">
-        <a class="help-icon" href="#laptop"></a>
-        <div data-id="laptop" data-view="TimeSinceLast" data-title="Last laptop rebuild" class="dark-blue"></div>
+        <div data-id="quotes" data-view="Quotes" class="double-height color-1"></div>
       </div>
       <div class="col-sm-3">
         <a class="help-icon" href="#euler"></a>
-        <div data-id="euler" data-view="Number" data-title="Unsolved Project Euler" class="cyan"></div>
+        <div data-id="euler" data-view="Number" data-title="Unsolved Project Euler" class="color-2"></div>
+      </div>
+      <div class="col-sm-3">
+        <a class="help-icon" href="#laptop"></a>
+        <div data-id="laptop" data-view="TimeSinceLast" data-title="Last laptop rebuild" class="grey"></div>
       </div>
     </div>
     <div class="row">
       <div class="col-sm-3">
         <a class="help-icon" href="#training"></a>
-        <div data-id="training" data-view="Number" data-title="Training courses" class="cream"></div>
+        <div data-id="training" data-view="Number" data-title="Training courses" class="color-3"></div>
       </div>
       <div class="col-sm-3">
         <a class="help-icon" href="#challenges"></a>
-        <div data-id="challenges" data-view="Number" data-title="Coding challenges" class="purple"></div>
+        <div data-id="challenges" data-view="Number" data-title="Coding challenges" class="color-4"></div>
       </div>
     </div>
     <%= erb(:help, :layout => false) %>

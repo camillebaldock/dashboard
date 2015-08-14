@@ -6,7 +6,13 @@ SCHEDULER.every "1h", :first_in => 0 do
   logger.start
   begin
     client = KindleClient.new(ENV["AMAZON_EMAIL"], ENV["AMAZON_PASSWORD"])
-    send_event("kindle", { current: client.to_read })
+    kindle = client.to_read
+    settings = {
+      "danger" => 10
+    }
+    status_calculator = StatusCalculator.new(settings)
+    color = status_calculator.get_color(kindle)
+    send_event("kindle", { "current" => kindle, "background-color" => color })
   rescue Exception => e
     logger.exception(e)
   end
