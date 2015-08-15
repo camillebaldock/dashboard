@@ -29,10 +29,6 @@ Plex | [gist](https://gist.github.com/camilleldn/b3df4f58efe938d05912)
 PocketCasts | [gist](https://gist.github.com/camilleldn/40db50ad9bef72c7c304)
 Quotes | [gist](https://gist.github.com/camilleldn/920042990c6f9c121f58)
 
-## Deploy your own!
-
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
-
 ## Tech badges
 
 [![Build Status](https://travis-ci.org/camilleldn/dashboard.svg)](https://travis-ci.org/camilleldn/dashboard)
