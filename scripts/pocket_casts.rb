@@ -2,6 +2,8 @@ require 'watir-webdriver'
 require 'json'
 require 'uri'
 require 'net/http'
+require_relative '../lib/status_calculator'
+Selenium::WebDriver::Firefox::Binary.path=ENV["FIREFOX_PATH"]
 
 class PocketCastsClient
 

@@ -1,5 +1,6 @@
 require 'plex-ruby'
 require 'json'
+require_relative '../lib/status_calculator'
 
 server = Plex::Server.new(ENV["SERVER_HOST"], 32400)
 sections = server.library.sections
