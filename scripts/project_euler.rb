@@ -5,6 +5,7 @@ require 'mechanize'
 
 mechanize = Mechanize.new
 page = mechanize.get('https://projecteuler.net/sign_in')
+mechanize.agent.http.verify_mode = OpenSSL::SSL::VERIFY_NONE
 form = page.forms.first
 form['username']=ENV['PROJECT_EULER_USERNAME']
 form['password']=ENV['PROJECT_EULER_PASSWORD']
