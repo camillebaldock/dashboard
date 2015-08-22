@@ -84,7 +84,7 @@ GEM
       mini_portile (~> 0.6.0)
     ntlm-http (0.1.1)
     oauth (0.4.7)
-    octokit (4.0.1)
+    octokit (4.1.0)
       sawyer (~> 0.6.0, >= 0.5.3)
     passenger (5.0.15)
       rack
@@ -196,3 +196,6 @@ DEPENDENCIES
   ruby-gmail
   ruby-trello!
   watir-webdriver
+
+BUNDLED WITH
+   1.10.6
