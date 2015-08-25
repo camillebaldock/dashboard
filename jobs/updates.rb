@@ -13,6 +13,8 @@ def days_ago(date_string)
     "1 day ago"
   elsif number_days <30
     "#{number_days} days ago"
+  elsif number_days < 60
+    "1 month ago"
   elsif number_days < 365
     "#{number_days/30} months ago"
   else
