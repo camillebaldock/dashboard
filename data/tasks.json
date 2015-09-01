@@ -1,35 +1,31 @@
 {
-  "wunderlist": {
-    "title": "TODOs",
-    "goal": "Zero",
-    "gist": "camilleldn/1092f66251ad1461b473",
-    "description": "Number of tasks are due that day. I use <a href=\"https://wunderlist.com\">Wunderlist</a> to track small tasks only (eg 'go to the post office')."
-  },
-  "email": {
-    "title": "Email",
-    "goal": "Zero",
-    "gist": "camilleldn/10709a0ec6b25323f1cb",
-    "description": "Number of emails currently in my inbox. I manage regular subscriptions with <a href=\"http://unroll.me\">Unroll.me</a> so I only get one email per day for subscription emails."
-  },
-  "newsletter": {
-    "title": "Newsletter",
-    "goal": "Every month",
-    "gist": "hannesfostie/5420959",
-    "description": "I keep in touch with a few of my close friends by writing a monthly newsletter, featuring bad puns and terrible doodles."
-  },
-  "blog": {
-    "title": "Blog",
-    "goal": "Every month",
-    "gist": "hannesfostie/5420959",
-    "description": "I occasionally write blog posts on <a href=\"http://camillebaldock.com\">my website</a>."
-  },
-  "trello": {
-    "title": "Trello",
-    "gist": "camilleldn/cda910d857f4c6225f75",
-    "description": "I use a Trello board with four sections for longer
-    term projects that I am working on. I track my current projects in the \"Current\"
-    section. I have a \"Prioritised\" section for projects that are ready (next actions already known)
-    that are either urgent or important to get to that week. I store other ready projects in the \"Ready\" section.
-    Finally, I have an \"Icebox\" section for ideas and projects that I am unsure about or need more thinking."
-  }
+    "wunderlist": {
+        "title": "TODOs",
+        "goal": "Zero",
+        "gist": "camilleldn/1092f66251ad1461b473",
+        "description": "Number of tasks are due that day. I use <a href=\"https://wunderlist.com\">Wunderlist</a> to track small tasks only (eg 'go to the post office')."
+    },
+    "email": {
+        "title": "Email",
+        "goal": "Zero",
+        "gist": "camilleldn/10709a0ec6b25323f1cb",
+        "description": "Number of emails currently in my inbox. I manage regular subscriptions with <a href=\"http://unroll.me\">Unroll.me</a> so I only get one email per day for subscription emails."
+    },
+    "newsletter": {
+        "title": "Newsletter",
+        "goal": "Every month",
+        "gist": "hannesfostie/5420959",
+        "description": "I keep in touch with a few of my close friends by writing a monthly newsletter, featuring bad puns and terrible doodles."
+    },
+    "blog": {
+        "title": "Blog",
+        "goal": "Every month",
+        "gist": "hannesfostie/5420959",
+        "description": "I occasionally write blog posts on <a href=\"http://camillebaldock.com\">my website</a>."
+    },
+    "trello": {
+        "title": "Trello",
+        "gist": "camilleldn/cda910d857f4c6225f75",
+        "description": "I use a Trello board with four sections for longer term projects that I am working on. I track my current projects in the \"Current\" section. I have a \"Prioritised\" section for projects that are ready (next actions already known) that are either urgent or important to get to that week. I store other ready projects in the \"Ready\" section. Finally, I have an \"Icebox\" section for ideas and projects that I am unsure about or need more thinking."
+    }
 }
