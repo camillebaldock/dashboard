@@ -574,6 +574,15 @@ a:hover { color: #6c2eb2; }
 .help-title h3 {
   text-align: center;
 }
+#trello {
+  .help {
+    height: 160px;
+  }
+  .help-title {
+    height: 160px;
+  }
+}
+
 .help-title { height: 100px; background-color: orange; }
 .help-icon:before {
 	content: "\f059  ";
