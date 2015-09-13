@@ -289,8 +289,30 @@
     author: "William Shakespeare"
     quotes:
       - "There is nothing either good or bad, but thinking makes it so."
-- 
+-
   22:
     author: "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb"
     quotes:
       - "Gentlemen. You can't fight in here. This is the War Room."
+-
+  23:
+    quotes:
+      - |-
+        One thing I can do now is ______.
+        One thing I’m still unsure about is ______.
+        One thing I’d like to learn is ______.
+-
+  24:
+    quotes:
+      - |-
+        The Way is shaped by use,
+        But then the shape is lost.
+        Do not hold fast to shapes
+        But let sensation flow into the world
+        As a river courses down to the sea.
+    author: "Lao Tzu"
+-
+  25:
+    quotes:
+      - "Just as there are odors that dogs can smell and we cannot, as well as sounds that dogs can hear and we cannot, so too there are wavelengths of light we cannot see and flavors we cannot taste. Why then, given our brains wired the way they are, does the remark "Perhaps there are thoughts we cannot think," surprise you? Evolution, so far, may possibly have blocked us from being able to think in some directions; there could be unthinkable thoughts."
+    author: "Richard Hamming"
