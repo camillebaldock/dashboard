@@ -1,8 +1,11 @@
 require 'net/https'
 require 'json'
 
-SCHEDULER.every "10m", :first_in => 0 do
-  logger = Logger.new("travis")
+key="travis"
+config = ConfigRepository.new(key)
+
+SCHEDULER.every config.frequency, :first_in => 0 do
+  logger = Logger.new(key)
   logger.start
   broken_builds = 0
   begin
@@ -17,15 +20,13 @@ SCHEDULER.every "10m", :first_in => 0 do
         broken_builds += 1
       end
     end
-    settings = {
-      "warning" => 1
-    }
-    status_calculator = StatusCalculator.new(settings)
-    color = status_calculator.get_color(broken_builds)
+
+    colour_calculator = ColourCalculator.new(config)
+    colour = colour_calculator.get_color(broken_builds)
     if broken_builds > 0
-      send_event('travis', { current: broken_builds, "background-color" => color })
+      send_event(key, { current: broken_builds, "background-color" => KEY })
     else
-      send_event('travis', { current: nil, "background-color" => color })
+      send_event(key, { current: nil, "background-color" => KEY })
     end
   rescue Exception => e
     logger.exception(e)

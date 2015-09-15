@@ -1,8 +1,11 @@
 require 'mechanize'
 require 'json'
 
-SCHEDULER.every "1m", :first_in => 0 do
-  logger = Logger.new("quotes")
+key="quotes"
+config = ConfigRepository.new(key)
+
+SCHEDULER.every config.frequency, :first_in => 0 do
+  logger = Logger.new(key)
   logger.start
   begin
     quote_documents = YAML.load(File.open("./quotes.yml"))
@@ -18,7 +21,7 @@ SCHEDULER.every "1m", :first_in => 0 do
       end
     end
     quote = quotes.sample
-    send_event("quotes", { text: quote[:text], title: quote[:title], author: quote[:author] } )
+    send_event(key, { text: quote[:text], title: quote[:title], author: quote[:author] } )
   rescue Exception => e
     logger.exception(e)
   end

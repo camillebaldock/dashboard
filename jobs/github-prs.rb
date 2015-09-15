@@ -1,7 +1,10 @@
 require 'octokit'
 
-SCHEDULER.every "30m", first_in: 0 do
-  logger = Logger.new("github-prs")
+key="github-prs"
+config = ConfigRepository.new(key)
+
+SCHEDULER.every config.frequency, first_in: 0 do
+  logger = Logger.new(key)
   logger.start
   begin
     Octokit.auto_paginate = true
@@ -25,14 +28,9 @@ SCHEDULER.every "30m", first_in: 0 do
       number_prs += prs.count
     end
 
-    settings = {
-      "attention" => 1,
-      "danger" => 5,
-      "warning" => 10
-    }
-    status_calculator = StatusCalculator.new(settings)
-    color = status_calculator.get_color(number_prs)
-    send_event("github-prs", { "current" => number_prs, "background-color" => color })
+    colour_calculator = ColourCalculator.new(config)
+    colour = colour_calculator.get_colour(number_prs)
+    send_event(key, { "current" => number_prs, "background-color" => colour })
   rescue Exception => e
     logger.exception(e)
   end

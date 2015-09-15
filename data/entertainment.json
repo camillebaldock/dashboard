@@ -1,50 +1,78 @@
 {
-  "rss": {
-    "title": "RSS",
-    "goal": "Zero",
-    "gist": "camilleldn/e7756c5067bc11323aee",
-    "description": "I use <a href=\"http://feedly.com\">Feedly</a> to subscribe to several blogs, mostly tech-related ones. For more details about what I read, <a href=\"https://github.com/camilleldn/dashboard/blob/master/public/feedly.opml\">view the OPML file for my Feedly content</a>."
-  },
-  "pocket": {
-    "title": "Pocket",
-    "goal": "Zero",
-    "gist": "camilleldn/faff5cd21dee6a64867a",
-    "description": "I use <a href=\"http://getpocket.com\">Pocket</a> to save links that I wish to read later."
-  },
-  "books": {
-    "title": "Books",
-    "goal": "Less than 10",
-    "info": "I treat my reading list like a queue: first in, last out.",
-    "gist": "camilleldn/4f873e77cc625ba3632b",
-    "description": "I occasionally still buy or get given books in \"dead-tree\" format. I track those through <a href=\"https://www.goodreads.com/\">GoodReads</a> on a \"to-read\" list."
-  },
-  "kindle": {
-    "title": "Kindle books",
-    "goal": "Less than 10",
-    "info": "I treat my reading list like a queue: first in, last out.",
-    "gist": "camilleldn/3eb233168e62fab96de2",
-    "description": "I use Kindle to read e-books on my phone or tablet."
-  },
-  "films": {
-    "title": "Films",
-    "gist": "camilleldn/b3df4f58efe938d05912",
-    "description": "I have a home-brewed Plex-like media server setup at home that can talk to my Amazon Prime, Netflix accounts and personal files. I have the ability to add content to my list of things to watch."
-  },
-  "tv": {
-    "title": "TV shows",
-    "gist": "camilleldn/b3df4f58efe938d05912",
-    "description": "I have a home-brewed Plex-like media server setup at home that can talk to my Amazon Prime, Netflix accounts and personal files. I have the ability to add content to my list of things to watch."
-  },
-  "videos": {
-    "title": "Videos",
-    "goal": "Zero",
-    "gist": "camilleldn/b3df4f58efe938d05912",
-    "description": "I have a home-brewed Plex-like media server setup at home that can talk to my Amazon Prime, Netflix accounts and personal files. My home videos are mostly technical training videos."
-  },
-  "podcasts": {
-    "title": "Podcasts",
-    "goal": "Zero",
-    "gist": "camilleldn/40db50ad9bef72c7c304",
-    "description": "I use <a href=\"https://play.pocketcasts.com/web\">PocketCasts</a> to manage my podcasts. I listen to: <a href=\"http://99percentinvisible.org/\">99% Invisible</a>, <a href=\"http://www.bbfc.co.uk/case-studies/podcasts\">BBFC</a>, <a href=\"http://freakonomics.com/\">Freakonomics</a>, <a href=\"http://www.bbc.co.uk/podcasts/series/fricomedy\">Friday Night Comedy (BBC4)</a>, <a href=\"http://songexploder.net/\">Song Exploder</a>, <a href=\"http://www.thisamericanlife.org/\">This American Life</a> and a few more."
-  }
+    "rss": {
+        "title": "RSS",
+        "goal": "Zero",
+        "gist": "camilleldn/e7756c5067bc11323aee",
+        "description": "I use <a href=\"http://feedly.com\">Feedly</a> to subscribe to several blogs, mostly tech-related ones. For more details about what I read, <a href=\"https://github.com/camilleldn/dashboard/blob/master/public/feedly.opml\">view the OPML file for my Feedly content</a>.",
+        "settings": {
+            "goal": {
+                "yellow": 1,
+                "orange": 10,
+                "red": 20
+            }
+        },
+        "frequency": "30m"
+    },
+    "pocket": {
+        "title": "Pocket",
+        "goal": "Zero",
+        "gist": "camilleldn/faff5cd21dee6a64867a",
+        "description": "I use <a href=\"http://getpocket.com\">Pocket</a> to save links that I wish to read later.",
+        "settings": {
+            "goal": {
+                "yellow": 1,
+                "orange": 10,
+                "red": 20
+            }
+        },
+        "frequency": "30m"
+    },
+    "books": {
+        "title": "Books",
+        "goal": "Less than 10",
+        "info": "I treat my reading list like a queue: first in, last out.",
+        "gist": "camilleldn/4f873e77cc625ba3632b",
+        "description": "I occasionally still buy or get given books in \"dead-tree\" format. I track those through <a href=\"https://www.goodreads.com/\">GoodReads</a> on a \"to-read\" list.",
+        "settings": {
+            "goal": {
+                "yellow": 10
+            }
+        },
+        "frequency": "1h"
+    },
+    "kindle": {
+        "title": "Kindle books",
+        "goal": "Less than 10",
+        "info": "I treat my reading list like a queue: first in, last out.",
+        "gist": "camilleldn/3eb233168e62fab96de2",
+        "description": "I use Kindle to read e-books on my phone or tablet.",
+        "settings": {
+            "goal": {
+                "yellow": 10
+            }
+        },
+        "frequency": "1h"
+    },
+    "films": {
+        "title": "Films",
+        "gist": "camilleldn/b3df4f58efe938d05912",
+        "description": "I have a home-brewed Plex-like media server setup at home that can talk to my Amazon Prime, Netflix accounts and personal files. I have the ability to add content to my list of things to watch."
+    },
+    "tv": {
+        "title": "TV shows",
+        "gist": "camilleldn/b3df4f58efe938d05912",
+        "description": "I have a home-brewed Plex-like media server setup at home that can talk to my Amazon Prime, Netflix accounts and personal files. I have the ability to add content to my list of things to watch."
+    },
+    "videos": {
+        "title": "Videos",
+        "goal": "Zero",
+        "gist": "camilleldn/b3df4f58efe938d05912",
+        "description": "I have a home-brewed Plex-like media server setup at home that can talk to my Amazon Prime, Netflix accounts and personal files. My home videos are mostly technical training videos."
+    },
+    "podcasts": {
+        "title": "Podcasts",
+        "goal": "Zero",
+        "gist": "camilleldn/40db50ad9bef72c7c304",
+        "description": "I use <a href=\"https://play.pocketcasts.com/web\">PocketCasts</a> to manage my podcasts. I listen to: <a href=\"http://99percentinvisible.org/\">99% Invisible</a>, <a href=\"http://www.bbfc.co.uk/case-studies/podcasts\">BBFC</a>, <a href=\"http://freakonomics.com/\">Freakonomics</a>, <a href=\"http://www.bbc.co.uk/podcasts/series/fricomedy\">Friday Night Comedy (BBC4)</a>, <a href=\"http://songexploder.net/\">Song Exploder</a>, <a href=\"http://www.thisamericanlife.org/\">This American Life</a> and a few more."
+    }
 }

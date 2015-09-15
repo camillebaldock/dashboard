@@ -1,6 +1,6 @@
 require 'plex-ruby'
 require 'json'
-require_relative '../lib/status_calculator'
+require_relative '../lib/colour_calculator'
 
 server = Plex::Server.new(ENV["SERVER_HOST"], 32400)
 sections = server.library.sections
@@ -36,8 +36,8 @@ response = http.post(uri.path, params.to_json, json_headers)
 settings = {
   "danger" => 1
 }
-status_calculator = StatusCalculator.new(settings)
-color = status_calculator.get_color(unwatched_videos)
+colour_calculator = ColourCalculator.new(settings)
+color = colour_calculator.get_color(unwatched_videos)
 params = {'auth_token' => auth_token, 'current' => unwatched_videos, "background-color" => color }
 uri = URI.parse('http://dashboard.camillebaldock.com/widgets/videos')
 http = Net::HTTP.new(uri.host, uri.port)

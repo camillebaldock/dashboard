@@ -1,7 +1,10 @@
 require 'octokit'
 
-SCHEDULER.every "1h", first_in: 0 do
-  logger = Logger.new("releases")
+key="releases"
+config = ConfigRepository.new(key)
+
+SCHEDULER.every config.frequency, first_in: 0 do
+  logger = Logger.new(key)
   logger.start
   begin
     Octokit.auto_paginate = true
@@ -28,13 +31,11 @@ SCHEDULER.every "1h", first_in: 0 do
       end
     end
     formatted_releases["items"].compact!
-    settings = {
-      "warning" => 1
-    }
-    status_calculator = StatusCalculator.new(settings)
-    color = status_calculator.get_color(formatted_releases["items"].count)
-    formatted_releases["background-color"] = color
-    send_event("releases", formatted_releases)
+
+    status_calculator = StatusCalculator.new(config)
+    colour = status_calculator.get_colour(formatted_releases["items"].count)
+    formatted_releases["background-color"] = colour
+    send_event(key, formatted_releases)
   rescue Exception => e
     logger.exception(e)
   end

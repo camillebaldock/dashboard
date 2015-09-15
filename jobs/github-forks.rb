@@ -1,5 +1,8 @@
 require 'octokit'
 
+key="github-forks"
+config = ConfigRepository.new(key)
+
 def is_in_sync(client, parent, fork)
   parent_commits = parent.rels[:commits].get.data
   latest_parent_commit_date = parent_commits.first.commit.committer.date
@@ -12,8 +15,8 @@ def is_in_sync(client, parent, fork)
   repo_shas.index(latest_parent_commit_sha)
 end
 
-SCHEDULER.every "30m", first_in: 0 do
-  logger = Logger.new("github-forks")
+SCHEDULER.every config.frequency, first_in: 0 do
+  logger = Logger.new(key)
   logger.start
   begin
     Octokit.auto_paginate = true
@@ -47,13 +50,11 @@ SCHEDULER.every "30m", first_in: 0 do
       hash = {"label" => out_of_date_fork}
       formatted_forks["items"] << hash
     end
-    settings = {
-      "warning" => 1
-    }
-    status_calculator = StatusCalculator.new(settings)
-    color = status_calculator.get_color(formatted_forks["items"].count)
-    formatted_forks["background-color"] = color
-    send_event("github-forks", formatted_forks)
+
+    colour_calculator = ColourCalculator.new(config)
+    colour = colour_calculator.get_colour(formatted_forks["items"].count)
+    formatted_forks["background-color"] = colour
+    send_event(key, formatted_forks)
   rescue Exception => e
     logger.exception(e)
   end

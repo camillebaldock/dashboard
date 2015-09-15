@@ -2,7 +2,8 @@
     "quotes": {
         "title": "Quotes",
         "gist": "camilleldn/920042990c6f9c121f58",
-        "description": "I keep track of Kindle highlights and quotes that I found interesting, entertaining or note-worthy. They are viewable in <a href=\"https://github.com/camilleldn/dashboard/blob/master/quotes.yml\">this YML file</a>."
+        "description": "I keep track of Kindle highlights and quotes that I found interesting, entertaining or note-worthy. They are viewable in <a href=\"https://github.com/camilleldn/dashboard/blob/master/quotes.yml\">this YML file</a>.",
+        "frequency": "1m"
     },
     "laptop": {
         "title": "Laptop rebuild",
