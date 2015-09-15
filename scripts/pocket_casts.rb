@@ -2,7 +2,7 @@ require 'watir-webdriver'
 require 'json'
 require 'uri'
 require 'net/http'
-require_relative '../lib/status_calculator'
+require_relative '../lib/colour_calculator'
 Selenium::WebDriver::Firefox::Binary.path=ENV["FIREFOX_PATH"]
 
 class PocketCastsClient
@@ -69,8 +69,8 @@ p "#{unplayed_podcasts} podcasts"
 settings = {
   "danger" => 1
 }
-status_calculator = StatusCalculator.new(settings)
-color = status_calculator.get_color(unplayed_podcasts)
+colour_calculator = ColourCalculator.new(settings)
+color = colour_calculator.get_color(unplayed_podcasts)
 params = {'auth_token' => auth_token, 'current' => unplayed_podcasts, "background-color" => color }
 
 uri = URI.parse('http://dashboard.camillebaldock.com/widgets/podcasts')

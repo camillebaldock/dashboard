@@ -1,0 +1,10 @@
+{
+  "testkey": {
+    "settings": {
+      "goal": {
+        "red": 42
+      }
+    },
+    "frequency": "1h"
+  }
+}

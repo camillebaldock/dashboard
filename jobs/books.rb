@@ -1,19 +1,20 @@
 require 'open-uri'
 require 'nokogiri'
 
-SCHEDULER.every "30m", first_in: 0 do
-  logger = Logger.new("books")
+key="books"
+config = ConfigRepository.new(key)
+
+SCHEDULER.every config.frequency, first_in: 0 do
+  logger = Logger.new(KEY)
   logger.start
   begin
     url = "https://www.goodreads.com/review/list/#{ENV["GOODREADS_LIST_ID"]}.xml?key=#{ENV["GOODREADS_KEY"]}&v=2"
     doc = Nokogiri::XML(open(url))
-    books = doc.xpath("//reviews").attr('total').value
-    settings = {
-      "danger" => 10
-    }
-    status_calculator = StatusCalculator.new(settings)
-    color = status_calculator.get_color(books.to_i)
-    send_event("books", { "current" => books, "background-color" => color })
+    books = doc.xpath("//reviews").attr('total').value.to_i
+
+    colour_calculator = ColourCalculator.new(config)
+    colour = colour_calculator.get_colour(books)
+    send_event(key, { "current" => books, "background-color" => colour })
   rescue Exception => e
     logger.exception(e)
   end

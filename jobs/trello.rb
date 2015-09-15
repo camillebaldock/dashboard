@@ -2,13 +2,16 @@ require 'trello'
 
 include Trello
 
+key="trello"
+config = ConfigRepository.new(key)
+
 Trello.configure do |config|
   config.developer_public_key = ENV["TRELLO_DEVELOPER_KEY"]
   config.member_token = ENV["TRELLO_MEMBER_TOKEN"]
 end
 
-SCHEDULER.every "30m", first_in: 0 do
-  logger = Logger.new("trello")
+SCHEDULER.every config.frequency, first_in: 0 do
+  logger = Logger.new(key)
   logger.start
   begin
     board = Board.all.find { |board| board.name == ENV["TRELLO_BOARD_NAME"] }

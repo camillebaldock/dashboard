@@ -2,9 +2,11 @@ require 'json'
 
 username = ENV["STATUSCAKE_USERNAME"]
 key = ENV["STATUSCAKE_KEY"]
+key="statuscake"
+config = ConfigRepository.new(key)
 
-SCHEDULER.every "1h", first_in: 0 do
-  logger = Logger.new("statuscake")
+SCHEDULER.every config.frequency, first_in: 0 do
+  logger = Logger.new(key)
   logger.start
   begin
     items=[]
@@ -24,9 +26,9 @@ SCHEDULER.every "1h", first_in: 0 do
       end
     end
     if items.count > 0
-      send_event('statuscake', { "current" => items.count, "background-color" => 'red' })
+      send_event(key, { "current" => items.count, "background-color" => 'red' })
     else
-      send_event('statuscake', { "background-color" => 'green' })
+      send_event(key, { "background-color" => 'green' })
     end
   rescue Exception => e
     logger.exception(e)

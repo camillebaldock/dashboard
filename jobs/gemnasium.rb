@@ -1,7 +1,10 @@
 require 'rest_client'
 
-SCHEDULER.every "30m", first_in: 0 do
-  logger = Logger.new("gemnasium")
+key="gemnasium"
+config = ConfigRepository.new(key)
+
+SCHEDULER.every config.frequency, first_in: 0 do
+  logger = Logger.new(key)
   logger.start
   begin
     response = RestClient.get "https://X:#{ENV["GEMNASIUM_TOKEN"]}@api.gemnasium.com/v1/projects"
@@ -13,13 +16,13 @@ SCHEDULER.every "30m", first_in: 0 do
     end
     reds = colours.select { |colour| colour == "red" }
     if reds.count > 0
-      send_event('gemnasium', { current: reds.count, "background-color" => 'red' })
+      send_event(key, { current: reds.count, "background-color" => 'red' })
     else
       yellows = colours.select { |colour| colour == "yellow" }
       if yellows.count > 0
-        send_event('gemnasium', { current: yellows.count, "background-color" => 'yellow' })
+        send_event(key, { current: yellows.count, "background-color" => 'orange' })
       else
-        send_event('gemnasium', { "background-color" => 'green' })
+        send_event(key, { "background-color" => 'green' })
       end
     end
   rescue Exception => e

@@ -3,42 +3,49 @@
     "title": "Boxen releases",
     "goal": "Zero",
     "gist": "camilleldn/03e617de7bde53f179a2",
-    "description": "I use <a href=\"https://boxen.camillebaldock.com/\">Boxen</a> to automate setting up my computers. This widget lists every Puppet module that I use in my Boxen that has a new released version."
+    "description": "I use <a href=\"https://boxen.camillebaldock.com/\">Boxen</a> to automate setting up my computers. This widget lists every Puppet module that I use in my Boxen that has a new released version.",
+    "frequency": "30m"
   },
   "github-forks": {
     "title": "Forks to update",
     "goal": "Zero",
     "gist": "camilleldn/1d4eedb3d6564b423bdd",
-    "description": "Shows if any of my GitHub forks' parents have new commits that aren't in my forks."
+    "description": "Shows if any of my GitHub forks' parents have new commits that aren't in my forks.",
+    "frequency": "1h"
   },
   "github-issues": {
     "title": "GitHub issues",
     "goal": "Zero",
     "gist": "camilleldn/2aacd5153a15c7def1a3",
-    "description": "I compulsively check my <a href=\"https://github.com/issues\">issues</a> on GitHub. This widget tracks all issues open on my personal repositories and some organisations for which I am responsible for responding to issues."
+    "description": "I compulsively check my <a href=\"https://github.com/issues\">issues</a> on GitHub. This widget tracks all issues open on my personal repositories and some organisations for which I am responsible for responding to issues.",
+    "frequency": "30m"
   },
   "github-prs": {
     "title": "GitHub pull requests",
     "goal": "Zero",
     "gist": "camilleldn/b73b963bf51956b459d5",
-    "description": "I compulsively check my <a href=\"https://github.com/pulls\">pull requests</a> on GitHub. This widget tracks all pull requests open on my personal repositories and some organisations for which I am responsible for responding to pull requests."
+    "description": "I compulsively check my <a href=\"https://github.com/pulls\">pull requests</a> on GitHub. This widget tracks all pull requests open on my personal repositories and some organisations for which I am responsible for responding to pull requests.",
+    "frequency": "30m"
   },
   "travis": {
     "title": "Travis",
     "goal": "Zero",
     "gist": "camilleldn/e83b1859d385b05f214e",
-    "description": "Monitors the number of failed Travis builds. I use Travis builds to monitor all of my project builds."
+    "description": "Monitors the number of failed Travis builds. I use Travis builds to monitor all of my project builds.",
+    "frequency": "1h"
   },
   "gemnasium": {
     "title": "Gemnasium",
     "goal": "Zero",
     "gist": "camilleldn/f8a5d9487a6ecb019b88",
-    "description": "This widget uses the <a href=\"http://gemnasium.com\">Gemnasium</a> service to track Ruby gem updates on my projects. If any gems have an update available, this widget will turn orange. If any of those updates are urgent, this widget will turn red."
+    "description": "This widget uses the <a href=\"http://gemnasium.com\">Gemnasium</a> service to track Ruby gem updates on my projects. If any gems have an update available, this widget will turn orange. If any of those updates are urgent, this widget will turn red.",
+    "frequency": "1h"
   },
   "statuscake": {
     "title": "Monitoring",
     "goal": "Green at all times",
     "gist": "camilleldn/ba2e46052dc8da7b9624",
-    "description": "I use <a href=\"https://www.statuscake.com/\">StatusCake</a> to monitor uptime on several of my personal and work applications."
+    "description": "I use <a href=\"https://www.statuscake.com/\">StatusCake</a> to monitor uptime on several of my personal and work applications.",
+    "frequency": "1h"
   }
 }
