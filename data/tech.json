@@ -11,21 +11,40 @@
     "goal": "Zero",
     "gist": "camilleldn/1d4eedb3d6564b423bdd",
     "description": "Shows if any of my GitHub forks' parents have new commits that aren't in my forks.",
-    "frequency": "1h"
+    "frequency": "1h",
+    "settings": {
+        "goal": {
+            "red": 1
+        }
+    }
   },
   "github-issues": {
     "title": "GitHub issues",
     "goal": "Zero",
     "gist": "camilleldn/2aacd5153a15c7def1a3",
     "description": "I compulsively check my <a href=\"https://github.com/issues\">issues</a> on GitHub. This widget tracks all issues open on my personal repositories and some organisations for which I am responsible for responding to issues.",
-    "frequency": "30m"
+    "frequency": "30m",
+    "settings": {
+        "goal": {
+            "yellow": 1,
+            "orange": 5,
+            "red": 10
+        }
+    }
   },
   "github-prs": {
     "title": "GitHub pull requests",
     "goal": "Zero",
     "gist": "camilleldn/b73b963bf51956b459d5",
     "description": "I compulsively check my <a href=\"https://github.com/pulls\">pull requests</a> on GitHub. This widget tracks all pull requests open on my personal repositories and some organisations for which I am responsible for responding to pull requests.",
-    "frequency": "30m"
+    "frequency": "30m",
+    "settings": {
+      "goal": {
+          "yellow": 1,
+          "orange": 5,
+          "red": 10
+      }
+    }
   },
   "travis": {
     "title": "Travis",

@@ -24,12 +24,18 @@ SCHEDULER.every config.frequency, first_in: 0 do
     training = Board.all.find { |board| board.name == "Training" }
     training_lists = training.lists
     ongoing_training_cards = training_lists.select { |list| list.name != "Done" }.map(&:cards).map(&:size).inject(&:+)
-    send_event("training", { current: ongoing_training_cards })
+    config = ConfigRepository.new("training")
+    colour_calculator = ColourCalculator.new(config)
+    colour = colour_calculator.get_colour(ongoing_training_cards)
+    send_event("training", { "current" => ongoing_training_cards, "background-color" => colour })
     # Challenges
     challenges = Board.all.find { |board| board.name == "Challenges" }
     challenge_lists = challenges.lists
     ongoing_challenge_cards = challenge_lists.select { |list| list.name != "Done" }.map(&:cards).map(&:size).inject(&:+)
-    send_event("challenges", { current: ongoing_challenge_cards })
+    config = ConfigRepository.new("challenges")
+    colour_calculator = ColourCalculator.new(config)
+    colour = colour_calculator.get_colour(ongoing_challenge_cards)
+    send_event("challenges", { "current" => ongoing_challenge_cards, "background-color" => colour })
   rescue Exception => e
     logger.exception(e)
   end

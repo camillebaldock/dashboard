@@ -32,8 +32,8 @@ SCHEDULER.every config.frequency, first_in: 0 do
     end
     formatted_releases["items"].compact!
 
-    status_calculator = StatusCalculator.new(config)
-    colour = status_calculator.get_colour(formatted_releases["items"].count)
+    colour_calculator = ColourCalculator.new(config)
+    colour = colour_calculator.get_colour(formatted_releases["items"].count)
     formatted_releases["background-color"] = colour
     send_event(key, formatted_releases)
   rescue Exception => e
