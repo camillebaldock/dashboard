@@ -4,7 +4,14 @@
         "goal": "Zero",
         "gist": "camilleldn/1092f66251ad1461b473",
         "description": "Number of tasks are due that day. I use <a href=\"https://wunderlist.com\">Wunderlist</a> to track small tasks only (eg 'go to the post office').",
-        "frequency": "30m"
+        "frequency": "30m",
+        "settings": {
+          "goal": {
+            "yellow": 1,
+            "orange": 3,
+            "red": 5
+          }
+        }
     },
     "email": {
         "title": "Email",
@@ -64,6 +71,31 @@
           "yellow": 1,
           "orange": 30
         }
+      }
+    },
+    "trello-current": {
+      "settings": {
+        "goal": {
+          "red": 3
+        }
+      }
+    },
+    "trello-prioritised": {
+      "settings": {
+        "increase": "true",
+        "goal": {
+          "red": 0
+        }
+      }
+    },
+    "trello-icebox": {
+      "settings": {
+        "colour": "#48D1CC"
+      }
+    },
+    "trello-ready": {
+      "settings": {
+        "colour": "#9932CC"
       }
     }
 }

@@ -22,11 +22,11 @@ SCHEDULER.every config.frequency, :first_in => 0 do
     end
 
     colour_calculator = ColourCalculator.new(config)
-    colour = colour_calculator.get_color(broken_builds)
+    colour = colour_calculator.get_colour(broken_builds)
     if broken_builds > 0
-      send_event(key, { current: broken_builds, "background-color" => KEY })
+      send_event(key, { current: broken_builds, "background-color" => colour })
     else
-      send_event(key, { current: nil, "background-color" => KEY })
+      send_event(key, { current: nil, "background-color" => colour })
     end
   rescue Exception => e
     logger.exception(e)

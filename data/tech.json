@@ -4,7 +4,12 @@
     "goal": "Zero",
     "gist": "camilleldn/03e617de7bde53f179a2",
     "description": "I use <a href=\"https://boxen.camillebaldock.com/\">Boxen</a> to automate setting up my computers. This widget lists every Puppet module that I use in my Boxen that has a new released version.",
-    "frequency": "30m"
+    "frequency": "30m",
+    "settings": {
+        "goal": {
+            "red": 1
+        }
+    }
   },
   "github-forks": {
     "title": "Forks to update",
@@ -51,7 +56,12 @@
     "goal": "Zero",
     "gist": "camilleldn/e83b1859d385b05f214e",
     "description": "Monitors the number of failed Travis builds. I use Travis builds to monitor all of my project builds.",
-    "frequency": "1h"
+    "frequency": "1h",
+    "settings": {
+      "goal": {
+        "red": 1
+      }
+    }
   },
   "gemnasium": {
     "title": "Gemnasium",

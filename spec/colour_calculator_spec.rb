@@ -82,4 +82,30 @@ describe ColourCalculator do
       end
     end
   end
+
+  context "has an increase goal" do
+    let(:red) { 0 }
+    let(:settings) {
+        {
+          "goal" => {
+            "red" => red
+          },
+          "increase" => "true"
+        }
+      }
+    context "its settings are a red value" do
+      context "number is > to red" do
+        let(:number) { rand(red..red+1000) }
+        it "returns green" do
+          expect(result).to eq "green"
+        end
+      end
+      context "number is <= to red" do
+        let(:number) { 0 }
+        it "returns red" do
+          expect(result).to eq "red"
+        end
+      end
+    end
+  end
 end

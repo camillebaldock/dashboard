@@ -23,6 +23,10 @@ json_headers = {"Content-Type" => "application/json",
                 "Accept" => "application/json"}
 
 params = {'auth_token' => auth_token, 'current' => euler_left}
+config = ConfigRepository.new("euler")
+colour_calculator = ColourCalculator.new(config)
+colour = colour_calculator.get_colour(euler_left)
+params['background-color'] = colour
 uri = URI.parse('http://dashboard.camillebaldock.com/widgets/euler')
 http = Net::HTTP.new(uri.host, uri.port)
 response = http.post(uri.path, params.to_json, json_headers)

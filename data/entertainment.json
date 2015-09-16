@@ -56,23 +56,43 @@
     "films": {
         "title": "Films",
         "gist": "camilleldn/b3df4f58efe938d05912",
-        "description": "I have a home-brewed Plex-like media server setup at home that can talk to my Amazon Prime, Netflix accounts and personal files. I have the ability to add content to my list of things to watch."
+        "description": "I have a home-brewed Plex-like media server setup at home that can talk to my Amazon Prime, Netflix accounts and personal files. I have the ability to add content to my list of things to watch.",
+        "settings": {
+          "colour": "#48D1CC"
+        }
     },
     "tv": {
         "title": "TV shows",
         "gist": "camilleldn/b3df4f58efe938d05912",
-        "description": "I have a home-brewed Plex-like media server setup at home that can talk to my Amazon Prime, Netflix accounts and personal files. I have the ability to add content to my list of things to watch."
+        "description": "I have a home-brewed Plex-like media server setup at home that can talk to my Amazon Prime, Netflix accounts and personal files. I have the ability to add content to my list of things to watch.",
+        "settings": {
+          "colour": "#9932CC"
+        }
     },
     "videos": {
         "title": "Videos",
         "goal": "Zero",
         "gist": "camilleldn/b3df4f58efe938d05912",
-        "description": "I have a home-brewed Plex-like media server setup at home that can talk to my Amazon Prime, Netflix accounts and personal files. My home videos are mostly technical training videos."
+        "description": "I have a home-brewed Plex-like media server setup at home that can talk to my Amazon Prime, Netflix accounts and personal files. My home videos are mostly technical training videos.",
+        "settings": {
+            "goal": {
+                "yellow": 1,
+                "orange": 50,
+                "red": 100
+            }
+        }
     },
     "podcasts": {
         "title": "Podcasts",
         "goal": "Zero",
         "gist": "camilleldn/40db50ad9bef72c7c304",
-        "description": "I use <a href=\"https://play.pocketcasts.com/web\">PocketCasts</a> to manage my podcasts. I listen to: <a href=\"http://99percentinvisible.org/\">99% Invisible</a>, <a href=\"http://www.bbfc.co.uk/case-studies/podcasts\">BBFC</a>, <a href=\"http://freakonomics.com/\">Freakonomics</a>, <a href=\"http://www.bbc.co.uk/podcasts/series/fricomedy\">Friday Night Comedy (BBC4)</a>, <a href=\"http://songexploder.net/\">Song Exploder</a>, <a href=\"http://www.thisamericanlife.org/\">This American Life</a> and a few more."
+        "description": "I use <a href=\"https://play.pocketcasts.com/web\">PocketCasts</a> to manage my podcasts. I listen to: <a href=\"http://99percentinvisible.org/\">99% Invisible</a>, <a href=\"http://www.bbfc.co.uk/case-studies/podcasts\">BBFC</a>, <a href=\"http://freakonomics.com/\">Freakonomics</a>, <a href=\"http://www.bbc.co.uk/podcasts/series/fricomedy\">Friday Night Comedy (BBC4)</a>, <a href=\"http://songexploder.net/\">Song Exploder</a>, <a href=\"http://www.thisamericanlife.org/\">This American Life</a> and a few more.",
+        "settings": {
+            "goal": {
+                "yellow": 1,
+                "orange": 5,
+                "red": 20
+            }
+        }
     }
 }

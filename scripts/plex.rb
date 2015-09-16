@@ -1,6 +1,7 @@
 require 'plex-ruby'
 require 'json'
 require_relative '../lib/colour_calculator'
+require_relative '../lib/config_repository'
 
 server = Plex::Server.new(ENV["SERVER_HOST"], 32400)
 sections = server.library.sections
@@ -23,22 +24,26 @@ json_headers = {"Content-Type" => "application/json",
 p "#{unwatched_tv_shows} TV shows"
 p "#{unwatched_films} movies"
 p "#{unwatched_videos} videos"
-params = {'auth_token' => auth_token, 'current' => unwatched_tv_shows}
+config = ConfigRepository.new("tv")
+colour_calculator = ColourCalculator.new(config)
+colour = colour_calculator.get_colour(unwatched_tv_shows)
+params = {'auth_token' => auth_token, 'current' => unwatched_tv_shows, 'background-color' => colour}
 uri = URI.parse('http://dashboard.camillebaldock.com/widgets/tv')
 http = Net::HTTP.new(uri.host, uri.port)
 response = http.post(uri.path, params.to_json, json_headers)
 
-params = {'auth_token' => auth_token, 'current' => unwatched_films}
+config = ConfigRepository.new("films")
+colour_calculator = ColourCalculator.new(config)
+colour = colour_calculator.get_colour(unwatched_films)
+params = {'auth_token' => auth_token, 'current' => unwatched_films, 'background-color' => colour}
 uri = URI.parse('http://dashboard.camillebaldock.com/widgets/films')
 http = Net::HTTP.new(uri.host, uri.port)
 response = http.post(uri.path, params.to_json, json_headers)
 
-settings = {
-  "danger" => 1
-}
-colour_calculator = ColourCalculator.new(settings)
-color = colour_calculator.get_color(unwatched_videos)
-params = {'auth_token' => auth_token, 'current' => unwatched_videos, "background-color" => color }
+config = ConfigRepository.new("videos")
+colour_calculator = ColourCalculator.new(config)
+colour = colour_calculator.get_colour(unwatched_videos)
+params = {'auth_token' => auth_token, 'current' => unwatched_videos, "background-color" => colour }
 uri = URI.parse('http://dashboard.camillebaldock.com/widgets/videos')
 http = Net::HTTP.new(uri.host, uri.port)
 response = http.post(uri.path, params.to_json, json_headers)

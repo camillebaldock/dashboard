@@ -66,12 +66,10 @@ json_headers = {"Content-Type" => "application/json",
 unplayed_podcasts = client.podcasts.values.inject(:+)
 
 p "#{unplayed_podcasts} podcasts"
-settings = {
-  "danger" => 1
-}
-colour_calculator = ColourCalculator.new(settings)
-color = colour_calculator.get_color(unplayed_podcasts)
-params = {'auth_token' => auth_token, 'current' => unplayed_podcasts, "background-color" => color }
+config = ConfigRepository.new("podcasts")
+colour_calculator = ColourCalculator.new(config)
+colour = colour_calculator.get_colour(unplayed_podcasts)
+params = {'auth_token' => auth_token, 'current' => unplayed_podcasts, "background-color" => colour }
 
 uri = URI.parse('http://dashboard.camillebaldock.com/widgets/podcasts')
 http = Net::HTTP.new(uri.host, uri.port)

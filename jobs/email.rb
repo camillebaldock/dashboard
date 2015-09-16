@@ -4,9 +4,10 @@ key="email"
 config = ConfigRepository.new(key)
 
 SCHEDULER.every config.frequency, first_in: 0 do
-  logger = Logger.new(KEY)
+  logger = Logger.new(key)
   logger.start
   begin
+    inbox_count = 0
     Gmail.new(ENV["GMAIL_USER"], ENV["GMAIL_PASSWORD"]) do |gmail|
       inbox_count = gmail.inbox.count
     end
