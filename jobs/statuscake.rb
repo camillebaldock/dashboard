@@ -25,6 +25,7 @@ SCHEDULER.every config.frequency, first_in: 0 do
         status='warning'
       end
     end
+    logger.info(items)
     if items.count > 0
       send_event(key, { "current" => items.count, "background-color" => 'red' })
     else
