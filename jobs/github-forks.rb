@@ -9,7 +9,9 @@ def is_in_sync(client, parent, fork)
   latest_parent_commit_sha = parent_commits.first.sha
   repo_commits = fork.rels[:commits].get.data
   while repo_commits.last.commit.committer.date > latest_parent_commit_date do
-    repo_commits = client.last_response.rels[:next].get.data
+    if client.last_response.rels[:next]
+      repo_commits = client.last_response.rels[:next].get.data
+    end
   end
   repo_shas = repo_commits.map(&:sha)
   repo_shas.index(latest_parent_commit_sha)
@@ -31,8 +33,6 @@ SCHEDULER.every config.frequency, first_in: 0 do
     forks.each do |fork|
       if fork.full_name.include?(ENV["GITHUB_USER"])
         parent = client.repository("#{ENV["GITHUB_USER"]}/#{fork.name}").parent
-        logger.info(parent)
-        logger.info(fork)
         unless is_in_sync(client, parent, fork)
           out_of_date_forks << fork.name
         end
@@ -42,7 +42,7 @@ SCHEDULER.every config.frequency, first_in: 0 do
     manual_forks.each do |manual_fork|
       repos = manual_fork.split(",")
       parent = client.repository(repos[0])
-      fork = client.repoitory(repos[1])
+      fork = client.repository(repos[1])
       unless is_in_sync(client, parent, fork)
         out_of_date_forks << fork.name
       end
