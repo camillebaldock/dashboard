@@ -14,7 +14,15 @@
     "euler": {
         "title": "Project Euler",
         "gist": "camilleldn/a29450249721e1686cb8",
-        "description": "I enjoy solving the maths problems on <a href=\"https://projecteuler.net\">Project Euler</a>. I have a script monitoring any new problems published there."
+        "description": "I enjoy solving the maths problems on <a href=\"https://projecteuler.net\">Project Euler</a>. I have a script monitoring any new problems published there.",
+        "frequency": "1h",
+        "settings": {
+          "goal": {
+            "yellow": 5,
+            "orange": 50,
+            "red": 100
+          }
+        }
     },
     "training": {
         "title": "Training",
