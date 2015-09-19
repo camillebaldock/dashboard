@@ -31,6 +31,8 @@ SCHEDULER.every config.frequency, first_in: 0 do
     forks.each do |fork|
       if fork.full_name.include?(ENV["GITHUB_USER"])
         parent = client.repository("#{ENV["GITHUB_USER"]}/#{fork.name}").parent
+        logger.info(parent)
+        logger.info(fork)
         unless is_in_sync(client, parent, fork)
           out_of_date_forks << fork.name
         end
@@ -40,7 +42,7 @@ SCHEDULER.every config.frequency, first_in: 0 do
     manual_forks.each do |manual_fork|
       repos = manual_fork.split(",")
       parent = client.repository(repos[0])
-      fork = client.repository(repos[1])
+      fork = client.repoitory(repos[1])
       unless is_in_sync(client, parent, fork)
         out_of_date_forks << fork.name
       end
