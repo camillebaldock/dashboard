@@ -14,6 +14,7 @@ SCHEDULER.every config.frequency, first_in: 0 do
     status='ok'
     response = Net::HTTP.get_response(URI('https://www.statuscake.com/API/Tests/?Username='+username+'&API='+key))
     all_tests = JSON.parse(response.body)
+    logger.info(all_tests)
     test_ids = all_tests.map do |site_test|
       site_test["TestID"]
     end

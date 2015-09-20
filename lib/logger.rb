@@ -16,6 +16,9 @@ class Logger
 
   def exception(exception)
     p "**JOB ERROR** #{@name}: #{exception.message}"
+    exception.backtrace.each do |trace|
+      p "**DETAILS** #{@name}: #{trace}"
+    end
   end
 
   def end
