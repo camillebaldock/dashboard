@@ -57,22 +57,6 @@
         "description": "I use a Trello board with four sections for longer term projects that I am working on. I track my current projects in the \"Current\" section. I have a \"Prioritised\" section for projects that are ready (next actions already known) that are either urgent or important to get to that week. I store other ready projects in the \"Ready\" section. Finally, I have an \"Icebox\" section for ideas and projects that I am unsure about or need more thinking.",
         "frequency": "30m"
     },
-    "training": {
-      "settings": {
-        "goal": {
-          "yellow": 1,
-          "orange": 100
-        }
-      }
-    },
-    "challenges": {
-      "settings": {
-        "goal": {
-          "yellow": 1,
-          "orange": 30
-        }
-      }
-    },
     "trello-current": {
       "settings": {
         "goal": {

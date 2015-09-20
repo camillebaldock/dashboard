@@ -27,11 +27,23 @@
     "training": {
         "title": "Training",
         "gist": "camilleldn/cda910d857f4c6225f75",
-        "description": "I store technical training courses, tutorials and articles I am currently working on or plan to be working on in the future in a Trello board."
+        "description": "I store technical training courses, tutorials and articles I am currently working on or plan to be working on in the future in a Trello board.",
+        "settings": {
+          "goal": {
+            "yellow": 1,
+            "orange": 100
+          }
+        }
     },
     "challenges": {
         "title": "Challenges",
         "gist": "camilleldn/cda910d857f4c6225f75",
-        "description": "I store coding challenges that I'd like to solve, eg from the Google Code Jam or Codility, in a Trello board."
+        "description": "I store coding challenges that I'd like to solve, eg from the Google Code Jam or Codility, in a Trello board.",
+        "settings": {
+          "goal": {
+            "yellow": 1,
+            "orange": 30
+          }
+        }
     }
 }
