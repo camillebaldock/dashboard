@@ -8,10 +8,8 @@ def is_in_sync(client, parent, fork)
   latest_parent_commit_date = parent_commits.first.commit.committer.date
   latest_parent_commit_sha = parent_commits.first.sha
   repo_commits = fork.rels[:commits].get.data
-  while repo_commits.last.commit.committer.date > latest_parent_commit_date do
-    if client.last_response.rels[:next]
-      repo_commits = client.last_response.rels[:next].get.data
-    end
+  while repo_commits.last.commit.committer.date > latest_parent_commit_date && client.last_response.rels[:next] do
+    repo_commits = client.last_response.rels[:next].get.data
   end
   repo_shas = repo_commits.map(&:sha)
   repo_shas.index(latest_parent_commit_sha)
