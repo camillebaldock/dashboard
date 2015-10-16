@@ -80,5 +80,14 @@
                 "red": 20
             }
         }
+    },
+    "go_watch_it": {
+        "title": "GoWatchIt",
+        "gist": "camilleldn/TODO",
+        "description": "I list films I'd like to watch and that aren't out yet or not available on Netflix on GoWatchIt.",
+        "settings": {
+          "colour": "#0B46CF"
+        },
+        "frequency": "1h"
     }
 }
