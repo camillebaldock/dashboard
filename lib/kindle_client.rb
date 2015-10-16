@@ -4,14 +4,11 @@ KINDLE_LOGIN_PAGE      = "http://kindle.amazon.com/login"
 SIGNIN_FORM_IDENTIFIER = "signIn"
 
 class KindleClient
-  #Code taken from https://github.com/speric/kindle-highlights
-  #some modifications made to differentiate read status
-  attr_reader :books, :to_read
+  attr_reader :to_read
 
   def initialize(email_address, password)
     @email_address = email_address
     @password      = password
-    @books         = Hash.new
     @to_read       = 0
 
     setup_mechanize_agent
@@ -28,24 +25,8 @@ class KindleClient
     signin_form.password = @password
 
     kindle_logged_in_page = @mechanize_agent.submit(signin_form)
-    highlights_page = @mechanize_agent.click(kindle_logged_in_page.link_with(text: /Your Books/))
-
-    loop do
-      (highlights_page.search(".//tr")[1..-1] || []).each do |book|
-        title_and_author = book.search(".titleAndAuthor").first
-        status = book.search(".statusText").first
-        asin_and_title_element = title_and_author.search("a").first
-        asin = asin_and_title_element.attributes["href"].value.split("/").last
-        title = asin_and_title_element.inner_html
-        to_read = status.search("div")[2].children.text == "Hope to Read "
-        @books[asin] = title
-        if to_read
-          @to_read +=1
-        end
-      end
-      break if highlights_page.link_with(text: /Next/).nil?
-      highlights_page = @mechanize_agent.click(highlights_page.link_with(text: /Next/))
-    end
+    your_books_page = @mechanize_agent.click(kindle_logged_in_page.link_with(text: /Your Books/))
+    @to_read=your_books_page.at("//*[@id='readingListCount3']").text.to_i
   end
 
   def setup_mechanize_agent

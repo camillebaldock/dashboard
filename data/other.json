@@ -1,4 +1,18 @@
 {
+    "rss": {
+        "title": "RSS",
+        "goal": "Zero",
+        "gist": "camilleldn/e7756c5067bc11323aee",
+        "description": "I use <a href=\"http://feedly.com\">Feedly</a> to subscribe to several blogs, mostly tech-related ones. For more details about what I read, <a href=\"https://github.com/camilleldn/dashboard/blob/master/public/feedly.opml\">view the OPML file for my Feedly content</a>.",
+        "settings": {
+            "goal": {
+                "yellow": 1,
+                "orange": 10,
+                "red": 20
+            }
+        },
+        "frequency": "30m"
+    },
     "quotes": {
         "title": "Quotes",
         "gist": "camilleldn/920042990c6f9c121f58",
