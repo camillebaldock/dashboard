@@ -3,6 +3,7 @@ require 'json'
 require 'uri'
 require 'net/http'
 require_relative '../lib/colour_calculator'
+require_relative '../lib/config_repository'
 Selenium::WebDriver::Firefox::Binary.path=ENV["FIREFOX_PATH"]
 
 class PocketCastsClient
