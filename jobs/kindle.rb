@@ -10,7 +10,6 @@ SCHEDULER.every config.frequency, first_in: 0 do
   begin
     url = "https://www.goodreads.com/review/list/#{ENV["GOODREADS_LIST_ID"]}.xml?key=#{ENV["GOODREADS_KEY"]}&shelf=kindle-to-read&v=2"
     doc = Nokogiri::XML(open(url))
-    logger.info(doc)
     books = doc.xpath("//reviews").attr('total').value.to_i
 
     colour_calculator = ColourCalculator.new(config)

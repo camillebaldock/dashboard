@@ -18,11 +18,9 @@ SCHEDULER.every config.frequency, first_in: 0 do
     lists = board.lists
     ENV["TRELLO_LIST_NAMES"].split(",").each do |list_name|
       list = lists.find { |list| list.name == list_name }
-      logger.info("trello-#{list_name.downcase}")
       config = ConfigRepository.new("trello-#{list_name.downcase}")
       colour_calculator = ColourCalculator.new(config)
       colour = colour_calculator.get_colour(list.cards.size)
-      logger.info(colour)
       send_event("trello-#{list_name.downcase}", { "current" => list.cards.size, "background-color" => colour })
     end
     # Training
