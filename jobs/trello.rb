@@ -29,6 +29,10 @@ SCHEDULER.every config.frequency, first_in: 0 do
     training = Board.all.find { |board| board.name == "Training" }
     training_lists = training.lists
     ongoing_training_cards = training_lists.select { |list| list.name != "Done" }.map(&:cards).map(&:size).inject(&:+)
+    url = "https://www.goodreads.com/review/list/#{ENV["GOODREADS_LIST_ID"]}.xml?key=#{ENV["GOODREADS_KEY"]}&shelf=tech-to-read&v=2"
+    doc = Nokogiri::XML(open(url))
+    books = doc.xpath("//reviews").attr('total').value.to_i
+    ongoing_training_cards += books
     config = ConfigRepository.new("training")
     colour_calculator = ColourCalculator.new(config)
     colour = colour_calculator.get_colour(ongoing_training_cards)
