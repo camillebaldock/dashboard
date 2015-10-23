@@ -1,6 +1,9 @@
 class Dashing.Number extends Dashing.Widget
   @accessor 'current', Dashing.AnimatedValue
 
+  @accessor 'backgroundColor', ->
+    @get('background-color')
+
   @accessor 'updatedAtMessage', ->
     if updatedAt = @get('updatedAt')
       timestamp = new Date(updatedAt * 1000)
