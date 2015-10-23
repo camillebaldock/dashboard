@@ -15,6 +15,7 @@ SCHEDULER.every config.frequency, first_in: 0 do
       org_repos = client.organization_repositories(monitored_github_org).map { |repo| repo.name }
       org_repos.each do |org_repo|
         issues = client.issues("#{monitored_github_org}/#{org_repo}", :state => 'open')
+        logger.info(issues.map(&:inspect))
         number_issues += issues.count
       end
     end
