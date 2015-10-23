@@ -75,7 +75,7 @@ GEM
     oauth (0.4.7)
     octokit (4.1.1)
       sawyer (~> 0.6.0, >= 0.5.3)
-    passenger (5.0.20)
+    passenger (5.0.21)
       rack
       rake (>= 0.8.1)
     plex-ruby (1.5.3)
