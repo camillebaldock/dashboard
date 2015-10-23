@@ -8,7 +8,7 @@ SCHEDULER.every config.frequency, first_in: 0 do
   logger = Logger.new(key)
   logger.start
   begin
-    url = "https://www.goodreads.com/review/list/#{ENV["GOODREADS_LIST_ID"]}.xml?key=#{ENV["GOODREADS_KEY"]}&v=2"
+    url = "https://www.goodreads.com/review/list/#{ENV["GOODREADS_LIST_ID"]}.xml?key=#{ENV["GOODREADS_KEY"]}&shelf=fiction-to-read&v=2"
     doc = Nokogiri::XML(open(url))
     books = doc.xpath("//reviews").attr('total').value.to_i
 
