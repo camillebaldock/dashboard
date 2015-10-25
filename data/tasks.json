@@ -40,10 +40,10 @@
         }
     },
     "blog": {
-        "title": "Blog",
+        "title": "Blog and photos",
         "goal": "Every month",
         "gist": "hannesfostie/5420959",
-        "description": "I occasionally write blog posts on <a href=\"http://camillebaldock.com\">my website</a>.",
+        "description": "I occasionally write blog posts on <a href=\"http://camillebaldock.com\">my website</a> and publish my photos on <a href=\"http://photos.camillebaldock.com\".",
         "settings": {
           "goal": {
             "yellow": 30,

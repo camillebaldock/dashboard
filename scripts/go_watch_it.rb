@@ -14,6 +14,7 @@ class GoWatchItClient
     @browser.text_field(:name => 'user[email]').set(@user)
     @browser.text_field(:name => 'user[password]').set(@password)
     @browser.element(:css => '#login').click
+    sleep 5
     number = @browser.element(:css => "#movie_count").text.to_i
     @browser.close
     number
