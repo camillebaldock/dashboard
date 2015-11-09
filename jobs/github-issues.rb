@@ -14,8 +14,12 @@ SCHEDULER.every config.frequency, first_in: 0 do
     ENV["MONITORED_GITHUB_ORGS"].split(",").each do |monitored_github_org|
       org_repos = client.organization_repositories(monitored_github_org).map { |repo| repo.name }
       org_repos.each do |org_repo|
-        issues = client.issues("#{monitored_github_org}/#{org_repo}", :state => 'open')
-        number_issues += issues.count
+        begin
+          issues = client.issues("#{monitored_github_org}/#{org_repo}", :state => 'open')
+          number_issues += issues.count
+        rescue Exception => e
+          logger.info(e)
+        end
       end
     end
 
