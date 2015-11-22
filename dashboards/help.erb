@@ -1,24 +1,26 @@
 <% @row = 0 %>
 <% @help.each do |index, info| %>
-  <% @row += 1 %>
-  <div class="help-row <%= "first-help-row" if @row == 1 %>" id="<%=index%>">
-    <div class="col-sm-12">
-      <div class="col-sm-3 help-title padding-top">
-        <h3><%= info["title"] %></h3>
-      </div>
-      <div class="col-sm-3 help padding-top">
-        <% if info["goal"] %>
-          <p class="goal"><%= info["goal"] %></p>
-        <% end %>
-        <% if info["info"] %>
-          <p class="info"><%= info["info"] %></p>
-        <% end %>
-        <p class="code"><a href="https://gist.github.com/<%= info["gist"] %>">Code for widget</a></p>
-      </div>
-      <div class="col-sm-6 help padding-top">
-        <a class="home-icon" href="#container" title="Back to dashboard"></a>
-        <%= info["description"] %>
+  <% if info["title"] %>
+    <% @row += 1 %>
+    <div class="help-row <%= "first-help-row" if @row == 1 %>" id="<%=index%>">
+      <div class="col-sm-12">
+        <div class="col-sm-3 help-title padding-top">
+          <h3><%= info["title"] %></h3>
+        </div>
+        <div class="col-sm-3 help padding-top">
+          <% if info["goal"] %>
+            <p class="goal"><%= info["goal"] %></p>
+          <% end %>
+          <% if info["info"] %>
+            <p class="info"><%= info["info"] %></p>
+          <% end %>
+          <p class="code"><a href="https://gist.github.com/<%= info["gist"] %>">Code for widget</a></p>
+        </div>
+        <div class="col-sm-6 help padding-top">
+          <a class="home-icon" href="#container" title="Back to dashboard"></a>
+          <%= info["description"] %>
+        </div>
       </div>
     </div>
-  </div>
+  <% end %>
 <% end %>
