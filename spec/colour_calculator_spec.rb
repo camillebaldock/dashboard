@@ -37,7 +37,7 @@ describe ColourCalculator do
       context "number is < to yellow" do
         let(:number) { rand(0..yellow-1) }
         it "returns green" do
-          expect(result).to eq "green"
+          expect(result).to eq "#2EFE2E"
         end
       end
       context "number is >= to yellow and < orange" do
@@ -71,7 +71,7 @@ describe ColourCalculator do
       context "number is < to danger" do
         let(:number) { rand(0..orange-1) }
         it "returns green" do
-          expect(result).to eq "green"
+          expect(result).to eq "#2EFE2E"
         end
       end
       context "number is >= to danger" do
@@ -97,7 +97,7 @@ describe ColourCalculator do
       context "number is > to red" do
         let(:number) { rand(red..red+1000) }
         it "returns green" do
-          expect(result).to eq "green"
+          expect(result).to eq "#2EFE2E"
         end
       end
       context "number is <= to red" do
