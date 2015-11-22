@@ -26,7 +26,7 @@ SCHEDULER.every config.frequency, :first_in => 0 do
     if broken_builds > 0
       send_event(key, { current: broken_builds, "background-color" => colour })
     else
-      send_event(key, { current: nil, "background-color" => colour })
+      send_event(key, { current: "ok", "background-color" => colour })
     end
   rescue Exception => e
     logger.exception(e)

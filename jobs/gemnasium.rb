@@ -22,7 +22,7 @@ SCHEDULER.every config.frequency, first_in: 0 do
       if yellows.count > 0
         send_event(key, { current: yellows.count, "background-color" => 'orange' })
       else
-        send_event(key, { "background-color" => '#2EFE2E' })
+        send_event(key, { "current" => "ok", "background-color" => '#2EFE2E' })
       end
     end
   rescue Exception => e

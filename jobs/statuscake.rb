@@ -28,7 +28,7 @@ SCHEDULER.every config.frequency, first_in: 0 do
     if items.count > 0
       send_event(key, { "current" => items.count, "background-color" => 'red' })
     else
-      send_event(key, { "background-color" => '#2EFE2E' })
+      send_event(key, { "current" => "ok", "background-color" => '#2EFE2E' })
     end
   rescue Exception => e
     logger.exception(e)
