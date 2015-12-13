@@ -41,13 +41,13 @@
     },
     "blog": {
         "title": "Blog and photos",
-        "goal": "Every month",
+        "goal": "Every 3 months",
         "gist": "hannesfostie/5420959",
         "description": "I occasionally write blog posts on <a href=\"http://camillebaldock.com\">my website</a> and publish my photos on <a href=\"http://photos.camillebaldock.com\">my photos website</a>.",
         "settings": {
           "goal": {
-            "yellow": 30,
-            "orange": 60
+            "yellow": 60,
+            "orange": 90
           }
         }
     },

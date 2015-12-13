@@ -31,11 +31,7 @@
         "description": "I enjoy solving the maths problems on <a href=\"https://projecteuler.net\">Project Euler</a>. I have a script monitoring any new problems published there.",
         "frequency": "1h",
         "settings": {
-          "goal": {
-            "yellow": 5,
-            "orange": 50,
-            "red": 100
-          }
+          "colour": "#0B46CF"
         }
     },
     "training": {
@@ -43,10 +39,7 @@
         "gist": "camilleldn/cda910d857f4c6225f75",
         "description": "I store technical training courses, tutorials and articles I am currently working on or plan to be working on in the future in a Trello board.",
         "settings": {
-          "goal": {
-            "yellow": 1,
-            "orange": 100
-          }
+          "colour": "#9932CC"
         }
     },
     "challenges": {
@@ -54,10 +47,7 @@
         "gist": "camilleldn/cda910d857f4c6225f75",
         "description": "I store coding challenges that I'd like to solve, eg from the Google Code Jam or Codility, in a Trello board.",
         "settings": {
-          "goal": {
-            "yellow": 1,
-            "orange": 30
-          }
+          "colour": "#48D1CC"
         }
     }
 }
