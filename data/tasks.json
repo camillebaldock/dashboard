@@ -38,7 +38,8 @@
             "orange": 100,
             "red": 500
           }
-        }
+        },
+        "frequency": "1h"
     },
     "blog": {
         "title": "Blog and photos",
