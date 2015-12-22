@@ -34,7 +34,9 @@
     "PROJECT_EULER_USERNAME": "project_euler_username",
     "PROJECT_EULER_PASSWORD": "project_euler_password",
     "MANUAL_FORKS":"user/parent,otheruser/fork;user2/parent,otheruser2/fork",
-    "MONITORED_GITHUB_ORGS":"names,of,github,orgs,to,monitor,for,pulls,and,issues"
+    "MONITORED_GITHUB_ORGS":"names,of,github,orgs,to,monitor,for,pulls,and,issues",
+    "ANCESTRY_EMAIL":"ancestry_email",
+    "ANCESTRY_PASSWORD":"ancestry_password"
   },
   "addons": [
     "redistogo:nano"

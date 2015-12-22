@@ -27,15 +27,16 @@
         },
         "frequency": "1h"
     },
-    "newsletter": {
-        "title": "Newsletter",
-        "goal": "Every month",
-        "gist": "hannesfostie/5420959",
-        "description": "I keep in touch with a few of my close friends by writing a monthly newsletter, featuring bad puns and terrible doodles.",
+    "ancestry": {
+        "title": "Ancestry",
+        "goal": "Zero",
+        "gist": "",
+        "description": "I keep track of new hints on my family tree via ancestry.co.uk",
         "settings": {
           "goal": {
-            "yellow": 30,
-            "orange": 60
+            "yellow": 1,
+            "orange": 100,
+            "red": 500
           }
         }
     },

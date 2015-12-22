@@ -44,12 +44,6 @@ SCHEDULER.every "1h", :first_in => 0 do
         "background-color" => calculate_color(formatted_updates["blog"]["number_days"], blog_config)
       }
     )
-    newsletter_config = ConfigRepository.new("newsletter")
-    send_event("newsletter", {
-        "text" => formatted_updates["newsletter"]["ago"],
-        "background-color" => calculate_color(formatted_updates["newsletter"]["number_days"], newsletter_config)
-      }
-    )
   rescue Exception => e
     logger.exception(e)
   end
