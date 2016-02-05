@@ -12,9 +12,9 @@ tv_shows.each do |tv_show|
   unwatched_tv_shows += tv_show.leaf_count.to_i - tv_show.viewed_leaf_count.to_i
 end
 films_section = sections.find{|section| section.title == "Movies" }
-unwatched_films = films_section.unwatched.count
+unwatched_films = films_section.unwatched != nil ? films_section.unwatched.count : 0
 videos_section = sections.find{|section| section.title == "Home Videos" }
-unwatched_videos = videos_section.unwatched.count
+unwatched_videos = videos_section.unwatched != nil ? videos_section.unwatched.count : 0
 
 auth_token=ENV["AUTH_TOKEN"]
 
