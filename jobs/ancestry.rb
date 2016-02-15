@@ -19,8 +19,8 @@ SCHEDULER.every config.frequency, first_in: 0 do
     signin_form.password = ENV["ANCESTRY_PASSWORD"]
 
     logged_in_page = @mechanize_agent.submit(signin_form)
-    hints_icon = logged_in_page.at("#navHints")
-    hints_page = @mechanize_agent.click(hints_icon)
+    hints_link = logged_in_page.at("#navHints").attributes['href']
+    hints_page = @mechanize_agent.get(hints_link)
     hint_text = hints_page.at("#subNav1").text
     hints_number = hint_text.match(/\w*\((\d*)\)/)
     nb_hints = hints_number[1].to_i
